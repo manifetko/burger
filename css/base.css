@@ -1,0 +1,54 @@
+html,
+body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0
+}
+
+.wrapper {
+  min-width: 1100px;
+  overflow: hidden;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.wrapper__container {
+  flex: 1;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}

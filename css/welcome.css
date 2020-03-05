@@ -1,0 +1,150 @@
+.welcome {
+  background: url(../images/texture.png) repeat-x, url(../images/back.png) no-repeat center black;
+}
+
+.welcome__container {
+  max-width: 1100px;
+  min-height: 650px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.welcome__content {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.welcome__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 14px;
+  margin-top: 53px;
+}
+
+.welcome-text__up {
+  font-size: 72px;
+  font-family: "gagalin";
+  color: #f9b43b;
+  margin-bottom: 22px;
+}
+
+.welcome-text__bot {
+  font-size: 72px;
+  font-family: "gagalin";
+  color: #f9b43b;
+  margin-bottom: 22px;
+}
+
+.burger-img {
+  margin-left: 96px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo {
+  margin: 14px 69px 0 77px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__item::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 5px 14px 0 19px;
+}
+
+.nav__item:nth-child(1)::before {
+  display: none;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 39px;
+}
+
+.nav__link {
+  font-size: 13px;
+  font-family: "Ubuntu";
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav_order {
+  padding-top: 10px;
+  text-align: center;
+  background-color: #C1401E;
+  margin: 28px 0 0 16px;
+  width: 96px;
+  height: 36px;
+  border-radius: 7px;
+}
+
+.breadcrumbs {
+  position: fixed;
+  top: 14%;
+  right: 18%;
+}
+
+.breadcrumbs__item {
+  border: 1px solid transparent;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.breadcrumbs__item.active {
+  border-color: #fff;
+}
+
+.breadcrumbs__link {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.arrow-scroll {
+  position: absolute;
+  bottom: 5%;
+  left: 49%;
+}
+/*# sourceMappingURL=welcome.css.map */

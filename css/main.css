@@ -1,0 +1,18 @@
+@import url(./normalize.css);
+@import url(./base.css);
+@import url(./welcome.css);
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+@font-face {
+  font-family: 'gagalin';
+  src: url("./Gagalin-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lifehack';
+  src: url("./Lifehack-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/*# sourceMappingURL=main.css.map */
