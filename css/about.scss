@@ -1,0 +1,52 @@
+.about {
+  @include bg(url(../images/bgabout.png));
+
+  &__container {
+    @include container;
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 71.713px;
+    font-family: "Gagalin";
+    color: rgb(47, 50, 52);
+    margin-top: 116px;
+  }
+}
+
+.features {
+  display: flex;
+  margin-top: 47px;
+
+  &__icon {
+    text-align: center;
+    margin-bottom: 29px;
+  }
+
+  &__list {
+    display: flex;
+    padding-left: 86px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    margin-right: 40px;
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 24px;
+    font-family: "lifehack";
+    color: rgb(47, 50, 52);
+    margin-bottom: 20px;
+  }
+
+  &__discription {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Ubuntu";
+    color: rgba(47, 50, 52, 0.8);
+  }
+}

@@ -1,11 +1,24 @@
+@mixin bg($backgroud:url(../images/bgwelcome.png)) {
+  background: $backgroud;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  min-height: 650px;
+}
+
+@mixin container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .welcome {
-  background: url(../images/texture.png) repeat-x, url(../images/back.png) no-repeat center black;
+  @include bg;
 
   &__container {
-    max-width: 1100px;
-    min-height: 650px;
-    margin: 0 auto;
-    position: relative;
+    @include container;
   }
 
   &__content {
@@ -20,6 +33,7 @@
     margin-left: 14px;
     margin-top: 53px;
   }
+
   &-text__up {
     font-size: 72px;
     font-family: "gagalin";
@@ -29,8 +43,8 @@
 
   &-text__bot {
     font-size: 72px;
-    font-family: "gagalin";
-    color: rgb(249, 180, 59);
+    font-family: "lifehack";
+    color: #fff;
     margin-bottom: 22px;
   }
 }
@@ -64,6 +78,7 @@ header {
     &:nth-child(1)::before {
       display: none;
     }
+
     display: flex;
   }
 
@@ -121,7 +136,8 @@ header {
   top: 14%;
   right: 18%;
 }
-.arrow-scroll{
+
+.arrow-scroll {
   position: absolute;
   bottom: 5%;
   left: 49%;
