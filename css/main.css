@@ -250,6 +250,12 @@ header {
   color: rgba(47, 50, 52, 0.8);
 }
 
+.comments__heading, .comments__discription, .comments__button {
+  display: none;
+  position: absolute;
+  left: 7%;
+}
+
 .comments {
   height: 100%;
   min-height: 650px;
@@ -274,14 +280,16 @@ header {
           filter: brightness(0.5);
 }
 
+.comments__item:hover .comments__heading, .comments__item:hover .comments__discription, .comments__item:hover .comments__button {
+  display: block;
+}
+
 .comments__img {
   width: 100%;
 }
 
 .comments__heading {
-  position: absolute;
   top: 15%;
-  left: 7%;
   font-size: 14px;
   font-family: "Gagalin";
   color: white;
@@ -289,9 +297,7 @@ header {
 }
 
 .comments__discription {
-  position: absolute;
   top: 28%;
-  left: 7%;
   margin-right: 30px;
   font-size: 14px;
   font-family: "Ubuntu";
@@ -299,13 +305,11 @@ header {
 }
 
 .comments__button {
-  position: absolute;
   bottom: 15%;
-  left: 7%;
   font-size: 13px;
   color: #2F3234;
   font-family: "Ubuntu";
-  color: white;
+  color: #2f3234;
   text-transform: uppercase;
   padding: 15px;
   border-radius: 5px;
