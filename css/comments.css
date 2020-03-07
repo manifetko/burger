@@ -1,0 +1,68 @@
+.comments__heading, .comments__discription, .comments__button {
+  display: none;
+  position: absolute;
+  left: 7%;
+}
+
+.comments {
+  height: 100%;
+  min-height: 650px;
+}
+
+.comments__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.comments__item {
+  width: 25%;
+  margin-bottom: -4px;
+  position: relative;
+}
+
+.comments__item:hover .comments__img {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.comments__item:hover .comments__heading, .comments__item:hover .comments__discription, .comments__item:hover .comments__button {
+  display: block;
+}
+
+.comments__img {
+  width: 100%;
+}
+
+.comments__heading {
+  top: 15%;
+  font-size: 14px;
+  font-family: "Gagalin";
+  color: white;
+  text-align: left;
+}
+
+.comments__discription {
+  top: 28%;
+  margin-right: 30px;
+  font-size: 14px;
+  font-family: "Ubuntu";
+  color: white;
+}
+
+.comments__button {
+  bottom: 15%;
+  font-size: 13px;
+  font-family: "Ubuntu";
+  background-color: #2f3234;
+  text-transform: uppercase;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.comments__button__text {
+  color: white;
+}
+/*# sourceMappingURL=comments.css.map */

@@ -307,15 +307,11 @@ header {
 .comments__button {
   bottom: 15%;
   font-size: 13px;
-  color: #2F3234;
   font-family: "Ubuntu";
-  color: #2f3234;
+  background-color: #2f3234;
   text-transform: uppercase;
   padding: 15px;
   border-radius: 5px;
-}
-
-.comments__button__text {
-  color: white;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
