@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'gagalin';
-  src: url('./Gagalin-Regular.woff') format('woff');
+  src: url('../src/fonts/Gagalin-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'lifehack';
-  src: url('./Lifehack-Regular.woff') format('woff');
+  src: url('../src/fonts/Lifehack-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-@import url(./normalize.css);
-@import url(./base.css);
+@import 'normalize';
+@import 'base';
 @import 'welcome';
 @import 'about';
 @import 'comments';

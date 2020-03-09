@@ -1,4 +1,4 @@
-@mixin bg($backgroud:url(../images/bgwelcome.png)) {
+@mixin bg($backgroud:url(./images/bgwelcome.png)) {
   background: $backgroud;
   background-position: center;
   background-size: cover;

@@ -1,5 +1,5 @@
 .about {
-  @include bg(url(../images/bgabout.png));
+  @include bg(url(./images/bgabout.png));
 
   &__container {
     @include container;
