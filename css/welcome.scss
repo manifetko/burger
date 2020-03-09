@@ -2,7 +2,7 @@
   background: $backgroud;
   background-position: center;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   min-height: 650px;
 }
 
@@ -12,6 +12,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .welcome {
@@ -134,7 +135,7 @@ header {
 
   position: fixed;
   top: 14%;
-  right: 18%;
+  right: 50px;
 }
 
 .arrow-scroll {
