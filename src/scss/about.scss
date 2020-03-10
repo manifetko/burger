@@ -1,16 +1,14 @@
 .about {
   @include bg(url(./images/bgabout.png));
 
-  &__container {
-    @include container;
-  }
-
+&__container{
+  @include container;
+}
   &__heading {
     text-align: center;
     font-size: 71.713px;
     font-family: "Gagalin";
     color: rgb(47, 50, 52);
-    margin-top: 116px;
   }
 }
 
@@ -31,7 +29,7 @@
   &__item {
     display: flex;
     flex-direction: column;
-    width: 290px;
+    width: 27%;
     margin-right: 40px;
   }
 

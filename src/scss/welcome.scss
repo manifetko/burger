@@ -13,19 +13,21 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  justify-content: center;
 }
 
 .welcome {
   @include bg;
 
-  &__container {
-    @include container;
-  }
-
+&__container{
+  @include container;
+  justify-content: space-between;
+}
   &__content {
     margin: 0 auto;
     display: flex;
     align-items: center;
+    margin-bottom: 98px;
   }
 
   &__text {
@@ -139,7 +141,5 @@ header {
 }
 
 .arrow-scroll {
-  position: absolute;
-  bottom: 5%;
-  left: 49%;
+  margin-bottom: 40px;
 }

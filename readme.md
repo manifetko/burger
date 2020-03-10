@@ -1,4 +1,6 @@
-for scss complier--
+https://manifetko.github.io/dist/
+--------------------------------------------
+for scss complier
 {
     "liveSassCompile.settings": {
         "generateMap": false,
@@ -14,3 +16,4 @@ for scss complier--
         ]
     }
 }
+--------------------------------------------
