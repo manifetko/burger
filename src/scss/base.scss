@@ -49,6 +49,13 @@ h6 {
 }
 
 .container {
+  max-width: 1100px;
   margin: 0 auto;
-  width: 1200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+img{
+  display: block;
 }

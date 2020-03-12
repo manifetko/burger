@@ -1,24 +1,26 @@
-%phblock {
-  display: none;
-  position: absolute;
-  left: 7%;
-}
 
 .comments {
   height: 100vh;
   min-height: 650px;
-
+  &__content{
+    position: absolute;
+    top: 22%;
+    left: 6%;
+    display: none;
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
+    height: 100%;
   }
 
   &__item {
+    height: 50%;
     &:hover {
       .comments__img {
-        filter: brightness(0.5);
+        opacity: 0.5;
       }
-      .comments__heading, .comments__discription, .comments__button{
+      .comments__content{
         display: block;
       }
     }
@@ -26,6 +28,7 @@
     width: 25%;
     margin-bottom: -4px;
     position: relative;
+    background-color: #000;
   }
 
   &__img {
@@ -33,8 +36,6 @@
   }
 
   &__heading {
-    @extend %phblock;
-    top: 15%;
     font-size: 14px;
     font-family: "Gagalin";
     color: rgb(255, 255, 255);
@@ -42,17 +43,14 @@
   }
 
   &__discription {
-    @extend %phblock;
-    top: 28%;
-    margin-right: 30px;
+    
     font-size: 14px;
     font-family: "Ubuntu";
     color: rgb(255, 255, 255);
+    margin: 30px 30px 20px 0;
   }
 
   &__button {
-    @extend %phblock;
-    bottom: 15%;
     font-size: 13px;
     font-family: "Ubuntu";
     background-color: #2f3234;

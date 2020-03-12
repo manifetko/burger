@@ -1,9 +1,8 @@
 .about {
   @include bg(url(./images/bgabout.png));
-
-&__container{
-  @include container;
-}
+  &--container{
+    justify-content:center;
+  }
   &__heading {
     text-align: center;
     font-size: 71.713px;

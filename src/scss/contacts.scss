@@ -1,0 +1,55 @@
+.contacts {
+    @include bg(url(./images/bgcontacts.png));
+    position: relative;
+}
+.footer{
+    height: 9%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(./images/bgfooter.png);
+    &__container{
+        width: 86%;
+        margin: 0 auto;
+        display: flex;
+        height: 100%;
+    }
+    &__info{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    &__social-list{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__address{
+            font-size: 14px;
+            font-family: "Ubuntu";
+            color: rgb(255, 255, 255);
+            white-space: nowrap;
+            margin-bottom: 10px;
+          }
+          &__item{
+              margin-right: 20px;
+              display: flex;
+              align-items: center;
+          }
+}
+.social{
+    fill:#5A5A5A;
+    &:hover{
+        fill:#fff;
+    }
+}
+.telephone-link{
+    font-size: 14px;
+    font-family: "Ubuntu";
+    color:#E45028;
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+}
