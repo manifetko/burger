@@ -15,7 +15,6 @@
   }
 
   &__item {
-    height: 50%;
     &:hover {
       .comments__img {
         opacity: 0.5;
@@ -24,7 +23,8 @@
         display: block;
       }
     }
-
+    height: 50%;
+    overflow: hidden;
     width: 25%;
     margin-bottom: -4px;
     position: relative;

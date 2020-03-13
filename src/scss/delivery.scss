@@ -1,0 +1,122 @@
+%formtext{
+    font-size: 14px;
+    font-family: "Ubuntu";
+    color: rgb(255, 255, 255);
+}
+.delivery{
+    @include bg(url(./images/bgdelivery.png));
+    &--container{
+        justify-content:center;  
+    }  
+    &__heading {
+        font-size: 71.713px;
+        font-family: "Gagalin";
+        color: rgb(249, 180, 59);
+        text-align: center;
+      }   
+}
+.form{
+    margin: 45px 80px 140px;
+    display: flex;
+    &__part{
+        width: 50%;
+    }
+    &__input{
+        width: 100%;
+        border-radius: 6px;
+        margin-top: 10px;
+        height: 35px;
+        font-size: 14px;
+        font-family: "Ubuntu";
+        color: rgb(47, 50, 52);
+        &:hover{
+            border:2px solid #F9B43B;
+        }
+    }
+    &__radio{
+        margin-right: 20px;
+        display: flex;
+    }
+    &__choice{
+        display: flex;
+        margin-bottom: 20px;
+        &-name{
+            @extend %formtext;
+            &:before{
+                content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin-right: 10px;
+            background-image:none;
+            vertical-align: middle;
+            }
+        }
+        &-radio{
+            &:checked + .form__choice-name:before{
+                background-image: url(./images/radio.png);
+                background-position:50% , 50% ;
+                background-repeat: no-repeat;
+            }
+            display: none;
+        }
+    }
+    &__item{
+        margin-right: 20px;
+    }
+    &__line{
+        width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+        &--textarea{
+            display: flex;
+    flex-direction: column;
+        }
+    }
+    &__heading{
+     @extend %formtext;
+    }
+    &__submit{
+        @extend %formtext;
+        margin-right: 20px;
+        &--order{
+            width: 100px;
+            height: 35px;
+            background: #E45028;
+            border-radius: 6px;
+        }
+    }
+    &__comment{
+        @extend %formtext;
+    }
+    &__checkbox{
+        @extend %formtext;
+        display: flex;
+        &-input{
+            display: none;
+            &:checked+ .form__checkbox-name:before{
+                background-image:url(./images/checkbox.png);
+                background-position:50% , 50% ;
+                background-repeat: no-repeat;
+            }
+        }
+        &-name:before{
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            margin-right: 10px;
+            background-image:none;
+            vertical-align: middle;
+        }
+    }
+    &__buttons{
+        margin-top:25px; 
+    }
+}
+.textarea{
+    height: 110px;
+}

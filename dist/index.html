@@ -224,7 +224,6 @@
               расплавленным.</div>
             <button class="comments__button">Подробнее</button>
           </div>
-
         </li>
         <li class="comments__item"><img src="./images/comm7.png" alt="" class="comments__img">
           <div class="comments__content"><span class="comments__heading">КОНСТАНТИН СПИЛБЕРГ</span>
@@ -243,9 +242,8 @@
           </div>
         </li>
       </ul>
-      </span>
     </section>
-    <!-- <section class="delivery">
+    <section class="delivery">
       <div class="delivery--container container">
         <h2 class="delivery__heading">
           Закажите доставку
@@ -279,7 +277,7 @@
                 <span class="form__heading">
                   Дом
                 </span>
-                <input type="number" name="house" class="form__input">
+                <input type="text" name="house" class="form__input">
               </label>
               <label class="form__item">
                 <span class="form__heading">
@@ -291,46 +289,46 @@
                 <span class="form__heading">
                   Квартира
                 </span>
-                <input type="number" name="apartaments" class="form__input">
+                <input type="text" name="apartaments" class="form__input">
               </label>
               <label class="form__item">
                 <span class="form__heading">
                   Этаж
                 </span>
-                <input type="number" name="floor" class="form__input">
+                <input type="text" name="floor" class="form__input">
               </label>
             </div>
 
           </div>
           <div class="form__part">
-            <label class="form__item">
-              <span class="form__line">
+            <label class="form__line form__line--textarea">
+              <span class="form__comment">
                 Комментарий
               </span>
-              <textarea type="text" name="comment" class="form__input"></textarea>
+              <textarea type="text" name="comment" class="form__input textarea"></textarea>
             </label>
             <div class="form__choice">
-              <label class="form__radio">
-                <input type="radio" name="pay" class="form__choice-radio" value="Потребуется сдача">
-                <span class="form__choice-name">Потребуется сдача</span>
-              </label>
-              <label class="form__radio">
-                <input type="radio" name="pay" class="form__optons-radio" value="Оплата по картe" checked>
-                <span class="form__choice-name">Оплата по карте</span>
-              </label>
+              <div class="form__radio">
+                <input type="radio" id='radio1' name="pay" class="form__choice-radio" value="Потребуется сдача">
+                <label class="form__choice-name" for="radio1">Потребуется сдача</label>
+              </div>
+              <div class="form__radio">
+                <input type="radio" id='radio2' name="pay" class="form__choice-radio" value="Оплата по картe" checked>
+                <label class="form__choice-name" for="radio2">Оплата по карте</label>
+              </div>
             </div>
-            <label class="form__checkbox">
-              <input type="checkbox" name="callback" class="form__checkbox-input" checked>
-              <span class="form__checkbox-name">Не перезванивать</span>
-            </label>
+            <div class="form__checkbox">
+              <input type="checkbox" id="checkbox" name="callback" class="form__checkbox-input" checked>
+              <label class="form__checkbox-name" for="checkbox">Не перезванивать</label>
+            </div>
             <div class="form__buttons">
-              <button type="submit" class="form__submit">Заказать</button>
+              <button type="submit" class="form__submit form__submit--order">Заказать</button>
               <button type="reset" class="form__submit">Очистить</button>
             </div>
           </div>
         </form>
       </div>
-    </section> -->
+    </section>
     <section class="contacts">
       <footer class="footer">
         <div class="footer__container">
