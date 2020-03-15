@@ -11,6 +11,24 @@
   font-weight: normal;
   font-style: normal;
 }
+// background for sections
+@mixin bg($backgroud:url(./images/bgwelcome.png)) {
+  background: $backgroud;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  min-height: 40.625rem;
+}
+@mixin tablets{
+  @media screen and (max-width:768px){
+    @content;
+  } 
+}
+@mixin phones{
+  @media screen and (max-width:480px){
+    @content;
+  } 
+}
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 @import 'welcome';
 @import 'about';

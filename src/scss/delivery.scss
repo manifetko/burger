@@ -1,5 +1,5 @@
 %formtext{
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: "Ubuntu";
     color: rgb(255, 255, 255);
 }
@@ -9,47 +9,65 @@
         justify-content:center;  
     }  
     &__heading {
-        font-size: 71.713px;
+        font-size: 4.4820625rem;
         font-family: "Gagalin";
         color: rgb(249, 180, 59);
         text-align: center;
+        @include phones{
+            font-size: 3.1100625rem;
+        }
       }   
 }
+  
 .form{
-    margin: 45px 80px 140px;
+    @include tablets{
+        flex-direction: column;
+        padding: 0 17%;
+        margin-top:0.8125rem;
+    }
+    @include phones{
+        padding: 0;
+        margin-top:0.8125rem;
+    }
     display: flex;
+    margin-top: 2.8125rem;
+    padding: 0 5rem;
     &__part{
         width: 50%;
+        @include tablets{
+            width:100%
+        }
     }
     &__input{
         width: 100%;
-        border-radius: 6px;
-        margin-top: 10px;
-        height: 35px;
-        font-size: 14px;
+        border-radius: 0.375rem;
+        margin-top: 0.625rem;
+        height: 2.1875rem;
+        font-size: 0.875rem;
+        border: 1px solid transparent;
         font-family: "Ubuntu";
         color: rgb(47, 50, 52);
         &:hover{
-            border:2px solid #F9B43B;
+            border:0.125rem solid #F9B43B;
         }
     }
     &__radio{
-        margin-right: 20px;
+        margin-right: 1.25rem;
         display: flex;
     }
     &__choice{
         display: flex;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
         &-name{
             @extend %formtext;
             &:before{
                 content: '';
             display: inline-block;
-            width: 15px;
-            height: 15px;
+            width: 0.9375rem;
+            height: 0.9375rem;
             border-radius: 50%;
             background-color: #fff;
-            margin-right: 10px;
+            margin-right: 0.625rem;
             background-image:none;
             vertical-align: middle;
             }
@@ -64,15 +82,18 @@
         }
     }
     &__item{
-        margin-right: 20px;
+        margin-left: 1.25rem;
+        width: 100%;
     }
     &__line{
         width: 100%;
         display: flex;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
+        margin-left:-1.25rem;
         &--textarea{
             display: flex;
     flex-direction: column;
+    margin-left: 0;
         }
     }
     &__heading{
@@ -80,12 +101,12 @@
     }
     &__submit{
         @extend %formtext;
-        margin-right: 20px;
+        margin-right: 1.25rem;
         &--order{
-            width: 100px;
-            height: 35px;
+            width: 6.25rem;
+            height: 2.1875rem;
             background: #E45028;
-            border-radius: 6px;
+            border-radius: 0.375rem;
         }
     }
     &__comment{
@@ -105,18 +126,24 @@
         &-name:before{
             content: '';
             display: inline-block;
-            width: 15px;
-            height: 15px;
+            width: 0.9375rem;
+            height: 0.9375rem;
             background-color: #fff;
-            margin-right: 10px;
+            margin-right: 0.625rem;
             background-image:none;
             vertical-align: middle;
         }
     }
     &__buttons{
-        margin-top:25px; 
+        margin-top:1.5625rem;
+        @include tablets{
+            margin-top: 0.5625rem;
+        } 
+        @include phones{
+            margin-top: 0.5625rem;
+        } 
     }
 }
 .textarea{
-    height: 110px;
+    height: 6.875rem;
 }

@@ -2,6 +2,7 @@
     @include bg(url(./images/bgcontacts.png));
     position: relative;
 }
+  
 .footer{
     height: 9%;
     position: absolute;
@@ -9,17 +10,29 @@
     left: 0;
     right: 0;
     background: url(./images/bgfooter.png);
+    @include phones{
+        height: 7.1875rem;
+    }
     &__container{
         width: 86%;
         margin: 0 auto;
         display: flex;
         height: 100%;
+        @include phones{
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__info{
         width: 50%;
         display: flex;
         flex-direction: column;
-        padding-top: 10px;
+        padding-top: 0.625rem;
+        @include phones{
+            width: auto;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
     }
     &__social-list{
         width: 50%;
@@ -31,10 +44,10 @@
             font-family: "Ubuntu";
             color: rgb(255, 255, 255);
             white-space: nowrap;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
           }
           &__item{
-              margin-right: 20px;
+              margin-right: 1.25rem;
               display: flex;
               align-items: center;
           }
@@ -46,7 +59,7 @@
     }
 }
 .telephone-link{
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: "Ubuntu";
     color:#E45028;
     font-weight: bold;

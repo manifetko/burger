@@ -18,7 +18,7 @@
   background-position: center;
   background-size: cover;
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
 }
 
 .welcome--container {
@@ -35,7 +35,17 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 98px;
+  margin-bottom: 6.125rem;
+}
+
+@media screen and (max-width: 768px) {
+  .welcome__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 0;
+  }
 }
 
 .welcome__text {
@@ -46,36 +56,70 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 14px;
-  margin-top: 53px;
+  margin-left: 0.875rem;
+  margin-top: 3.3125rem;
+}
+
+@media screen and (max-width: 768px) {
+  .welcome__text {
+    margin: 0;
+    text-align: center;
+  }
 }
 
 .welcome-text__up {
-  font-size: 72px;
+  font-size: 4.5rem;
   font-family: "gagalin";
   color: #f9b43b;
-  margin-bottom: 22px;
+  margin-bottom: 1.375rem;
+}
+
+@media screen and (max-width: 480px) {
+  .welcome-text__up {
+    font-size: 3.5625rem;
+  }
 }
 
 .welcome-text__bot {
-  font-size: 72px;
+  font-size: 4.5rem;
   font-family: "lifehack";
   color: #fff;
-  margin-bottom: 22px;
+  margin-bottom: 1.375rem;
+}
+
+@media screen and (max-width: 480px) {
+  .welcome-text__bot {
+    font-size: 3rem;
+  }
 }
 
 .burger-img {
-  margin-left: 96px;
+  margin-left: 6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .burger-img {
+    margin-left: 0;
+  }
 }
 
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .logo {
-  margin: 14px 69px 0 77px;
+  margin: 0.875rem 4.3125rem 0 4.8125rem;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    margin: 0.625rem 0 0 0;
+  }
 }
 
 .nav {
@@ -97,7 +141,7 @@ header {
   height: 4px;
   border-radius: 50%;
   background-color: #fff;
-  margin: 5px 14px 0 19px;
+  margin: 0.3125rem 0.875rem 0 1.1875rem;
 }
 
 .nav__item:nth-child(1)::before {
@@ -108,40 +152,47 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 39px;
+  margin-top: 2.4375rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__list {
+    display: none;
+  }
 }
 
 .nav__link {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-family: "Ubuntu";
   color: white;
   text-transform: uppercase;
   text-decoration: none;
+  text-wrap: none;
 }
 
 .nav_order {
-  padding-top: 10px;
+  padding-top: 0.625rem;
   text-align: center;
   background-color: #C1401E;
-  margin: 28px 0 0 16px;
-  width: 96px;
-  height: 36px;
-  border-radius: 7px;
+  margin: 1.75rem 0 0 1rem;
+  width: 6rem;
+  height: 2.25rem;
+  border-radius: 0.4375rem;
 }
 
 .breadcrumbs {
   position: fixed;
   top: 14%;
-  right: 50px;
+  right: 3.125rem;
 }
 
 .breadcrumbs__item {
   border: 1px solid transparent;
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
   position: relative;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 
 .breadcrumbs__item.active {
@@ -150,9 +201,9 @@ header {
 
 .breadcrumbs__link {
   display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 3px;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.1875rem;
   background-color: #fff;
   position: absolute;
   top: 50%;
@@ -166,8 +217,25 @@ header {
 }
 
 .arrow-scroll {
-  margin-bottom: 26px;
+  margin-bottom: 1.625rem;
   text-align: center;
+}
+
+.hamburger-menu {
+  margin-left: 1.875rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: none;
+  background: url(./images/hamburgermenu.svg) 50% 50% no-repeat;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+    margin-top: 2.1875rem;
+    margin-right: 0.625rem;
+  }
 }
 
 .about {
@@ -175,7 +243,7 @@ header {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
 }
 
 .about--container {
@@ -186,7 +254,7 @@ header {
 
 .about__heading {
   text-align: center;
-  font-size: 71.713px;
+  font-size: 4.4820625rem;
   font-family: "Gagalin";
   color: #2f3234;
 }
@@ -195,19 +263,53 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 47px;
+  margin-top: 2.9375rem;
+}
+
+.features__text {
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .features__text {
+    text-align: left;
+  }
 }
 
 .features__icon {
   text-align: center;
-  margin-bottom: 29px;
+  margin-bottom: 1.8125rem;
+}
+
+@media screen and (max-width: 480px) {
+  .features__icon {
+    margin-right: 1.5625rem;
+  }
 }
 
 .features__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 86px;
+  padding-left: 5.375rem;
+}
+
+@media screen and (max-width: 768px) {
+  .features__list {
+    padding-left: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .features__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .features__item {
@@ -219,34 +321,70 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 27%;
-  margin-right: 40px;
+  margin-right: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .features__item {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .features__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: auto;
+  }
 }
 
 .features__heading {
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "lifehack";
   color: #2f3234;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .features__discription {
   text-align: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Ubuntu";
   color: rgba(47, 50, 52, 0.8);
 }
 
+@media screen and (max-width: 480px) {
+  .features__discription {
+    text-align: left;
+  }
+}
+
 .comments {
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
 }
 
 .comments__content {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 22%;
-  left: 6%;
+  padding: 17% 12% 0;
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .comments__content {
+    padding-top: 6%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .comments__content {
+    padding: 2.8125rem 3.4375rem 0;
+  }
 }
 
 .comments__list {
@@ -262,7 +400,7 @@ header {
   height: 50%;
   overflow: hidden;
   width: 25%;
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
   position: relative;
   background-color: #000;
 }
@@ -275,32 +413,60 @@ header {
   display: block;
 }
 
+@media screen and (max-width: 768px) {
+  .comments__item {
+    width: 50%;
+    height: 25%;
+  }
+}
+
 .comments__img {
   width: 100%;
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  .comments__img {
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
 }
 
 .comments__heading {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Gagalin";
   color: white;
   text-align: left;
 }
 
 .comments__discription {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Ubuntu";
   color: white;
-  margin: 30px 30px 20px 0;
+  margin: 1.875rem 1.875rem 1.25rem 0;
+}
+
+@media screen and (max-width: 480px) {
+  .comments__discription {
+    display: none;
+  }
 }
 
 .comments__button {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-family: "Ubuntu";
   background-color: #2f3234;
   text-transform: uppercase;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 0.9375rem;
+  border-radius: 0.3125rem;
   color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  .comments__button {
+    margin-top: 1.875rem;
+  }
 }
 
 .menu {
@@ -308,15 +474,15 @@ header {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
   position: relative;
 }
 
 .menu__heading {
-  left: 95px;
-  top: 110px;
+  left: 5.9375rem;
+  top: 6.875rem;
   position: absolute;
-  font-size: 71.713px;
+  font-size: 4.4820625rem;
   font-family: "Gagalin";
   color: white;
 }
@@ -341,20 +507,32 @@ header {
   display: inline-block;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-family: "Gagalin";
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .menu__tag {
+    font-size: 1.9rem;
+  }
 }
 
 .menu__discription {
   display: none;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Ubuntu";
   color: white;
   background: #3E4042;
-  padding: 60px 35px 0 30px;
+  padding: 3.75rem 0.1875rem 0 1.875rem;
   line-height: 1.714;
+}
+
+@media screen and (max-width: 480px) {
+  .menu__discription {
+    padding: 0 0 0 0.875rem;
+  }
 }
 
 .menu__item {
@@ -425,7 +603,7 @@ header {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
   position: relative;
 }
 
@@ -437,8 +615,17 @@ header {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  min-height: 650px;
-  padding: 110px 95px 0px;
+  min-height: 40.625rem;
+  padding: 6.875rem 5.9375rem 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .team__content {
+    width: 100%;
+    text-align: center;
+    padding-left: 2.9375rem;
+    padding-right: 2.9375rem;
+  }
 }
 
 .team__heading {
@@ -448,7 +635,13 @@ header {
 }
 
 .team__accordeon {
-  margin-top: 50px;
+  margin-top: 3.125rem;
+}
+
+@media screen and (max-width: 768px) {
+  .team__accordeon {
+    margin-top: 2.125rem;
+  }
 }
 
 .team__item {
@@ -459,7 +652,13 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 35px;
+  margin-bottom: 2.1875rem;
+}
+
+@media screen and (max-width: 768px) {
+  .team__item {
+    margin-bottom: 1.1875rem;
+  }
 }
 
 .team__item:hover .team__name {
@@ -467,7 +666,7 @@ header {
 }
 
 .team__name {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Gagalin";
   color: #fff;
   display: -webkit-box;
@@ -479,46 +678,93 @@ header {
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .team__name {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .team__name::before {
   content: "";
-  border-bottom: 6px solid transparent;
-  border-top: 6px solid #f9b43b;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  margin-right: 10px;
-  margin-top: 3px;
+  border-bottom: 0.375rem solid transparent;
+  border-top: 0.375rem solid #f9b43b;
+  border-right: 0.3125rem solid transparent;
+  border-left: 0.3125rem solid transparent;
+  margin-right: 0.625rem;
+  margin-top: 0.1875rem;
 }
 
 .team__profession {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Ubuntu";
   color: white;
   font-weight: bold;
 }
 
+@media screen and (max-width: 768px) {
+  .team__profession {
+    margin-top: 1.25rem;
+  }
+}
+
 .team__discription {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Ubuntu";
   color: white;
-  margin-left: 20px;
-  width: 215px;
+  margin-left: 1.25rem;
+  width: 13.4375rem;
+}
+
+@media screen and (max-width: 768px) {
+  .team__discription {
+    margin-left: 0;
+    width: auto;
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team__discription {
+    padding: 0;
+  }
 }
 
 .team__member {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   height: 0;
   overflow: hidden;
 }
 
+@media screen and (max-width: 768px) {
+  .team__member {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 20%;
+  }
+}
+
 .team__photo {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .team__photo {
+    margin-bottom: 1rem;
+  }
 }
 
 .team__img {
@@ -527,6 +773,7 @@ header {
           transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  max-width: none;
 }
 
 .active--team .team__member {
@@ -547,7 +794,7 @@ header {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
   position: relative;
 }
 
@@ -560,6 +807,12 @@ header {
   background: url(./images/bgfooter.png);
 }
 
+@media screen and (max-width: 480px) {
+  .footer {
+    height: 7.1875rem;
+  }
+}
+
 .footer__container {
   width: 86%;
   margin: 0 auto;
@@ -567,6 +820,18 @@ header {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .footer__info {
@@ -578,7 +843,17 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 10px;
+  padding-top: 0.625rem;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__info {
+    width: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 1rem;
+  }
 }
 
 .footer__social-list {
@@ -596,11 +871,11 @@ header {
   font-family: "Ubuntu";
   color: white;
   white-space: nowrap;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .footer__item {
-  margin-right: 20px;
+  margin-right: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -618,7 +893,7 @@ header {
 }
 
 .telephone-link {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Ubuntu";
   color: #E45028;
   font-weight: bold;
@@ -631,7 +906,7 @@ header {
 }
 
 .form__choice-name, .form__heading, .form__submit, .form__comment, .form__checkbox {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Ubuntu";
   color: white;
 }
@@ -641,7 +916,7 @@ header {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
 }
 
 .delivery--container {
@@ -651,39 +926,71 @@ header {
 }
 
 .delivery__heading {
-  font-size: 71.713px;
+  font-size: 4.4820625rem;
   font-family: "Gagalin";
   color: #f9b43b;
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  .delivery__heading {
+    font-size: 3.1100625rem;
+  }
+}
+
 .form {
-  margin: 45px 80px 140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 2.8125rem;
+  padding: 0 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 17%;
+    margin-top: 0.8125rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    padding: 0;
+    margin-top: 0.8125rem;
+  }
 }
 
 .form__part {
   width: 50%;
 }
 
+@media screen and (max-width: 768px) {
+  .form__part {
+    width: 100%;
+  }
+}
+
 .form__input {
   width: 100%;
-  border-radius: 6px;
-  margin-top: 10px;
-  height: 35px;
-  font-size: 14px;
+  border-radius: 0.375rem;
+  margin-top: 0.625rem;
+  height: 2.1875rem;
+  font-size: 0.875rem;
+  border: 1px solid transparent;
   font-family: "Ubuntu";
   color: #2f3234;
 }
 
 .form__input:hover {
-  border: 2px solid #F9B43B;
+  border: 0.125rem solid #F9B43B;
 }
 
 .form__radio {
-  margin-right: 20px;
+  margin-right: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,17 +1000,17 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .form__choice-name:before {
   content: '';
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 0.9375rem;
+  height: 0.9375rem;
   border-radius: 50%;
   background-color: #fff;
-  margin-right: 10px;
+  margin-right: 0.625rem;
   background-image: none;
   vertical-align: middle;
 }
@@ -719,7 +1026,8 @@ header {
 }
 
 .form__item {
-  margin-right: 20px;
+  margin-left: 1.25rem;
+  width: 100%;
 }
 
 .form__line {
@@ -727,7 +1035,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+  margin-left: -1.25rem;
 }
 
 .form__line--textarea {
@@ -738,17 +1047,18 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-left: 0;
 }
 
 .form__submit {
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .form__submit--order {
-  width: 100px;
-  height: 35px;
+  width: 6.25rem;
+  height: 2.1875rem;
   background: #E45028;
-  border-radius: 6px;
+  border-radius: 0.375rem;
 }
 
 .form__checkbox {
@@ -770,20 +1080,32 @@ header {
 .form__checkbox-name:before {
   content: '';
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 0.9375rem;
+  height: 0.9375rem;
   background-color: #fff;
-  margin-right: 10px;
+  margin-right: 0.625rem;
   background-image: none;
   vertical-align: middle;
 }
 
 .form__buttons {
-  margin-top: 25px;
+  margin-top: 1.5625rem;
+}
+
+@media screen and (max-width: 768px) {
+  .form__buttons {
+    margin-top: 0.5625rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form__buttons {
+    margin-top: 0.5625rem;
+  }
 }
 
 .textarea {
-  height: 110px;
+  height: 6.875rem;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1171,7 +1493,7 @@ h6 {
 }
 
 .wrapper {
-  min-width: 1100px;
+  min-width: 0px;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1179,14 +1501,14 @@ h6 {
           flex-direction: column;
 }
 
-.wrapper__container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .container {
   max-width: 1100px;
+  width: 95%;
   margin: 0 auto;
   position: relative;
   display: -webkit-box;
@@ -1199,6 +1521,6 @@ h6 {
   height: 100%;
 }
 
-img {
-  display: block;
+html {
+  font-size: 16px;
 }
