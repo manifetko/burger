@@ -490,6 +490,13 @@ header {
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .menu__heading {
+    left: 1.9375rem;
+    top: 3.875rem;
+  }
+}
+
 .menu__accordeon {
   position: absolute;
   right: 0;
@@ -507,6 +514,26 @@ header {
 @media screen and (max-width: 480px) {
   .menu__accordeon {
     width: 100%;
+  }
+}
+
+.menu__close {
+  margin-right: 1rem;
+}
+
+.menu__close-icon {
+  display: none;
+  margin-top: 1.375rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (max-width: 480px) {
+  .menu__close-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -533,15 +560,22 @@ header {
   font-size: 0.875rem;
   font-family: "Ubuntu";
   color: white;
-  background: #3E4042;
+  background: rgba(62, 64, 66, 0.9);
   padding: 3.75rem 0.1875rem 0 1.875rem;
   line-height: 1.714;
+  left: 14%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 @media screen and (max-width: 480px) {
   .menu__discription {
     padding: 0 0.5rem 0;
     font-size: 0.7rem;
+    width: 125%;
+    left: 24%;
   }
 }
 
@@ -550,6 +584,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .menu__name {
@@ -578,13 +613,13 @@ header {
 }
 
 .menu--meat {
-  background: url(./images/menuitem1.png) 78;
+  background: url(./images/menuitem1.png) 78%;
   background-size: cover;
 }
 
 .menu--vegan {
   background-size: cover;
-  background: url(./images/menuitem2.png) 91;
+  background: url(./images/menuitem2.png) 91%;
 }
 
 .menu--diet {
@@ -618,6 +653,12 @@ header {
 
 .active--menu .menu__discription {
   display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .active--menu .menu__discription {
+    padding: 0.5rem 0.875rem 0;
+  }
 }
 
 @media screen and (max-width: 480px) {
