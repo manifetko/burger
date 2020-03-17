@@ -540,7 +540,7 @@ header {
 
 @media screen and (max-width: 480px) {
   .menu__discription {
-    padding: 0 0 0 0.875rem;
+    padding: 0 0.5rem 0;
     font-size: 0.7rem;
   }
 }
@@ -610,13 +610,19 @@ header {
   width: 14%;
 }
 
+@media screen and (max-width: 480px) {
+  .active--menu .menu__name {
+    width: 24%;
+  }
+}
+
 .active--menu .menu__discription {
   display: block;
 }
 
 @media screen and (max-width: 480px) {
   .active--menu {
-    width: 67%;
+    width: 68%;
   }
 }
 
