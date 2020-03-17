@@ -68,8 +68,10 @@
     font-size: 0.875rem;
     font-family: "Ubuntu";
     color: rgba(47, 50, 52, 0.8);
+    margin-top: 0.5rem;
     @include phones{
       text-align: left;
+      padding-bottom: 0.6rem;
     }
   }
 }

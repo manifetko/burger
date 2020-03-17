@@ -5,7 +5,8 @@
     &__heading{
        left: 5.9375rem;
        top:6.875rem;
-       position: absolute; 
+       position: absolute;
+       text-transform: uppercase; 
         font-size: 4.4820625rem;
         font-family: "Gagalin";
         color: rgb(255, 255, 255);
@@ -17,7 +18,10 @@
     bottom: 0;
     display: flex;
     justify-content: flex-end;
-    width: 71%;  
+    width: 71%;
+    @include phones{
+        width: 100%;
+    }  
     }
     &__tag{
         transform: rotate(-90deg) translate(50%, 0);
@@ -41,7 +45,7 @@
         padding: 3.75rem 0.1875rem 0 1.875rem;
         line-height: 1.714;
         @include phones{
-            padding: 0 0 0 0.875rem;
+            padding: 0 0.5rem 0 ;
             font-size: 0.7rem;
         }
     }
@@ -81,15 +85,21 @@
 }
 .active--menu{
     ~.menu__item{
-        width: 10.5%; 
+        width: 10.5%;
+        @include phones{
+         width: 16%;
+        } 
        }
     .menu__name{
-        width: 13%;
+        width: 14%;
     }
     .menu__discription{
         display: block;
     }
     width: 79%;
+    @include phones{
+        width: 68%;
+    }
 }
 
   

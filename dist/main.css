@@ -353,11 +353,13 @@ header {
   font-size: 0.875rem;
   font-family: "Ubuntu";
   color: rgba(47, 50, 52, 0.8);
+  margin-top: 0.5rem;
 }
 
 @media screen and (max-width: 480px) {
   .features__discription {
     text-align: left;
+    padding-bottom: 0.6rem;
   }
 }
 
@@ -482,6 +484,7 @@ header {
   left: 5.9375rem;
   top: 6.875rem;
   position: absolute;
+  text-transform: uppercase;
   font-size: 4.4820625rem;
   font-family: "Gagalin";
   color: white;
@@ -499,6 +502,12 @@ header {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 71%;
+}
+
+@media screen and (max-width: 480px) {
+  .menu__accordeon {
+    width: 100%;
+  }
 }
 
 .menu__tag {
@@ -591,12 +600,24 @@ header {
   width: 10.5%;
 }
 
+@media screen and (max-width: 480px) {
+  .active--menu ~ .menu__item {
+    width: 16%;
+  }
+}
+
 .active--menu .menu__name {
-  width: 13%;
+  width: 14%;
 }
 
 .active--menu .menu__discription {
   display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .active--menu {
+    width: 67%;
+  }
 }
 
 .team {
@@ -984,6 +1005,7 @@ header {
   border: 1px solid transparent;
   font-family: "Ubuntu";
   color: #2f3234;
+  padding-left: 0.4rem;
 }
 
 .form__input:hover {
