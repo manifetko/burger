@@ -92,6 +92,9 @@
        }
     .menu__name{
         width: 14%;
+        @include phones{
+            width: 24%;
+        }
     }
     .menu__discription{
         display: block;
