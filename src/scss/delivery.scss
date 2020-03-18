@@ -75,7 +75,7 @@
         }
         &-radio{
             &:checked + .form__choice-name:before{
-                background-image: url(./images/radio.png);
+                background-image: url(./images/radio.svg);
                 background-position:50% , 50% ;
                 background-repeat: no-repeat;
             }
@@ -119,7 +119,7 @@
         &-input{
             display: none;
             &:checked+ .form__checkbox-name:before{
-                background-image:url(./images/checkbox.png);
+                background-image:url(https://svgshare.com/i/JDx.svg);
                 background-position:50% , 50% ;
                 background-repeat: no-repeat;
             }
