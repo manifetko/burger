@@ -45,6 +45,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 0;
+    padding: 2rem;
   }
 }
 
@@ -167,6 +168,7 @@ header {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
+  text-wrap: none;
 }
 
 .nav_order {
@@ -526,10 +528,12 @@ header {
 
 .menu__close-icon {
   display: none;
-  margin-top: 1.375rem;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 2%;
 }
 
 @media screen and (max-width: 480px) {
@@ -660,7 +664,7 @@ header {
 
 @media screen and (max-width: 768px) {
   .active--menu .menu__discription {
-    padding: 0.5rem 0.875rem 0;
+    padding: 1.875rem 0.875rem 0;
   }
 }
 
