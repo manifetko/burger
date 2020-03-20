@@ -36,6 +36,9 @@
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 6.125rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -59,6 +62,8 @@
           flex-direction: column;
   margin-left: 0.875rem;
   margin-top: 3.3125rem;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -95,12 +100,18 @@
 }
 
 .burger-img {
-  margin-left: 6rem;
+  width: 41%;
 }
 
 @media screen and (max-width: 768px) {
   .burger-img {
-    margin-left: 0;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .burger-img {
+    max-width: 25rem;
   }
 }
 
@@ -108,13 +119,21 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .logo {
-  margin: 0.875rem 4.3125rem 0 4.8125rem;
+  margin: 0.875rem 5rem 0 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -154,6 +173,8 @@ header {
   display: -ms-flexbox;
   display: flex;
   margin-top: 2.4375rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media screen and (max-width: 768px) {
@@ -168,11 +189,10 @@ header {
   color: white;
   text-transform: uppercase;
   text-decoration: none;
-  text-wrap: none;
 }
 
 .nav_order {
-  padding-top: 0.625rem;
+  padding: 0.625rem 1rem;
   text-align: center;
   background-color: #C1401E;
   margin: 1.75rem 0 0 1rem;
