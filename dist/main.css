@@ -48,7 +48,6 @@
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 0;
-    padding: 2rem;
   }
 }
 
@@ -112,6 +111,7 @@
 @media screen and (max-width: 480px) {
   .burger-img {
     max-width: 25rem;
+    width: 88%;
   }
 }
 
@@ -1079,6 +1079,7 @@ header {
   font-family: "Ubuntu";
   color: #2f3234;
   padding-left: 0.4rem;
+  outline: none;
 }
 
 .form__input:hover {
