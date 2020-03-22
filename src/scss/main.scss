@@ -1,41 +1,43 @@
 @font-face {
-  font-family: 'gagalin';
-  src: url('../src/fonts/Gagalin-Regular.woff') format('woff');
+  font-family: "gagalin";
+  src: url("../src/fonts/Gagalin-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'lifehack';
-  src: url('../src/fonts/Lifehack-Regular.woff') format('woff');
+  font-family: "lifehack";
+  src: url("../src/fonts/Lifehack-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 // background for sections
-@mixin bg($backgroud:url(./images/bgwelcome.png)) {
+@mixin bg($backgroud: url(./images/bgwelcome.png)) {
   background: $backgroud;
   background-position: center;
   background-size: cover;
   height: 100vh;
   min-height: 40.625rem;
 }
-@mixin tablets{
-  @media screen and (max-width:768px){
+// for adaptive
+@mixin tablets {
+  @media screen and (max-width: 768px) {
     @content;
-  } 
+  }
 }
-@mixin phones{
-  @media screen and (max-width:480px){
+@mixin phones {
+  @media screen and (max-width: 480px) {
     @content;
-  } 
+  }
 }
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-@import 'welcome';
-@import 'about';
-@import 'comments';
-@import 'menu';
-@import 'team';
-@import 'contacts';
-@import 'delivery';
-@import 'normalize';
-@import 'base';
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+@import "welcome";
+@import "about";
+@import "burgers";
+@import "comments";
+@import "menu";
+@import "team";
+@import "contacts";
+@import "delivery";
+@import "normalize";
+@import "base";

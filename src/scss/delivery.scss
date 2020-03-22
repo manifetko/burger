@@ -1,151 +1,151 @@
-%formtext{
-    font-size: 0.875rem;
-    font-family: "Ubuntu";
-    color: rgb(255, 255, 255);
+%formtext {
+  font-size: 0.875rem;
+  font-family: "Ubuntu";
+  color: rgb(255, 255, 255);
 }
-.delivery{
-    @include bg(url(./images/bgdelivery.png));
-    &--container{
-        justify-content:center;  
-    }  
-    &__heading {
-        font-size: 4.4820625rem;
-        font-family: "Gagalin";
-        color: rgb(249, 180, 59);
-        text-align: center;
-        @include phones{
-            font-size: 3.1100625rem;
-        }
-      }   
+.delivery {
+  @include bg(url(./images/bgdelivery.png));
+  &--container {
+    justify-content: center;
+  }
+  &__heading {
+    font-size: 4.4820625rem;
+    font-family: "Gagalin";
+    color: rgb(249, 180, 59);
+    text-align: center;
+    @include phones {
+      font-size: 3.1100625rem;
+    }
+  }
 }
-  
-.form{
-    @include tablets{
-        flex-direction: column;
-        padding: 0 17%;
-        margin-top:0.8125rem;
-    }
-    @include phones{
-        padding: 0;
-        margin-top:0.8125rem;
-    }
-    display: flex;
-    margin-top: 2.8125rem;
-    padding: 0 5rem;
-    &__part{
-        width: 50%;
-        @include tablets{
-            width:100%
-        }
-    }
-    &__input{
-        width: 100%;
-        border-radius: 0.375rem;
-        margin-top: 0.625rem;
-        height: 2.1875rem;
-        font-size: 0.875rem;
-        border: 1px solid transparent;
-        font-family: "Ubuntu";
-        color: rgb(47, 50, 52);
-        padding-left: 0.4rem;
-        outline: none;
-        &:hover{
-            border:0.125rem solid #F9B43B;
-        }
-    }
-    &__radio{
-        margin-right: 1.25rem;
-        display: flex;
-    }
-    &__choice{
-        display: flex;
-        margin-bottom: 1.25rem;
-        &-name{
-            @extend %formtext;
-            &:before{
-                content: '';
-            display: inline-block;
-            width: 0.9375rem;
-            height: 0.9375rem;
-            border-radius: 50%;
-            background-color: #fff;
-            margin-right: 0.625rem;
-            background-image:none;
-            vertical-align: middle;
-            }
-        }
-        &-radio{
-            &:checked + .form__choice-name:before{
-                background-image: url(./images/radio.svg);
-                background-position:50% , 50% ;
-                background-repeat: no-repeat;
-            }
-            display: none;
-        }
-    }
-    &__item{
-        margin-left: 1.25rem;
-        width: 100%;
-    }
-    &__line{
-        width: 100%;
-        display: flex;
-        margin-bottom: 1.25rem;
-        margin-left:-1.25rem;
-        &--textarea{
-            display: flex;
+
+.form {
+  @include tablets {
     flex-direction: column;
-    margin-left: 0;
-        }
+    padding: 0 17%;
+    margin-top: 0.8125rem;
+  }
+  @include phones {
+    padding: 0;
+    margin-top: 0.8125rem;
+  }
+  display: flex;
+  margin-top: 2.8125rem;
+  padding: 0 5rem;
+  &__part {
+    width: 50%;
+    @include tablets {
+      width: 100%;
     }
-    &__heading{
-     @extend %formtext;
+  }
+  &__input {
+    width: 100%;
+    border-radius: 0.375rem;
+    margin-top: 0.625rem;
+    height: 2.1875rem;
+    font-size: 0.875rem;
+    border: 1px solid transparent;
+    font-family: "Ubuntu";
+    color: rgb(47, 50, 52);
+    padding-left: 0.4rem;
+    outline: none;
+    &:hover {
+      border: 0.125rem solid #f9b43b;
     }
-    &__submit{
-        @extend %formtext;
-        margin-right: 1.25rem;
-        &--order{
-            width: 6.25rem;
-            height: 2.1875rem;
-            background: #E45028;
-            border-radius: 0.375rem;
-        }
+  }
+  &__radio {
+    margin-right: 1.25rem;
+    display: flex;
+  }
+  &__choice {
+    display: flex;
+    margin-bottom: 1.25rem;
+    &-name {
+      @extend %formtext;
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 0.9375rem;
+        height: 0.9375rem;
+        border-radius: 50%;
+        background-color: #fff;
+        margin-right: 0.625rem;
+        background-image: none;
+        vertical-align: middle;
+      }
     }
-    &__comment{
-        @extend %formtext;
+    &-radio {
+      &:checked + .form__choice-name:before {
+        background-image: url(./images/radio.svg);
+        background-position: 50%, 50%;
+        background-repeat: no-repeat;
+      }
+      display: none;
     }
-    &__checkbox{
-        @extend %formtext;
-        display: flex;
-        &-input{
-            display: none;
-            &:checked+ .form__checkbox-name:before{
-                background-image:url(https://svgshare.com/i/JDx.svg);
-                background-position:50% , 50% ;
-                background-repeat: no-repeat;
-            }
-        }
-        &-name:before{
-            content: '';
-            display: inline-block;
-            width: 0.9375rem;
-            height: 0.9375rem;
-            background-color: #fff;
-            margin-right: 0.625rem;
-            background-image:none;
-            vertical-align: middle;
-        }
+  }
+  &__item {
+    margin-left: 1.25rem;
+    width: 100%;
+  }
+  &__line {
+    width: 100%;
+    display: flex;
+    margin-bottom: 1.25rem;
+    margin-left: -1.25rem;
+    &--textarea {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
     }
-    &__buttons{
-        margin-top:1.5625rem;
-        @include tablets{
-            margin-top: 0.5625rem;
-        } 
-        @include phones{
-            margin-top: 0.5625rem;
-        } 
+  }
+  &__heading {
+    @extend %formtext;
+  }
+  &__submit {
+    @extend %formtext;
+    margin-right: 1.25rem;
+    &--order {
+      width: 6.25rem;
+      height: 2.1875rem;
+      background: #e45028;
+      border-radius: 0.375rem;
     }
+  }
+  &__comment {
+    @extend %formtext;
+  }
+  &__checkbox {
+    @extend %formtext;
+    display: flex;
+    &-input {
+      display: none;
+      &:checked + .form__checkbox-name:before {
+        background-image: url(https://svgshare.com/i/JDx.svg);
+        background-position: 50%, 50%;
+        background-repeat: no-repeat;
+      }
+    }
+    &-name:before {
+      content: "";
+      display: inline-block;
+      width: 0.9375rem;
+      height: 0.9375rem;
+      background-color: #fff;
+      margin-right: 0.625rem;
+      background-image: none;
+      vertical-align: middle;
+    }
+  }
+  &__buttons {
+    margin-top: 1.5625rem;
+    @include tablets {
+      margin-top: 0.5625rem;
+    }
+    @include phones {
+      margin-top: 0.5625rem;
+    }
+  }
 }
-.textarea{
-    height: 6.875rem;
+.textarea {
+  height: 6.875rem;
 }

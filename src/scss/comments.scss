@@ -1,18 +1,17 @@
-
 .comments {
   height: 100vh;
   min-height: 40.625rem;
-  &__content{
+  &__content {
     width: 100%;
     height: 100%;
     position: absolute;
     padding: 17% 12% 0;
     display: none;
-    @include tablets{
+    @include tablets {
       padding-top: 6%;
       text-align: center;
     }
-    @include phones{
+    @include phones {
       padding: 2.8125rem 1.4375rem 0;
     }
   }
@@ -27,7 +26,7 @@
       .comments__img {
         opacity: 0.5;
       }
-      .comments__content{
+      .comments__content {
         display: block;
       }
     }
@@ -37,9 +36,9 @@
     margin-bottom: -0.25rem;
     position: relative;
     background-color: #000;
-    @include tablets{
-width: 50%;
-height: 25%;
+    @include tablets {
+      width: 50%;
+      height: 25%;
     }
   }
 
@@ -48,7 +47,7 @@ height: 25%;
     height: 100%;
     position: absolute;
     object-fit: cover;
-    @include tablets{
+    @include tablets {
       top: 50%;
       transform: translate(0, -50%);
     }
@@ -66,7 +65,7 @@ height: 25%;
     font-family: "Ubuntu";
     color: rgb(255, 255, 255);
     margin: 1.875rem 1.875rem 1.25rem 0;
-    @include phones{
+    @include phones {
       display: none;
     }
   }
@@ -76,11 +75,11 @@ height: 25%;
     font-family: "Ubuntu";
     background-color: #2f3234;
     text-transform: uppercase;
-    padding:0.9375rem;
-    border-radius:0.3125rem;
+    padding: 0.9375rem;
+    border-radius: 0.3125rem;
     color: #fff;
-    @include phones{
- margin-top: 1.875rem;
+    @include phones {
+      margin-top: 1.875rem;
     }
   }
 }
