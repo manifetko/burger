@@ -35,12 +35,16 @@
               <li class="nav__item"> <a href="" class="nav__link">контакты</a>
               </li>
             </ul>
-            <a class="nav__link nav_order" href="">заказать</a>
-            <div class="hamburger">
-              <div class="icon icon-menu"></div>
-              <div class="icon icon-close"></div>
-            </div>
           </nav>
+          <a class="nav__link order-link" href="">заказать</a>
+          <div class="hamburger">
+            <div class="icon icon-menu"><svg class="menu-open" width="24" height="22">
+                <use xlink:href="./images/sprites.svg#hamburger"></use>
+              </svg></div>
+            <div class="icon icon-close"><svg class="menu-close" width="24" height="22">
+                <use xlink:href="./images/sprites.svg#closemenu"></use>
+              </svg></div>
+          </div>
         </header>
         <div class="welcome__content">
           <img src="./images/burger.png" alt="" class="burger-img">
@@ -100,59 +104,60 @@
     </section>
     <section class="burgers">
       <div class="container burgers--container">
-        <div class="arrow-left">
+        <div class="arrow--left burgers__arrow">
           <svg class="arrow" width="28.685px" height="14.479px">
             <use xlink:href="./images/sprites.svg#arrow-scroll"></use>
           </svg>
         </div>
         <div class="burgers__content">
           <div class="burgers__images">
-            <div class="burgers__composition"><svg>
-                <use xlink:href="./images/sprites.svg"></use>
-              </svg>
-              <ul class="composition__list">
-                <li class="composition__item"> <svg>
-                    <use xlink:href="./images/sprites.svg"></use>
-                  </svg><span class="composition__name"> Говядина</span>300 г</li>
-                <li class="composition__item"> <svg>
-                    <use xlink:href="./images/sprites.svg"></use>
-                  </svg><span class="composition__name">Булочки</span>100 г</li>
-                <li class="composition__item"> <svg>
-                    <use xlink:href="./images/sprites.svg"></use>
-                  </svg><span class="composition__name">Зелень</span>70 г</li>
-                <li class="composition__item"> <svg>
-                    <use xlink:href="./images/sprites.svg"></use>
-                  </svg><span class="composition__name">Соус</span>150 г</li>
-                <li class="composition__item"> <svg>
-                    <use xlink:href="./images/sprites.svg"></use>
-                  </svg><span class="composition__name">Овощи</span>200 г</li>
-                <li class="composition__item"> <svg>
-                    <use xlink:href="./images/sprites.svg"></use>
-                  </svg><span class="composition__name">Сыр</span>80 г</li>
-              </ul>
+            <div class="off-images">
+              <div class="burgers__composition"><img src="./images/composition.png" alt=""
+                  class="burgers__composition-icon">
+                <ul class="composition__list">
+                  <li class="composition__item"> <svg>
+                      <use xlink:href="./images/sprites.svg"></use>
+                    </svg><span class="composition__name"> Говядина</span>300 г</li>
+                  <li class="composition__item"> <svg>
+                      <use xlink:href="./images/sprites.svg"></use>
+                    </svg><span class="composition__name">Булочки</span>100 г</li>
+                  <li class="composition__item"> <svg>
+                      <use xlink:href="./images/sprites.svg"></use>
+                    </svg><span class="composition__name">Зелень</span>70 г</li>
+                  <li class="composition__item"> <svg>
+                      <use xlink:href="./images/sprites.svg"></use>
+                    </svg><span class="composition__name">Соус</span>150 г</li>
+                  <li class="composition__item"> <svg>
+                      <use xlink:href="./images/sprites.svg"></use>
+                    </svg><span class="composition__name">Овощи</span>200 г</li>
+                  <li class="composition__item"> <svg>
+                      <use xlink:href="./images/sprites.svg"></use>
+                    </svg><span class="composition__name">Сыр</span>80 г</li>
+                </ul>
+              </div>
+              <div class="burgers__weight"><img src="./images/weight.png" alt="" class="burgers__weight-icon"></div>
             </div>
-            <img src="" alt="" class="burgers__main-img">
-            <div class="burgers__weight"><svg>
-                <use xlink:href="./images/sprites.svg"></use>
-              </svg></div>
+            <img src="./images/darkbeef.png" alt="" class="burgers__main-img">
           </div>
-          <div class="burgers__text">
-            <div class="burgers__name">dark beef burger</div>
-            <div class="burgers__description">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя
-              кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением
-              экзотического соуса чураско.</div>
-            <div class="burgers__order">
-              <div class="burgers__price"><span class="burgers__price-number">500</span>рублей</div>
-              <a class="nav__link nav_order" href="">заказать</a>
+            <div class="burgers__text">
+              <div class="burgers__name">dark beef burger</div>
+              <div class="burgers__discription">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины,
+                тремя
+                кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с
+                добавлением
+                экзотического соуса чураско.</div>
+              <div class="burgers__order">
+                <div class="burgers__price"><span class="burgers__price-number">500</span>рублей</div>
+                <a class="nav__link order-link order--burgers" href="">заказать</a>
+              </div>
             </div>
+          </div>
+          <div class="arrow--right burgers__arrow">
+            <svg class="arrow" width="28.685px" height="14.479px">
+              <use xlink:href="./images/sprites.svg#arrow-scroll"></use>
+            </svg>
           </div>
         </div>
-        <div class="arrow-right">
-          <svg class="arrow" width="28.685px" height="14.479px">
-            <use xlink:href="./images/sprites.svg#arrow-scroll"></use>
-          </svg>
-        </div>
-      </div>
     </section>
     </section>
     <section class="team">

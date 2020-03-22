@@ -1,0 +1,120 @@
+.burgers {
+  @include bg(-webkit-linear-gradient(90deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%));
+  &--container {
+    justify-content: center;
+  }
+  &__name {
+    font-size: 4.4820625rem;
+    font-family: "Gagalin";
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-bottom: 3.5rem;
+    @include tablets {
+      text-align: center;
+      padding: 0 3rem;
+    }
+    @include phones {
+      font-size: 3.125rem;
+    }
+  }
+  &__discription {
+    font-size: 0.875rem;
+    font-family: "Ubuntu";
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-bottom: 2.5rem;
+    padding-right: 2rem;
+    @include tablets {
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+  &__price {
+    font-size: 1.875rem;
+    font-family: "Gagalin";
+    color: rgb(227, 80, 40);
+    &-number {
+      font-size: 4.4820625rem;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    transform: translate(0, 50%);
+    top: 50%;
+  }
+  &__content {
+    display: flex;
+    margin: 0 2rem;
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__images {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    @include tablets {
+      width: auto;
+      flex-direction: column;
+    }
+    @include phones {
+      width: 100%;
+    }
+  }
+  &__main-img {
+    @include tablets {
+      max-width: 28.125rem;
+    }
+    @include phones {
+      max-width: 22.5rem;
+    }
+  }
+  &__text {
+    width: 50%;
+    @include tablets {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__order {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+.off-images {
+  display: flex;
+  flex-direction: column;
+  margin-right: -5.625rem;
+  height: 121%;
+  justify-content: space-between;
+  @include tablets {
+    flex-direction: row;
+    height: auto;
+    margin-right: 0;
+    width: 105%;
+    margin-bottom: -1rem;
+  }
+  @include phones {
+    margin-bottom: 1rem;
+    width: 117%;
+  }
+}
+.order--burgers {
+  margin: 0 0 0 2rem;
+}
+.composition {
+  &__list {
+    display: none;
+  }
+}
+.arrow--left {
+  left: 0;
+  transform: rotate(90deg);
+}
+.arrow--right {
+  right: 0;
+  transform: rotate(-90deg);
+}

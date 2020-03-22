@@ -977,6 +977,12 @@
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#F9B43B" d="M46.789,68.676c-0.311,0.742-0.55,1.313-0.804,1.918
 		c1.103,0.145,0.923-0.884,1.259-1.406C47.28,69.132,46.932,68.833,46.789,68.676z"/>
 </symbol>
+  <symbol id="hamburger" width="24" height="22" viewBox="0 0 24 22">
+  <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" d="M715,35h20a2,2,0,0,1,0,4H715A2,2,0,0,1,715,35Zm0,9h20a2,2,0,1,1,0,4H715A2,2,0,1,1,715,44Zm0,9h20a2,2,0,0,1,0,4H715A2,2,0,0,1,715,53Z" transform="translate(-713 -35)"/>
+</symbol>
+  <symbol id="closemenu" width="18.156" height="18.12" viewBox="0 0 18.156 18.12">
+  <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" d="M449.485,3233.34l-14.142,14.14a2,2,0,0,1-2.828-2.82l14.142-14.15A2,2,0,1,1,449.485,3233.34Zm-14.142-2.83,14.142,14.15a2,2,0,0,1-2.828,2.82l-14.142-14.14A2,2,0,1,1,435.343,3230.51Z" transform="translate(-431.938 -3229.94)"/>
+</symbol>
 <symbol id="arrow-scroll" width="28.685px" height="14.479px" viewBox="0 0 28.685 14.479" enable-background="new 0 0 28.685 14.479">
 		<path fill="#FFFFFF" d="M14.332,14.479c-1.279,0-2.554-0.486-3.525-1.458L0.268,1.681c-0.376-0.404-0.353-1.037,0.052-1.413
 			c0.403-0.374,1.036-0.354,1.413,0.052l10.514,11.314c1.145,1.143,3.049,1.142,4.218-0.026L26.952,0.319
