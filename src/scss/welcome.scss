@@ -123,14 +123,6 @@ header {
   }
 
   &__list {
-    &--active {
-      visibility: visible;
-      opacity: 1;
-      .nav__item {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
     display: flex;
     margin-top: 2.4375rem;
     flex-wrap: wrap;
@@ -149,6 +141,14 @@ header {
       background: #313436;
       margin: 0;
       flex-direction: column;
+    }
+    &--active {
+      visibility: visible;
+      opacity: 1;
+      .nav__item {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   }
 
@@ -233,10 +233,10 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   &-close {
-    background: url(./images/closemenu.svg);
+    background-image: url(./images/closemenu.svg);
     display: none;
   }
   &-menu {
-    background: url(./images/hamburgermenu.svg);
+    background-image: url(./images/hamburgermenu.svg);
   }
 }

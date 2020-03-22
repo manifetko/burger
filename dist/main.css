@@ -235,17 +235,6 @@ header {
   transition: all 0.3s;
 }
 
-.nav__list--active {
-  visibility: visible;
-  opacity: 1;
-}
-
-.nav__list--active .nav__item {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
-}
-
 @media screen and (max-width: 768px) {
   .nav__list {
     visibility: hidden;
@@ -267,6 +256,17 @@ header {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.nav__list--active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav__list--active .nav__item {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .nav__link {
@@ -359,12 +359,12 @@ header {
 }
 
 .icon-close {
-  background: url(./images/closemenu.svg);
+  background-image: url(./images/closemenu.svg);
   display: none;
 }
 
 .icon-menu {
-  background: url(./images/hamburgermenu.svg);
+  background-image: url(./images/hamburgermenu.svg);
 }
 
 .about {
