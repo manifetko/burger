@@ -214,6 +214,7 @@ header {
   z-index: 3;
   cursor: pointer;
   display: none;
+  height: 22px;
   &--active {
     .icon-menu {
       display: none;
