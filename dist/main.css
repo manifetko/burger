@@ -544,7 +544,7 @@ header {
 
 @media screen and (max-width: 480px) {
   .burgers__discription {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 }
 
@@ -563,6 +563,15 @@ header {
   -webkit-transform: translate(0, 50%);
           transform: translate(0, 50%);
   top: 50%;
+}
+
+.burgers__composition {
+  background: #f08c33;
+  border-radius: 6px;
+  width: 5.625rem;
+  height: 5.625rem;
+  cursor: pointer;
+  position: relative;
 }
 
 .burgers__content {
@@ -651,6 +660,12 @@ header {
           align-items: flex-end;
 }
 
+.burgers__weight {
+  width: 3.75rem;
+  height: 3.75rem;
+  position: relative;
+}
+
 .off-images {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -661,6 +676,7 @@ header {
           flex-direction: column;
   margin-right: -5.625rem;
   height: 121%;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -690,10 +706,6 @@ header {
   margin: 0 0 0 2rem;
 }
 
-.composition__list {
-  display: none;
-}
-
 .arrow--left {
   left: 0;
   -webkit-transform: rotate(90deg);
@@ -704,6 +716,121 @@ header {
   right: 0;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+.composition__heading {
+  position: absolute;
+  left: 50%;
+  bottom: 0.8125rem;
+  font-size: 0.875rem;
+  font-family: "Gagalin";
+  color: white;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.burger-icon {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  top: 0.9375rem;
+}
+
+.weight__heading {
+  font-size: 1.25rem;
+  font-family: "Gagalin";
+  color: rgba(255, 255, 255, 0.502);
+  position: absolute;
+  top: 39%;
+  line-height: 2rem;
+  left: 23%;
+}
+
+.composition__list {
+  padding: 1.125rem 1.5625rem 0 1.125rem;
+}
+
+@media screen and (max-width: 480px) {
+  .composition__list {
+    max-width: 73%;
+  }
+}
+
+.composition__item {
+  font-size: 0.875rem;
+  font-family: "Ubuntu";
+  color: #2f3234;
+  margin-bottom: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  white-space: nowrap;
+}
+
+.composition__name {
+  margin-right: 4rem;
+}
+
+@media screen and (max-width: 480px) {
+  .composition__name {
+    margin-right: 0;
+  }
+}
+
+.composition-icon {
+  margin-right: 1.5rem;
+  min-width: 3rem;
+}
+
+@media screen and (max-width: 480px) {
+  .composition-icon {
+    margin-right: 0;
+  }
+}
+
+.composition__window {
+  display: none;
+  background: #fff;
+  opacity: 0.95;
+  position: absolute;
+  left: 5.625rem;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+@media screen and (max-width: 480px) {
+  .composition__window {
+    width: 80%;
+  }
+}
+
+.composition--active .burgers__composition {
+  background: #e35028;
+}
+
+.composition--active .composition__window {
+  display: block;
+}
+
+.composition-close {
+  display: none;
+  position: absolute;
+  top: 1.25rem;
+  right: 5%;
+  fill: #eb8262;
+}
+
+@media screen and (max-width: 480px) {
+  .composition-close {
+    display: block;
+  }
 }
 
 .comments {

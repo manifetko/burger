@@ -29,7 +29,7 @@
       padding-right: 0;
       text-align: center;
     }
-    @include phones{
+    @include phones {
       margin-bottom: 0;
     }
   }
@@ -45,6 +45,14 @@
     position: absolute;
     transform: translate(0, 50%);
     top: 50%;
+  }
+  &__composition {
+    background: #f08c33;
+    border-radius: 6px;
+    width: 5.625rem;
+    height: 5.625rem;
+    cursor: pointer;
+    position: relative;
   }
   &__content {
     display: flex;
@@ -87,12 +95,18 @@
     display: flex;
     align-items: flex-end;
   }
+  &__weight {
+    width: 3.75rem;
+    height: 3.75rem;
+    position: relative;
+  }
 }
 .off-images {
   display: flex;
   flex-direction: column;
   margin-right: -5.625rem;
   height: 121%;
+  position: relative;
   justify-content: space-between;
   @include tablets {
     flex-direction: row;
@@ -109,11 +123,6 @@
 .order--burgers {
   margin: 0 0 0 2rem;
 }
-.composition {
-  &__list {
-    display: none;
-  }
-}
 .arrow--left {
   left: 0;
   transform: rotate(90deg);
@@ -121,4 +130,87 @@
 .arrow--right {
   right: 0;
   transform: rotate(-90deg);
+}
+.composition__heading {
+  position: absolute;
+  left: 50%;
+  bottom: 0.8125rem;
+  font-size: 0.875rem;
+  font-family: "Gagalin";
+  color: rgb(255, 255, 255);
+  transform: translate(-50%, 0);
+}
+.burger-icon {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 0.9375rem;
+}
+.weight__heading {
+  font-size: 1.25rem;
+  font-family: "Gagalin";
+  color: rgba(255, 255, 255, 0.502);
+  position: absolute;
+  top: 39%;
+  line-height: 2rem;
+  left: 23%;
+}
+.composition__list {
+  padding: 1.125rem 1.5625rem 0 1.125rem;
+  @include phones {
+    max-width: 73%;
+  }
+}
+.composition__item {
+  font-size: 0.875rem;
+  font-family: "Ubuntu";
+  color: rgb(47, 50, 52);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+.composition__name {
+  margin-right: 4rem;
+  @include phones{
+    margin-right: 0; 
+  }
+}
+.composition-icon {
+  margin-right: 1.5rem;
+  min-width: 3rem;
+  @include phones{
+    margin-right: 0; 
+  }
+}
+.composition__window {
+  display: none;
+  background: #fff;
+  opacity: 0.95;
+  position: absolute;
+  left: 5.625rem;
+  border-radius: 6px;
+  z-index: 10;
+  @include phones{
+    width: 80%;
+  }
+}
+.composition--active {
+  & .burgers__composition {
+    background: #e35028;
+  }
+  & .composition__window {
+    display: block;
+  }
+}
+.composition-close {
+  display: none;
+  position: absolute;
+  top: 1.25rem;
+  right: 5%;
+  fill: #eb8262;
+  @include phones{
+    display: block;
+  }
 }
