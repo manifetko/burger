@@ -21,23 +21,42 @@
     bottom: 0;
     display: flex;
     justify-content: flex-end;
-    width: 71%;
+    width: 22%;
+    transition: width 1s;
     @include phones {
-      width: 100%;
+      width: 50%;
+    }
+    &--active {
+      .menu__item {
+        width: 10.5%;
+        @include phones {
+          width: 16%;
+        }
+      }
+      width: 71%;
+      @include phones {
+        width: 100%;
+      }
+      & .menu__item--active {
+        width: 79%;
+        @include phones {
+          width: 68%;
+        }
+      }
     }
   }
   &__close {
-    margin-right: 1rem;
     cursor: pointer;
+    display: none;
+    justify-content: flex-end;
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    @include phones {
+      display: block;
+    }
     &-icon {
-      display: none;
-      justify-content: flex-end;
-      position: absolute;
-      right: 0;
-      top: 2%;
-      @include phones {
-        display: flex;
-      }
+      fill: #c1c2c2;
     }
   }
   &__tag {
@@ -68,7 +87,6 @@
     @include phones {
       padding-right: 2rem;
       font-size: 0.7rem;
-      width: 125%;
       left: 24%;
     }
   }
@@ -76,6 +94,36 @@
     width: 33%;
     display: flex;
     position: relative;
+    transition: width 1s;
+    &:nth-child(1) .menu__discription {
+      @include phones {
+        width: 125%;
+      }
+    }
+    &:nth-child(2) .menu__discription {
+      @include phones {
+        width: 100%;
+      }
+    }
+    &:nth-child(3) .menu__discription {
+      @include phones {
+        width: 76%;
+      }
+    }
+    &--active {
+      .menu__name {
+        width: 14%;
+        @include phones {
+          width: 24%;
+        }
+      }
+      .menu__discription {
+        display: block;
+        @include tablets {
+          padding: 1.875rem 1rem 0 1rem;
+        }
+      }
+    }
   }
   &__name {
     &::before {
@@ -107,28 +155,3 @@
     background: url(./images/menuitem3.png) 100%;
   }
 }
-.active--menu {
-  ~ .menu__item {
-    width: 10.5%;
-    @include phones {
-      width: 16%;
-    }
-  }
-  .menu__name {
-    width: 14%;
-    @include phones {
-      width: 24%;
-    }
-  }
-  .menu__discription {
-    display: block;
-    @include tablets {
-      padding: 1.875rem 1rem 0 1rem;
-    }
-  }
-  width: 79%;
-  @include phones {
-    width: 68%;
-  }
-}
-
