@@ -1234,6 +1234,19 @@ header {
   }
 }
 
+.team__item--active .team__member {
+  max-height: 18.75rem;
+}
+
+.team__item--active .team__name {
+  color: #f9b43b;
+}
+
+.team__item--active .team__name::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .team__item:hover .team__name {
   color: #f9b43b;
 }
@@ -1267,6 +1280,8 @@ header {
   border-left: 0.3125rem solid transparent;
   margin-right: 0.625rem;
   margin-top: 0.1875rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .team__profession {
@@ -1309,8 +1324,10 @@ header {
   display: -ms-flexbox;
   display: flex;
   margin-top: 1.25rem;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media screen and (max-width: 768px) {
@@ -1347,19 +1364,6 @@ header {
   top: 50%;
   left: 50%;
   max-width: none;
-}
-
-.active--team .team__member {
-  height: 100%;
-}
-
-.active--team .team__name {
-  color: #f9b43b;
-}
-
-.active--team .team__name::before {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 .contacts {
