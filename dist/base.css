@@ -1,0 +1,155 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.wrapper {
+  min-width: 0px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+.overlay {
+  z-index: 200;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.95;
+  bottom: 0;
+  height: 100%;
+  background-color: #3f4244;
+}
+
+.overlay__heading {
+  font-size: 0.875rem;
+  font-family: "Gagalin";
+  color: #2f3234;
+  text-align: left;
+  margin-bottom: 1.875rem;
+}
+
+.overlay__window {
+  z-index: 250;
+  border-radius: 0.3125rem;
+  background-color: #fff;
+  padding: 1.25rem 0.75rem;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.overlay__content {
+  font-size: 0.875rem;
+  font-family: "Ubuntu";
+  margin-bottom: 1.25rem;
+  color: #2f3234;
+}
+
+.form__overlay-window {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__overlay-link {
+  font-size: 0.8125rem;
+  font-family: "Ubuntu";
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.625rem 1rem;
+  text-align: center;
+  background-color: #c1401e;
+  width: 6rem;
+  height: 2.25rem;
+  border-radius: 0.4375rem;
+}
+
+.comments__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.comments__close-icon {
+  fill: #EC8468;
+}

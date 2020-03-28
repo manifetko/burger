@@ -11,19 +11,23 @@ hamburger.addEventListener('click', (e) => {
   }
 })
 // for hamburger
-const composition = document.querySelector('.off-images');
-const burgers__composition = document.querySelector('.burgers__composition');
+const composition = document.querySelectorAll('.off-images');
+const burgers__composition = document.querySelectorAll('.burgers__composition');
 const composition_close = document.querySelector('.composition-close');
-burgers__composition.addEventListener('click', (e) => {
-  if (composition.classList.contains('composition--active')) {
+burgers__composition.forEach(active_all => {
+  active_all.addEventListener('click', (e) => {
+    composition.forEach(e => {
+      if (e.classList.contains('composition--active')) {
+        e.classList.remove('composition--active');
+      } else {
+        e.classList.add('composition--active');
+      }
+    });
+  });
+  composition_close.addEventListener('click', (e) => {
     composition.classList.remove('composition--active');
-  } else {
-    composition.classList.add('composition--active');
-  }
-})
-composition_close.addEventListener('click', (e) => {
-  composition.classList.remove('composition--active');
-})
+  });
+});
 // for composition
 const menu__items = document.querySelectorAll('.menu__item');
 const menu__accordeon = document.querySelector('.menu__accordeon');
@@ -63,3 +67,71 @@ team__items.forEach(active_all => {
     }
   });
 });
+// for team accordeon 
+const right = document.querySelector('.arrow--right');
+const left = document.querySelector('.arrow--left');
+const burgers__list = document.querySelector('.burgers__list');
+right.addEventListener("click", function (e) {
+  loop("right", e);
+});
+left.addEventListener("click", function (e) {
+  loop("left", e);
+});
+function loop(direction, e) {
+  e.preventDefault();
+  if (direction === "right") {
+    burgers__list.appendChild(burgers__list.firstElementChild);
+  } else {
+    burgers__list.insertBefore(burgers__list.lastElementChild, burgers__list.firstElementChild);
+  }
+}
+// for slider
+const form = document.querySelector('.form');
+const sendButton = document.querySelector('.form__submit');
+sendButton.addEventListener('click', formEvent => {
+  event.preventDefault();
+  console.log(form.elements.pay.value);
+  if (validateForm(form)) {
+    const data = FormData();
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(JSON.stringify(data));
+    xhr.addEventListener('load', () => {
+      console.log(xhr.response);
+    });
+  }
+});
+function validateForm(myform) {
+  let valid = true;
+  if (!validateField(form.elements.name)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.phone)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.street)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.house)) {
+    valid = false;
+  }
+  return valid;
+}
+function validateField(field) {
+  return field.checkValidity();
+}
+// for form
+var comment = document.querySelectorAll('.comments__button');
+console.log(comment);
+comment.forEach(open => {
+  open.addEventListener('click', () => {
+    console.log(comment);
+  });
+});
+// function createOverlay() {
+//   const overlayElement = document.createElement('div');
+//   overlayElement.classList.add('overlay');
+//   document.body.appendChild(overlayElement);
+//   const template = document.querySelector('#overlayTemplate');
+//   overlayElement.innerHTML = template.innerHTML;
+// }

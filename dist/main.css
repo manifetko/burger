@@ -548,6 +548,13 @@ header {
   }
 }
 
+.burgers__content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 .burgers__price {
   font-size: 1.875rem;
   font-family: "Gagalin";
@@ -574,23 +581,17 @@ header {
   position: relative;
 }
 
-.burgers__content {
+.burgers__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 2rem;
-}
-
-@media screen and (max-width: 768px) {
-  .burgers__content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .burgers__images {
@@ -601,6 +602,9 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -619,15 +623,13 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .burgers__main-img {
-    max-width: 28.125rem;
-  }
+.burgers__main-img {
+  max-height: 18rem;
 }
 
 @media screen and (max-width: 480px) {
   .burgers__main-img {
-    max-width: 22.5rem;
+    max-height: 17rem;
   }
 }
 
@@ -666,6 +668,30 @@ header {
   position: relative;
 }
 
+.burgers__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .burgers__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .off-images {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,7 +724,8 @@ header {
 @media screen and (max-width: 480px) {
   .off-images {
     margin-bottom: 1rem;
-    width: 117%;
+    width: 100%;
+    max-height: 5.625rem;
   }
 }
 
@@ -707,13 +734,13 @@ header {
 }
 
 .arrow--left {
-  left: 0;
+  left: -3%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
 .arrow--right {
-  right: 0;
+  right: -3%;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
@@ -744,7 +771,8 @@ header {
   position: absolute;
   top: 39%;
   line-height: 2rem;
-  left: 23%;
+  left: 6%;
+  text-align: center;
 }
 
 .composition__list {
@@ -942,6 +970,83 @@ header {
   .comments__button {
     margin-top: 1.875rem;
   }
+}
+
+.overlay {
+  z-index: 200;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.95;
+  bottom: 0;
+  height: 100%;
+  background-color: #3f4244;
+}
+
+.overlay__heading {
+  font-size: 0.875rem;
+  font-family: "Gagalin";
+  color: #2f3234;
+  text-align: left;
+  margin-bottom: 1.875rem;
+}
+
+.overlay__window {
+  border-radius: 0.3125rem;
+  background-color: #fff;
+  padding: 1.25rem 0.75rem;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.overlay__content {
+  font-size: 0.875rem;
+  font-family: "Ubuntu";
+  margin-bottom: 1.25rem;
+  color: #2f3234;
+}
+
+.form__overlay-window {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__overlay-link {
+  font-size: 0.8125rem;
+  font-family: "Ubuntu";
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.625rem 1rem;
+  text-align: center;
+  background-color: #c1401e;
+  width: 6rem;
+  height: 2.25rem;
+  border-radius: 0.4375rem;
+}
+
+.comments__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.comments__close-icon {
+  fill: #EC8468;
 }
 
 .menu {
@@ -2078,6 +2183,10 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+p {
+  margin: 0;
 }
 
 img {
