@@ -98,7 +98,7 @@ html {
 }
 
 .overlay__window {
-  z-index: 250;
+  max-width: 29.6rem;
   border-radius: 0.3125rem;
   background-color: #fff;
   padding: 1.25rem 0.75rem;
@@ -115,6 +115,10 @@ html {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.overlay-link {
+  cursor: pointer;
 }
 
 .overlay__content {

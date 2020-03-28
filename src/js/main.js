@@ -70,21 +70,78 @@ team__items.forEach(active_all => {
 // for team accordeon 
 const right = document.querySelector('.arrow--right');
 const left = document.querySelector('.arrow--left');
-const burgers__list = document.querySelector('.burgers__list');
-right.addEventListener("click", function (e) {
-  loop("right", e);
+const burgersList = document.querySelector('.burgers__list');
+const burgersItems = document.querySelectorAll(".burgers__item");
+const itemsArr = Array.from(burgersItems);
+const itemsLength = burgersItems.length;
+const slidesToShow = 1;
+const step = 100;
+const initialX = slidesToShow * step * -1;
+let currentIndex = 0;
+
+burgersList.classList.add('burgers__list--notransition');
+burgersList.style.transform = `translate(${initialX}%, -50%)`;
+burgersList.offsetHeight; // trigger reflow
+burgersList.classList.remove('burgers__list--notransition');
+
+right.addEventListener("click", function () {
+  moveSlides('right');
 });
-left.addEventListener("click", function (e) {
-  loop("left", e);
+
+left.addEventListener("click", function () {
+  moveSlides('left');
 });
-function loop(direction, e) {
-  e.preventDefault();
-  if (direction === "right") {
-    burgers__list.appendChild(burgers__list.firstElementChild);
+
+for (let i = 0; i < slidesToShow; i++) {
+  const cloneForEnd = burgersItems[i].cloneNode(true);
+  cloneForEnd.classList.add('item--clone');
+  burgersList.append(cloneForEnd);
+
+  const cloneForStart = burgersItems[itemsLength - (i + 1)].cloneNode(true);
+  cloneForStart.classList.add('item--clone');
+  burgersList.prepend(cloneForStart);
+}
+
+function moveSlides(direction) {
+  if (direction === 'right') {
+    --currentIndex;
   } else {
-    burgers__list.insertBefore(burgers__list.lastElementChild, burgers__list.firstElementChild);
+    ++currentIndex;
+  }
+
+  burgersList.style.transform = `translate(${initialX + (currentIndex * step)}%, -50%)`;
+  console.log(currentIndex);
+  if (currentIndex === (0 - itemsLength)) {
+    currentIndex = 0;
+    setTimeout(() => {
+      reset();
+    }, 310);
+  }
+
+  if (currentIndex === slidesToShow) {
+    currentIndex = (itemsLength - slidesToShow) * -1;
+    setTimeout(() => {
+      reset();
+    }, 310);
   }
 }
+
+function reset() {
+  burgersList.classList.add('burgers__list--notransition');
+  burgersList.style.transform = `translate(${initialX + (currentIndex * step)}%, -50%)`;
+  burgersList.offsetHeight; // trigger reflow
+  burgersList.classList.remove('burgers__list--notransition');
+}
+function autoPlay(direction) {
+  function play() {
+    setTimeout(() => {
+      moveSlides(direction);
+      play();
+    }, 3000);
+  }
+  play();
+}
+autoPlay('left');
 // for slider
 const form = document.querySelector('.form');
 const sendButton = document.querySelector('.form__submit');
@@ -120,18 +177,52 @@ function validateForm(myform) {
 function validateField(field) {
   return field.checkValidity();
 }
+// createOverlay();
+// const overlayText = document.querySelector('.overlay__text');
+// const overlayLink = document.querySelector('.overlay-link');
+// const overlayWindow = document.querySelector('.overlay__window');
+// overlayLink.classList.add('form__overlay-link');
+// overlayWindow.classList.add('form__overlay-window');
+// overlayLink.innerHTML = 'Закрыть';
+// overlayText.innerHTML = 'Сообщение отправлено';
+// overlayText.style.margin = '0';
+// var overlayElement = document.querySelector('.overlay');
+// overlayLink.addEventListener('click', () => {
+//   document.body.removeChild(overlayElement);
+// });
+// overlayElement.addEventListener('click', (e) => {
+//   if (e.target === overlayElement) {
+//     overlayLink.click();
+//   }
+// });
 // for form
-var comment = document.querySelectorAll('.comments__button');
-console.log(comment);
-comment.forEach(open => {
+const openComment = document.querySelectorAll('.comments__button');
+function createOverlay() {
+  var overlayElement = document.createElement('div');
+  overlayElement.classList.add('overlay');
+  document.body.appendChild(overlayElement);
+  const template = document.querySelector('#overlayTemplate');
+  overlayElement.innerHTML = template.innerHTML;
+}
+openComment.forEach(open => {
   open.addEventListener('click', () => {
-    console.log(comment);
+    createOverlay();
+    const overlayHeading = document.querySelector('.overlay__heading');
+    const overlayText = document.querySelector('.overlay__text');
+    const overlayLink = document.querySelector('.overlay-link');
+    overlayLink.classList.add('comments__close')
+    overlayHeading.innerHTML = 'Константин Спилберг';
+    overlayText.innerHTML = 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.';
+    var overlayElement = document.querySelector('.overlay');
+    overlayLink.addEventListener('click', () => {
+      document.body.removeChild(overlayElement);
+    });
+    overlayElement.addEventListener('click', (e) => {
+      if (e.target === overlayElement) {
+        overlayLink.click();
+      }
+    });
   });
 });
-// function createOverlay() {
-//   const overlayElement = document.createElement('div');
-//   overlayElement.classList.add('overlay');
-//   document.body.appendChild(overlayElement);
-//   const template = document.querySelector('#overlayTemplate');
-//   overlayElement.innerHTML = template.innerHTML;
-// }
+// for overlay
+

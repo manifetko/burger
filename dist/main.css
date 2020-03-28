@@ -588,10 +588,20 @@ header {
   width: 100%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(0%, -50%);
-          transform: translate(0%, -50%);
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  will-change: transform;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.burgers__list--notransition {
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 
 .burgers__images {
@@ -970,83 +980,6 @@ header {
   .comments__button {
     margin-top: 1.875rem;
   }
-}
-
-.overlay {
-  z-index: 200;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  opacity: 0.95;
-  bottom: 0;
-  height: 100%;
-  background-color: #3f4244;
-}
-
-.overlay__heading {
-  font-size: 0.875rem;
-  font-family: "Gagalin";
-  color: #2f3234;
-  text-align: left;
-  margin-bottom: 1.875rem;
-}
-
-.overlay__window {
-  border-radius: 0.3125rem;
-  background-color: #fff;
-  padding: 1.25rem 0.75rem;
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: left;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.overlay__content {
-  font-size: 0.875rem;
-  font-family: "Ubuntu";
-  margin-bottom: 1.25rem;
-  color: #2f3234;
-}
-
-.form__overlay-window {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.form__overlay-link {
-  font-size: 0.8125rem;
-  font-family: "Ubuntu";
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0.625rem 1rem;
-  text-align: center;
-  background-color: #c1401e;
-  width: 6rem;
-  height: 2.25rem;
-  border-radius: 0.4375rem;
-}
-
-.comments__close {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-}
-
-.comments__close-icon {
-  fill: #EC8468;
 }
 
 .menu {
@@ -2211,4 +2144,89 @@ img {
 
 html {
   font-size: 16px;
+}
+
+.overlay {
+  z-index: 200;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0.95;
+  bottom: 0;
+  height: 100%;
+  background-color: #3f4244;
+}
+
+.overlay__heading {
+  font-size: 0.875rem;
+  font-family: "Gagalin";
+  color: #2f3234;
+  text-align: left;
+}
+
+.overlay__text {
+  margin-top: 1.875rem;
+}
+
+.overlay__window {
+  max-width: 29.6rem;
+  border-radius: 0.3125rem;
+  background-color: #fff;
+  padding: 1.25rem 0.75rem;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.overlay-link {
+  cursor: pointer;
+}
+
+.overlay__content {
+  font-size: 0.875rem;
+  font-family: "Ubuntu";
+  margin-bottom: 1.25rem;
+  color: #2f3234;
+}
+
+.form__overlay-window {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form__overlay-link {
+  font-size: 0.8125rem;
+  font-family: "Ubuntu";
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.625rem 1rem;
+  text-align: center;
+  background-color: #c1401e;
+  width: 6rem;
+  height: 2.25rem;
+  border-radius: 0.4375rem;
+}
+
+.comments__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.comments__close-icon {
+  fill: #EC8468;
 }

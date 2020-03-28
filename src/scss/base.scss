@@ -71,9 +71,12 @@ html {
     font-family: "Gagalin";
     color: rgb(47, 50, 52);
     text-align: left;
-    margin-bottom: 1.875rem;
+  }
+  &__text{
+    margin-top: 1.875rem;
   }
   &__window {
+    max-width: 29.6rem;
     border-radius: 0.3125rem;
     background-color: #fff;
     padding: 1.25rem 0.75rem;
@@ -84,6 +87,9 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  &-link{
+    cursor: pointer;
   }
   &__content {
     font-size: 0.875rem;
