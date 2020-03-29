@@ -2230,6 +2230,11 @@ html {
   border-radius: 0.4375rem;
 }
 
+.form__overlay-text {
+  text-align: center;
+  margin: 0;
+}
+
 .comments__close {
   position: absolute;
   top: 1.25rem;

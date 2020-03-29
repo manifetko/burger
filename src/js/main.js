@@ -154,7 +154,7 @@ sendButton.addEventListener('click', formEvent => {
         overlayWindow.classList.add('form__overlay-window');
         overlayLink.innerHTML = 'Закрыть';
         overlayText.innerHTML = 'Сообщение отправлено';
-        overlayText.style.margin = '0';
+        overlayText.classList.add('form__overlay-text');
         var overlayElement = document.querySelector('.overlay');
         overlayLink.addEventListener('click', () => {
           document.body.removeChild(overlayElement);
@@ -174,7 +174,7 @@ sendButton.addEventListener('click', formEvent => {
         overlayWindow.classList.add('form__overlay-window');
         overlayLink.innerHTML = 'Закрыть';
         overlayText.innerHTML = 'Ошибка';
-        overlayText.style.margin = '0';
+        overlayText.classList.add('form__overlay-text');
         var overlayElement = document.querySelector('.overlay');
         overlayLink.addEventListener('click', () => {
           document.body.removeChild(overlayElement);
@@ -195,7 +195,7 @@ sendButton.addEventListener('click', formEvent => {
     overlayWindow.classList.add('form__overlay-window');
     overlayLink.innerHTML = 'Закрыть';
     overlayText.innerHTML = 'Заполните все поля корректно';
-    overlayText.style.margin = '0';
+    overlayText.classList.add('form__overlay-text');
     var overlayElement = document.querySelector('.overlay');
     overlayLink.addEventListener('click', () => {
       document.body.removeChild(overlayElement);
