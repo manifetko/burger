@@ -141,6 +141,7 @@ sendButton.addEventListener('click', formEvent => {
     formData.append('name', form.elements.name.value);
     formData.append('phone', form.elements.phone.value);
     formData.append('comment', form.elements.comment.value);
+    formData.append('to', 'mail@mail.ru');
     xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(JSON.stringify(formData));
