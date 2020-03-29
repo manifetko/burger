@@ -145,7 +145,7 @@ sendButton.addEventListener('click', formEvent => {
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(JSON.stringify(formData));
     xhr.addEventListener('load', () => {
-      if(xhr.response.status){
+      if(xhr.status){
         createOverlay();
         const overlayText = document.querySelector('.overlay__text');
         const overlayLink = document.querySelector('.overlay-link');
