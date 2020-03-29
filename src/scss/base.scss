@@ -76,6 +76,9 @@ html {
     margin-top: 1.875rem;
   }
   &__window {
+    @include phones {
+      width: 95%;
+    }
     max-width: 29.6rem;
     border-radius: 0.3125rem;
     background-color: #fff;
@@ -110,6 +113,9 @@ html {
 }
 .form__overlay-window {
   align-items: center;
+  @include phones{
+    width: auto;
+  }
 }
 .form__overlay-link {
   font-size: 0.8125rem;

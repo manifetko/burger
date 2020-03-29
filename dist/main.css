@@ -588,8 +588,6 @@ header {
   width: 100%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
   will-change: transform;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
@@ -726,15 +724,14 @@ header {
             flex-direction: row;
     height: auto;
     margin-right: 0;
-    width: 105%;
+    width: 100%;
     margin-bottom: -1rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .off-images {
-    margin-bottom: 1rem;
-    width: 100%;
+    margin-bottom: 0.5rem;
     max-height: 5.625rem;
   }
 }
@@ -2190,6 +2187,12 @@ html {
           transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 480px) {
+  .overlay__window {
+    width: 95%;
+  }
+}
+
 .overlay-link {
   cursor: pointer;
 }
@@ -2205,6 +2208,12 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .form__overlay-window {
+    width: auto;
+  }
 }
 
 .form__overlay-link {

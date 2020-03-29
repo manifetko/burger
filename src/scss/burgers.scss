@@ -65,6 +65,7 @@
     width: 100%;
     position: absolute;
     top: 50%;
+
     will-change: transform;
     transition-duration: 0.3s;
     transition-property: transform;
@@ -130,12 +131,11 @@
     flex-direction: row;
     height: auto;
     margin-right: 0;
-    width: 105%;
+    width: 100%;
     margin-bottom: -1rem;
   }
   @include phones {
-    margin-bottom: 1rem;
-    width: 100%;
+    margin-bottom: 0.5rem;
     max-height: 5.625rem;
   }
 }

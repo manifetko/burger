@@ -94,11 +94,9 @@ left.addEventListener("click", function () {
 
 for (let i = 0; i < slidesToShow; i++) {
   const cloneForEnd = burgersItems[i].cloneNode(true);
-  cloneForEnd.classList.add('item--clone');
   burgersList.append(cloneForEnd);
 
   const cloneForStart = burgersItems[itemsLength - (i + 1)].cloneNode(true);
-  cloneForStart.classList.add('item--clone');
   burgersList.prepend(cloneForStart);
 }
 
@@ -132,29 +130,80 @@ function reset() {
   burgersList.offsetHeight; // trigger reflow
   burgersList.classList.remove('burgers__list--notransition');
 }
-function autoPlay(direction) {
-  function play() {
-    setTimeout(() => {
-      moveSlides(direction);
-      play();
-    }, 3000);
-  }
-  play();
-}
-autoPlay('left');
 // for slider
 const form = document.querySelector('.form');
 const sendButton = document.querySelector('.form__submit');
 sendButton.addEventListener('click', formEvent => {
-  event.preventDefault();
-  console.log(form.elements.pay.value);
+  formEvent.preventDefault();
   if (validateForm(form)) {
-    const data = FormData();
     const xhr = new XMLHttpRequest();
+    const formData = new FormData();
+    formData.append('name', form.elements.name.value);
+    formData.append('phone', form.elements.phone.value);
+    formData.append('comment', form.elements.comment.value);
+    xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-    xhr.send(JSON.stringify(data));
+    xhr.send(JSON.stringify(formData));
     xhr.addEventListener('load', () => {
-      console.log(xhr.response);
+      if(xhr.response.status){
+        createOverlay();
+        const overlayText = document.querySelector('.overlay__text');
+        const overlayLink = document.querySelector('.overlay-link');
+        const overlayWindow = document.querySelector('.overlay__window');
+        overlayLink.classList.add('form__overlay-link');
+        overlayWindow.classList.add('form__overlay-window');
+        overlayLink.innerHTML = 'Закрыть';
+        overlayText.innerHTML = 'Сообщение отправлено';
+        overlayText.style.margin = '0';
+        var overlayElement = document.querySelector('.overlay');
+        overlayLink.addEventListener('click', () => {
+          document.body.removeChild(overlayElement);
+        });
+        overlayElement.addEventListener('click', (e) => {
+          if (e.target === overlayElement) {
+            overlayLink.click();
+          }
+        }); 
+      }
+      else{
+        createOverlay();
+        const overlayText = document.querySelector('.overlay__text');
+        const overlayLink = document.querySelector('.overlay-link');
+        const overlayWindow = document.querySelector('.overlay__window');
+        overlayLink.classList.add('form__overlay-link');
+        overlayWindow.classList.add('form__overlay-window');
+        overlayLink.innerHTML = 'Закрыть';
+        overlayText.innerHTML = 'Ошибка';
+        overlayText.style.margin = '0';
+        var overlayElement = document.querySelector('.overlay');
+        overlayLink.addEventListener('click', () => {
+          document.body.removeChild(overlayElement);
+        });
+        overlayElement.addEventListener('click', (e) => {
+          if (e.target === overlayElement) {
+            overlayLink.click();
+          }
+        });
+      }
+    });
+  } else {
+    createOverlay();
+    const overlayText = document.querySelector('.overlay__text');
+    const overlayLink = document.querySelector('.overlay-link');
+    const overlayWindow = document.querySelector('.overlay__window');
+    overlayLink.classList.add('form__overlay-link');
+    overlayWindow.classList.add('form__overlay-window');
+    overlayLink.innerHTML = 'Закрыть';
+    overlayText.innerHTML = 'Заполните все поля корректно';
+    overlayText.style.margin = '0';
+    var overlayElement = document.querySelector('.overlay');
+    overlayLink.addEventListener('click', () => {
+      document.body.removeChild(overlayElement);
+    });
+    overlayElement.addEventListener('click', (e) => {
+      if (e.target === overlayElement) {
+        overlayLink.click();
+      }
     });
   }
 });
@@ -166,10 +215,7 @@ function validateForm(myform) {
   if (!validateField(form.elements.phone)) {
     valid = false;
   }
-  if (!validateField(form.elements.street)) {
-    valid = false;
-  }
-  if (!validateField(form.elements.house)) {
+  if (!validateField(form.elements.comment)) {
     valid = false;
   }
   return valid;
@@ -177,40 +223,22 @@ function validateForm(myform) {
 function validateField(field) {
   return field.checkValidity();
 }
-// createOverlay();
-// const overlayText = document.querySelector('.overlay__text');
-// const overlayLink = document.querySelector('.overlay-link');
-// const overlayWindow = document.querySelector('.overlay__window');
-// overlayLink.classList.add('form__overlay-link');
-// overlayWindow.classList.add('form__overlay-window');
-// overlayLink.innerHTML = 'Закрыть';
-// overlayText.innerHTML = 'Сообщение отправлено';
-// overlayText.style.margin = '0';
-// var overlayElement = document.querySelector('.overlay');
-// overlayLink.addEventListener('click', () => {
-//   document.body.removeChild(overlayElement);
-// });
-// overlayElement.addEventListener('click', (e) => {
-//   if (e.target === overlayElement) {
-//     overlayLink.click();
-//   }
-// });
 // for form
 const openComment = document.querySelectorAll('.comments__button');
-function createOverlay() {
+function createOverlay(eventObject, event, link, window, heading, linkContent, message) {
   var overlayElement = document.createElement('div');
   overlayElement.classList.add('overlay');
   document.body.appendChild(overlayElement);
   const template = document.querySelector('#overlayTemplate');
   overlayElement.innerHTML = template.innerHTML;
-}
+};
 openComment.forEach(open => {
   open.addEventListener('click', () => {
     createOverlay();
     const overlayHeading = document.querySelector('.overlay__heading');
     const overlayText = document.querySelector('.overlay__text');
     const overlayLink = document.querySelector('.overlay-link');
-    overlayLink.classList.add('comments__close')
+    overlayLink.classList.add('comments__close');
     overlayHeading.innerHTML = 'Константин Спилберг';
     overlayText.innerHTML = 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.';
     var overlayElement = document.querySelector('.overlay');
