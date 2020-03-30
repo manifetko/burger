@@ -12,7 +12,6 @@ hamburger.addEventListener('click', (e) => {
 })
 // for hamburger
 const composition = document.querySelectorAll('.off-images');
-const burgers__composition = document.querySelectorAll('.burgers__composition');
 const composition__close = document.querySelectorAll('.composition-close');
 composition.forEach(all => {
   all.firstChild.addEventListener('click', () => {
@@ -71,7 +70,6 @@ function moveSlides(direction) {
   }
 
   burgersList.style.transform = `translate(${initialX + (currentIndex * step)}%, -50%)`;
-  console.log(currentIndex);
   if (currentIndex === (0 - itemsLength)) {
     currentIndex = 0;
     setTimeout(() => {
