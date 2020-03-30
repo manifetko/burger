@@ -33,7 +33,7 @@
       margin-bottom: 0;
     }
   }
-  &__content{
+  &__content {
     width: 100%;
     height: 100%;
     position: relative;
@@ -65,11 +65,11 @@
     width: 100%;
     position: absolute;
     top: 50%;
-
+    transform: translate(-100%, -50%);
     will-change: transform;
     transition-duration: 0.3s;
     transition-property: transform;
-    &--notransition{
+    &--notransition {
       transition: none !important;
     }
   }
@@ -110,7 +110,7 @@
     height: 3.75rem;
     position: relative;
   }
-  &__item{
+  &__item {
     display: flex;
     flex: 0 0 100%;
     @include tablets {
@@ -193,15 +193,15 @@
 }
 .composition__name {
   margin-right: 4rem;
-  @include phones{
-    margin-right: 0; 
+  @include phones {
+    margin-right: 0;
   }
 }
 .composition-icon {
   margin-right: 1.5rem;
   min-width: 3rem;
-  @include phones{
-    margin-right: 0; 
+  @include phones {
+    margin-right: 0;
   }
 }
 .composition__window {
@@ -212,7 +212,7 @@
   left: 5.625rem;
   border-radius: 6px;
   z-index: 10;
-  @include phones{
+  @include phones {
     width: 80%;
   }
 }
@@ -230,7 +230,14 @@
   top: 1.25rem;
   right: 5%;
   fill: #eb8262;
-  @include phones{
+  @include phones {
     display: block;
   }
+}
+.btn {
+  font-size: 0.8125rem;
+  font-family: "Ubuntu";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
 }

@@ -13,61 +13,24 @@ hamburger.addEventListener('click', (e) => {
 // for hamburger
 const composition = document.querySelectorAll('.off-images');
 const burgers__composition = document.querySelectorAll('.burgers__composition');
-const composition_close = document.querySelector('.composition-close');
-burgers__composition.forEach(active_all => {
-  active_all.addEventListener('click', (e) => {
-    composition.forEach(e => {
-      if (e.classList.contains('composition--active')) {
-        e.classList.remove('composition--active');
-      } else {
-        e.classList.add('composition--active');
-      }
-    });
+const composition__close = document.querySelectorAll('.composition-close');
+composition.forEach(all => {
+  all.firstChild.addEventListener('click', () => {
+    if (all.classList.contains('composition--active')) {
+      all.classList.remove('composition--active');
+    } else {
+      all.classList.add('composition--active');
+    }
   });
-  composition_close.addEventListener('click', (e) => {
-    composition.classList.remove('composition--active');
+});
+composition__close.forEach(close =>{
+  close.addEventListener('click', () => {
+    composition.forEach(all => {
+      all.classList.remove('composition--active');
+    });
   });
 });
 // for composition
-const menu__items = document.querySelectorAll('.menu__item');
-const menu__accordeon = document.querySelector('.menu__accordeon');
-menu__items.forEach(active_all => {
-  active_all.addEventListener('click', menu_click => {
-    if (menu__accordeon.classList.contains('menu__accordeon--active')) {
-    }
-    else {
-      menu__accordeon.classList.add('menu__accordeon--active');
-    }
-    if (active_all.classList.contains('menu__item--active')) {
-      active_all.classList.remove('menu__item--active');
-      menu__accordeon.classList.remove('menu__accordeon--active');
-    } else {
-      menu__items.forEach(active_each => {
-        if (active_each.classList.contains('menu__item--active')) {
-          active_each.classList.remove('menu__item--active');
-        }
-      });
-      active_all.classList.add('menu__item--active');
-    }
-  });
-});
-// for menu section
-const team__items = document.querySelectorAll('.team__item');
-team__items.forEach(active_all => {
-  active_all.addEventListener('click', team_click => {
-    if (active_all.classList.contains('team__item--active')) {
-      active_all.classList.remove('team__item--active');
-    } else {
-      team__items.forEach(active_each => {
-        if (active_each.classList.contains('team__item--active')) {
-          active_each.classList.remove('team__item--active');
-        }
-      });
-      active_all.classList.add('team__item--active');
-    }
-  });
-});
-// for team accordeon 
 const right = document.querySelector('.arrow--right');
 const left = document.querySelector('.arrow--left');
 const burgersList = document.querySelector('.burgers__list');
@@ -131,6 +94,39 @@ function reset() {
   burgersList.classList.remove('burgers__list--notransition');
 }
 // for slider
+const menu__items = document.querySelectorAll('.menu__item');
+const menu__accordeon = document.querySelector('.menu__accordeon');
+menu__items.forEach(active_all => {
+  active_all.addEventListener('click', menu_click => {
+    if (active_all.classList.contains('menu__item--active')) {
+      active_all.classList.remove('menu__item--active');
+    } else {
+      menu__items.forEach(active_each => {
+        if (active_each.classList.contains('menu__item--active')) {
+          active_each.classList.remove('menu__item--active');
+        }
+      });
+      active_all.classList.add('menu__item--active');
+    }
+  });
+});
+// for menu section
+const team__items = document.querySelectorAll('.team__item');
+team__items.forEach(active_all => {
+  active_all.addEventListener('click', team_click => {
+    if (active_all.classList.contains('team__item--active')) {
+      active_all.classList.remove('team__item--active');
+    } else {
+      team__items.forEach(active_each => {
+        if (active_each.classList.contains('team__item--active')) {
+          active_each.classList.remove('team__item--active');
+        }
+      });
+      active_all.classList.add('team__item--active');
+    }
+  });
+});
+// for team accordeon 
 const form = document.querySelector('.form');
 const sendButton = document.querySelector('.form__submit');
 sendButton.addEventListener('click', formEvent => {
@@ -146,7 +142,7 @@ sendButton.addEventListener('click', formEvent => {
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(JSON.stringify(formData));
     xhr.addEventListener('load', () => {
-      if(xhr.status){
+      if (xhr.status) {
         createOverlay();
         const overlayText = document.querySelector('.overlay__text');
         const overlayLink = document.querySelector('.overlay-link');
@@ -164,9 +160,9 @@ sendButton.addEventListener('click', formEvent => {
           if (e.target === overlayElement) {
             overlayLink.click();
           }
-        }); 
+        });
       }
-      else{
+      else {
         createOverlay();
         const overlayText = document.querySelector('.overlay__text');
         const overlayLink = document.querySelector('.overlay-link');

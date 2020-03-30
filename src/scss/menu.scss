@@ -1,6 +1,8 @@
 .menu {
   @include bg(url(./images/bgmenu.png));
   position: relative;
+  display: flex;
+  justify-content: flex-end;
   &__heading {
     left: 5.9375rem;
     top: 6.875rem;
@@ -15,34 +17,13 @@
     }
   }
   &__accordeon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    position: relative;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
-    width: 22%;
-    transition: width 1s;
-    @include phones {
-      width: 50%;
-    }
-    &--active {
-      .menu__item {
-        width: 10.5%;
-        @include phones {
-          width: 16%;
-        }
-      }
-      width: 71%;
-      @include phones {
-        width: 100%;
-      }
-      & .menu__item--active {
-        width: 79%;
-        @include phones {
-          width: 68%;
-        }
-      }
+    width: 50%;
+    @include tablets {
+      width: 100%;
     }
   }
   &__close {
@@ -52,9 +33,6 @@
     position: absolute;
     right: 3%;
     top: 2%;
-    @include phones {
-      display: block;
-    }
     &-icon {
       fill: #c1c2c2;
     }
@@ -73,55 +51,47 @@
     }
   }
   &__discription {
-    display: none;
+    visibility: hidden;
+    width: 0;
     font-size: 0.875rem;
     font-family: "Ubuntu";
     color: white;
+    position: relative;
     background: rgba(62, 64, 66, 0.9);
-    padding: 3.75rem 2.1875rem 0 1.875rem;
+    padding: 3.75rem 2.1875rem 0 2rem;
     line-height: 1.714;
-    left: 14%;
-    z-index: 1;
     height: 100%;
-    position: absolute;
+    transition: all 0.5s;
     @include phones {
-      padding-right: 2rem;
       font-size: 0.7rem;
-      left: 24%;
     }
   }
   &__item {
-    width: 33%;
     display: flex;
     position: relative;
     transition: width 1s;
-    &:nth-child(1) .menu__discription {
-      @include phones {
-        width: 125%;
-      }
-    }
-    &:nth-child(2) .menu__discription {
-      @include phones {
-        width: 100%;
-      }
-    }
-    &:nth-child(3) .menu__discription {
-      @include phones {
-        width: 76%;
-      }
-    }
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 5rem;
+    width: 5rem;
+    transition: all 0.5s;
     &--active {
-      .menu__name {
-        width: 14%;
-        @include phones {
-          width: 24%;
+      flex: 1 0 auto;
+      @include phones {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        width: 100%;
+        & .menu__close {
+          display: block;
         }
       }
-      .menu__discription {
-        display: block;
-        @include tablets {
-          padding: 1.875rem 1rem 0 1rem;
-        }
+      & .menu__discription{
+        width: auto;
+        visibility: visible;
       }
     }
   }
@@ -136,7 +106,7 @@
       right: 0;
     }
     position: relative;
-    width: 100%;
+    width: 5rem;
     height: 100%;
     display: flex;
     justify-content: center;
