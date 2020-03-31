@@ -11,22 +11,19 @@ hamburger.addEventListener('click', (e) => {
   }
 })
 // for hamburger
-const composition = document.querySelectorAll('.off-images');
-const composition__close = document.querySelectorAll('.composition-close');
-composition.forEach(all => {
-  all.firstChild.addEventListener('click', () => {
-    if (all.classList.contains('composition--active')) {
-      all.classList.remove('composition--active');
-    } else {
-      all.classList.add('composition--active');
+$('.burgers__composition').each((ndx, item) => {
+  $(item).on('click', () => {
+    if ($(item).closest('.off-images').hasClass('composition--active')) {
+      $(item).closest('.off-images').removeClass('composition--active');
+    }
+    else {
+      $(item).closest('.off-images').addClass('composition--active');
     }
   });
 });
-composition__close.forEach(close =>{
-  close.addEventListener('click', () => {
-    composition.forEach(all => {
-      all.classList.remove('composition--active');
-    });
+$('.composition-close').each((ndx, item) => {
+  $(item).on('click', () => {
+    $(item).closest('.off-images').removeClass('composition--active');
   });
 });
 // for composition
@@ -92,18 +89,21 @@ function reset() {
   burgersList.classList.remove('burgers__list--notransition');
 }
 // for slider
-const menu__items = document.querySelectorAll('.menu__item');
-menu__items.forEach(all => {
-  all.firstChild.addEventListener('click', () => {
-    if (all.classList.contains('menu__item--active')) {
-      all.classList.remove('menu__item--active');
+const menuTag = $('.menu__tag');
+$('.menu__close').each((ndx, item) => {
+  $(item).on('click', () => {
+    $(item).closest('.menu__item').removeClass('menu__item--active');
+  });
+});
+menuTag.each((ndx, item) => {
+  $(item).on('click', () => {
+    if ($(item).closest('.menu__item').hasClass('menu__item--active')) {
+      $(item).closest('.menu__item').removeClass('menu__item--active');
     } else {
-      menu__items.forEach(active_each => {
-        if (active_each.classList.contains('menu__item--active')) {
-          active_each.classList.remove('menu__item--active');
-        }
+      menuTag.each((ndx, item) => {
+        $(item).closest('.menu__item').removeClass('menu__item--active');
       });
-      all.classList.add('menu__item--active');
+      $(item).closest('.menu__item').addClass('menu__item--active')
     }
   });
 });
