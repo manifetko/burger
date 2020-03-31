@@ -93,18 +93,17 @@ function reset() {
 }
 // for slider
 const menu__items = document.querySelectorAll('.menu__item');
-const menu__accordeon = document.querySelector('.menu__accordeon');
-menu__items.forEach(active_all => {
-  active_all.addEventListener('click', menu_click => {
-    if (active_all.classList.contains('menu__item--active')) {
-      active_all.classList.remove('menu__item--active');
+menu__items.forEach(all => {
+  all.firstChild.addEventListener('click', () => {
+    if (all.classList.contains('menu__item--active')) {
+      all.classList.remove('menu__item--active');
     } else {
       menu__items.forEach(active_each => {
         if (active_each.classList.contains('menu__item--active')) {
           active_each.classList.remove('menu__item--active');
         }
       });
-      active_all.classList.add('menu__item--active');
+      all.classList.add('menu__item--active');
     }
   });
 });

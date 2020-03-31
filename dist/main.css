@@ -147,6 +147,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav__item {
@@ -361,7 +364,8 @@ header {
   display: none;
 }
 
-.menu-open, .menu-close {
+.menu-open,
+.menu-close {
   fill: #fff;
 }
 
@@ -1569,6 +1573,7 @@ header {
   color: #2f3234;
   padding-left: 0.4rem;
   outline: none;
+  border: 0.125rem solid transparent;
 }
 
 .form__input:focus {

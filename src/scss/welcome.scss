@@ -78,6 +78,7 @@ header {
 
 .nav {
   display: flex;
+  align-items: center;
   &__item {
     display: flex;
     transition: all 0.4s;
@@ -168,7 +169,7 @@ header {
   width: 6rem;
   height: 2.25rem;
   border-radius: 0.4375rem;
-  @include tablets{
+  @include tablets {
     margin: 1.75rem 0 0 auto;
   }
 }
@@ -228,9 +229,10 @@ header {
     margin: 2rem 0.25rem 0 1.8rem;
   }
 }
-  .icon-close {
-    display: none;
-  }
-  .menu-open, .menu-close{
-    fill: #fff;
-  }
+.icon-close {
+  display: none;
+}
+.menu-open,
+.menu-close {
+  fill: #fff;
+}

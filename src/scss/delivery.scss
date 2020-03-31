@@ -49,6 +49,7 @@
     color: rgb(47, 50, 52);
     padding-left: 0.4rem;
     outline: none;
+    border: 0.125rem solid transparent;
     &:focus {
       border: 0.125rem solid #f9b43b;
     }
