@@ -229,7 +229,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 2.4375rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   z-index: 2;
