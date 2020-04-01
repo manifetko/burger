@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "https://manifetko.github.io/dist/\r --------------------------------------------\r for scss complier\r {\r     \"liveSassCompile.settings\": {\r         \"generateMap\": false,\r         \"includeItems\": [\r             \"./src/scss/main.scss\"\r         ],\r         \"formats\":[\r             {\r                 \"format\": \"expanded\",\r                 \"extensionName\": \".css\",\r                 \"savePath\": \"/dist\"\r             }\r         ]\r     }\r }\r --------------------------------------------",
+  "main": "index.js",
+  "scripts": {
+    "gulp" : "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manifetko/burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manifetko/burger/issues"
+  },
+  "homepage": "https://github.com/manifetko/burger#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

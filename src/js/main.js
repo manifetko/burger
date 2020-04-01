@@ -10,6 +10,7 @@ hamburger.addEventListener('click', (e) => {
     nav__list.classList.add('nav__list--active');
   }
 })
+$(".wrapper").onepage_scroll();
 // for hamburger
 $('.burgers__composition').each((ndx, item) => {
   $(item).on('click', () => {
