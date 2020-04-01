@@ -10,7 +10,6 @@ hamburger.addEventListener('click', (e) => {
     nav__list.classList.add('nav__list--active');
   }
 })
-$(".wrapper").onepage_scroll();
 // for hamburger
 $('.burgers__composition').each((ndx, item) => {
   $(item).on('click', () => {
@@ -248,4 +247,7 @@ openComment.forEach(open => {
   });
 });
 // for overlay
-
+$(window).scroll(() => {
+  var offset = $('.about').offset().top;
+  console.log = (offset);
+});
