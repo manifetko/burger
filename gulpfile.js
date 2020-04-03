@@ -16,6 +16,7 @@ task('html', () => {
 });
 const libs = [
     'node_modules/jquery/dist/jquery.js',
+    'src/js/fullpage.js',
     'src/js/main.js'
 ];
 task('scripts', () => {

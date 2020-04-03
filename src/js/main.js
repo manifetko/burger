@@ -10,16 +10,6 @@ hamburger.addEventListener('click', (e) => {
     nav__list.classList.add('nav__list--active');
   }
 })
-$(document).ready(function() {
-	$('.wrapper').fullpage({
-		//options here
-		autoScrolling:true,
-		scrollHorizontally: true
-	});
-
-	//methods
-	$.fn.fullpage.setAllowScrolling(false);
-});
 // for hamburger
 $('.burgers__composition').each((ndx, item) => {
   $(item).on('click', () => {
@@ -257,7 +247,14 @@ openComment.forEach(open => {
   });
 });
 // for overlay
-$(window).scroll(() => {
-  var offset = $('.about').offset().top;
-  console.log = (offset);
+$(document).ready(function() {
+	$('.wrapper').fullpage({
+		//options here
+		autoScrolling:true,
+		scrollHorizontally: true
+	});
+
+	//methods
+	$.fn.fullpage.setAllowScrolling(false);
 });
+// onepagescroll
