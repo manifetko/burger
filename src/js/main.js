@@ -10,6 +10,16 @@ hamburger.addEventListener('click', (e) => {
     nav__list.classList.add('nav__list--active');
   }
 })
+$(document).ready(function() {
+	$('.wrapper').fullpage({
+		//options here
+		autoScrolling:true,
+		scrollHorizontally: true
+	});
+
+	//methods
+	$.fn.fullpage.setAllowScrolling(false);
+});
 // for hamburger
 $('.burgers__composition').each((ndx, item) => {
   $(item).on('click', () => {

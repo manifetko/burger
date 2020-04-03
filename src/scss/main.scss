@@ -1,13 +1,13 @@
 @font-face {
   font-family: "gagalin";
-  src: url("../src/fonts/Gagalin-Regular.woff") format("woff");
+  src: url("./fonts/Gagalin-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lifehack";
-  src: url("../src/fonts/Lifehack-Regular.woff") format("woff");
+  src: url("./fonts/Lifehack-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -31,6 +31,8 @@
   }
 }
 @import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+@import "normalize";
+@import "base";
 @import "welcome";
 @import "about";
 @import "burgers";
@@ -39,5 +41,3 @@
 @import "team";
 @import "contacts";
 @import "delivery";
-@import "normalize";
-@import "base";
