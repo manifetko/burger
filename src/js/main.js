@@ -247,14 +247,11 @@ openComment.forEach(open => {
   });
 });
 // for overlay
-$(document).ready(function () {
   $('.wrapper').fullpage({
     //options here
     autoScrolling: true,
-    sectionSelector: 'section'
+    sectionSelector: '.section'
   });
 
   //methods
-  $.fn.fullpage.setAllowScrolling(false);
-});
 // onepagescroll
