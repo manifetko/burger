@@ -15048,14 +15048,14 @@ openComment.forEach(open => {
   });
 });
 // for overlay
-$(document).ready(function() {
-	$('.wrapper').fullpage({
-		//options here
-		autoScrolling:true,
-		scrollHorizontally: true
-	});
+$(document).ready(function () {
+  $('.wrapper').fullpage({
+    //options here
+    autoScrolling: true,
+    sectionSelector: 'section'
+  });
 
-	//methods
-	$.fn.fullpage.setAllowScrolling(false);
+  //methods
+  $.fn.fullpage.setAllowScrolling(false);
 });
 // onepagescroll
