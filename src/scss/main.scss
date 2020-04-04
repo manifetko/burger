@@ -16,7 +16,7 @@
   background: $backgroud;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   min-height: 40.625rem;
 }
 // for adaptive
@@ -39,6 +39,6 @@
 @import "comments";
 @import "menu";
 @import "team";
-@import 'player';
+@import "player";
 @import "contacts";
 @import "delivery";

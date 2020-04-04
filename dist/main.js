@@ -10597,6 +10597,3120 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+// THIS FILE IS GENERATED - DO NOT EDIT!
+/*!mobile-detect v1.4.4 2019-09-21*/
+/*global module:false, define:false*/
+/*jshint latedef:false*/
+/*!@license Copyright 2013, Heinrich Goebl, License: MIT, see https://github.com/hgoebl/mobile-detect.js*/
+(function (define, undefined) {
+    define(function () {
+        'use strict';
+    
+        var impl = {};
+    
+        impl.mobileDetectRules = {
+        "phones": {
+            "iPhone": "\\biPhone\\b|\\biPod\\b",
+            "BlackBerry": "BlackBerry|\\bBB10\\b|rim[0-9]+|\\b(BBA100|BBB100|BBD100|BBE100|BBF100|STH100)\\b-[0-9]+",
+            "HTC": "HTC|HTC.*(Sensation|Evo|Vision|Explorer|6800|8100|8900|A7272|S510e|C110e|Legend|Desire|T8282)|APX515CKT|Qtek9090|APA9292KT|HD_mini|Sensation.*Z710e|PG86100|Z715e|Desire.*(A8181|HD)|ADR6200|ADR6400L|ADR6425|001HT|Inspire 4G|Android.*\\bEVO\\b|T-Mobile G1|Z520m|Android [0-9.]+; Pixel",
+            "Nexus": "Nexus One|Nexus S|Galaxy.*Nexus|Android.*Nexus.*Mobile|Nexus 4|Nexus 5|Nexus 6",
+            "Dell": "Dell[;]? (Streak|Aero|Venue|Venue Pro|Flash|Smoke|Mini 3iX)|XCD28|XCD35|\\b001DL\\b|\\b101DL\\b|\\bGS01\\b",
+            "Motorola": "Motorola|DROIDX|DROID BIONIC|\\bDroid\\b.*Build|Android.*Xoom|HRI39|MOT-|A1260|A1680|A555|A853|A855|A953|A955|A956|Motorola.*ELECTRIFY|Motorola.*i1|i867|i940|MB200|MB300|MB501|MB502|MB508|MB511|MB520|MB525|MB526|MB611|MB612|MB632|MB810|MB855|MB860|MB861|MB865|MB870|ME501|ME502|ME511|ME525|ME600|ME632|ME722|ME811|ME860|ME863|ME865|MT620|MT710|MT716|MT720|MT810|MT870|MT917|Motorola.*TITANIUM|WX435|WX445|XT300|XT301|XT311|XT316|XT317|XT319|XT320|XT390|XT502|XT530|XT531|XT532|XT535|XT603|XT610|XT611|XT615|XT681|XT701|XT702|XT711|XT720|XT800|XT806|XT860|XT862|XT875|XT882|XT883|XT894|XT901|XT907|XT909|XT910|XT912|XT928|XT926|XT915|XT919|XT925|XT1021|\\bMoto E\\b|XT1068|XT1092|XT1052",
+            "Samsung": "\\bSamsung\\b|SM-G950F|SM-G955F|SM-G9250|GT-19300|SGH-I337|BGT-S5230|GT-B2100|GT-B2700|GT-B2710|GT-B3210|GT-B3310|GT-B3410|GT-B3730|GT-B3740|GT-B5510|GT-B5512|GT-B5722|GT-B6520|GT-B7300|GT-B7320|GT-B7330|GT-B7350|GT-B7510|GT-B7722|GT-B7800|GT-C3010|GT-C3011|GT-C3060|GT-C3200|GT-C3212|GT-C3212I|GT-C3262|GT-C3222|GT-C3300|GT-C3300K|GT-C3303|GT-C3303K|GT-C3310|GT-C3322|GT-C3330|GT-C3350|GT-C3500|GT-C3510|GT-C3530|GT-C3630|GT-C3780|GT-C5010|GT-C5212|GT-C6620|GT-C6625|GT-C6712|GT-E1050|GT-E1070|GT-E1075|GT-E1080|GT-E1081|GT-E1085|GT-E1087|GT-E1100|GT-E1107|GT-E1110|GT-E1120|GT-E1125|GT-E1130|GT-E1160|GT-E1170|GT-E1175|GT-E1180|GT-E1182|GT-E1200|GT-E1210|GT-E1225|GT-E1230|GT-E1390|GT-E2100|GT-E2120|GT-E2121|GT-E2152|GT-E2220|GT-E2222|GT-E2230|GT-E2232|GT-E2250|GT-E2370|GT-E2550|GT-E2652|GT-E3210|GT-E3213|GT-I5500|GT-I5503|GT-I5700|GT-I5800|GT-I5801|GT-I6410|GT-I6420|GT-I7110|GT-I7410|GT-I7500|GT-I8000|GT-I8150|GT-I8160|GT-I8190|GT-I8320|GT-I8330|GT-I8350|GT-I8530|GT-I8700|GT-I8703|GT-I8910|GT-I9000|GT-I9001|GT-I9003|GT-I9010|GT-I9020|GT-I9023|GT-I9070|GT-I9082|GT-I9100|GT-I9103|GT-I9220|GT-I9250|GT-I9300|GT-I9305|GT-I9500|GT-I9505|GT-M3510|GT-M5650|GT-M7500|GT-M7600|GT-M7603|GT-M8800|GT-M8910|GT-N7000|GT-S3110|GT-S3310|GT-S3350|GT-S3353|GT-S3370|GT-S3650|GT-S3653|GT-S3770|GT-S3850|GT-S5210|GT-S5220|GT-S5229|GT-S5230|GT-S5233|GT-S5250|GT-S5253|GT-S5260|GT-S5263|GT-S5270|GT-S5300|GT-S5330|GT-S5350|GT-S5360|GT-S5363|GT-S5369|GT-S5380|GT-S5380D|GT-S5560|GT-S5570|GT-S5600|GT-S5603|GT-S5610|GT-S5620|GT-S5660|GT-S5670|GT-S5690|GT-S5750|GT-S5780|GT-S5830|GT-S5839|GT-S6102|GT-S6500|GT-S7070|GT-S7200|GT-S7220|GT-S7230|GT-S7233|GT-S7250|GT-S7500|GT-S7530|GT-S7550|GT-S7562|GT-S7710|GT-S8000|GT-S8003|GT-S8500|GT-S8530|GT-S8600|SCH-A310|SCH-A530|SCH-A570|SCH-A610|SCH-A630|SCH-A650|SCH-A790|SCH-A795|SCH-A850|SCH-A870|SCH-A890|SCH-A930|SCH-A950|SCH-A970|SCH-A990|SCH-I100|SCH-I110|SCH-I400|SCH-I405|SCH-I500|SCH-I510|SCH-I515|SCH-I600|SCH-I730|SCH-I760|SCH-I770|SCH-I830|SCH-I910|SCH-I920|SCH-I959|SCH-LC11|SCH-N150|SCH-N300|SCH-R100|SCH-R300|SCH-R351|SCH-R400|SCH-R410|SCH-T300|SCH-U310|SCH-U320|SCH-U350|SCH-U360|SCH-U365|SCH-U370|SCH-U380|SCH-U410|SCH-U430|SCH-U450|SCH-U460|SCH-U470|SCH-U490|SCH-U540|SCH-U550|SCH-U620|SCH-U640|SCH-U650|SCH-U660|SCH-U700|SCH-U740|SCH-U750|SCH-U810|SCH-U820|SCH-U900|SCH-U940|SCH-U960|SCS-26UC|SGH-A107|SGH-A117|SGH-A127|SGH-A137|SGH-A157|SGH-A167|SGH-A177|SGH-A187|SGH-A197|SGH-A227|SGH-A237|SGH-A257|SGH-A437|SGH-A517|SGH-A597|SGH-A637|SGH-A657|SGH-A667|SGH-A687|SGH-A697|SGH-A707|SGH-A717|SGH-A727|SGH-A737|SGH-A747|SGH-A767|SGH-A777|SGH-A797|SGH-A817|SGH-A827|SGH-A837|SGH-A847|SGH-A867|SGH-A877|SGH-A887|SGH-A897|SGH-A927|SGH-B100|SGH-B130|SGH-B200|SGH-B220|SGH-C100|SGH-C110|SGH-C120|SGH-C130|SGH-C140|SGH-C160|SGH-C170|SGH-C180|SGH-C200|SGH-C207|SGH-C210|SGH-C225|SGH-C230|SGH-C417|SGH-C450|SGH-D307|SGH-D347|SGH-D357|SGH-D407|SGH-D415|SGH-D780|SGH-D807|SGH-D980|SGH-E105|SGH-E200|SGH-E315|SGH-E316|SGH-E317|SGH-E335|SGH-E590|SGH-E635|SGH-E715|SGH-E890|SGH-F300|SGH-F480|SGH-I200|SGH-I300|SGH-I320|SGH-I550|SGH-I577|SGH-I600|SGH-I607|SGH-I617|SGH-I627|SGH-I637|SGH-I677|SGH-I700|SGH-I717|SGH-I727|SGH-i747M|SGH-I777|SGH-I780|SGH-I827|SGH-I847|SGH-I857|SGH-I896|SGH-I897|SGH-I900|SGH-I907|SGH-I917|SGH-I927|SGH-I937|SGH-I997|SGH-J150|SGH-J200|SGH-L170|SGH-L700|SGH-M110|SGH-M150|SGH-M200|SGH-N105|SGH-N500|SGH-N600|SGH-N620|SGH-N625|SGH-N700|SGH-N710|SGH-P107|SGH-P207|SGH-P300|SGH-P310|SGH-P520|SGH-P735|SGH-P777|SGH-Q105|SGH-R210|SGH-R220|SGH-R225|SGH-S105|SGH-S307|SGH-T109|SGH-T119|SGH-T139|SGH-T209|SGH-T219|SGH-T229|SGH-T239|SGH-T249|SGH-T259|SGH-T309|SGH-T319|SGH-T329|SGH-T339|SGH-T349|SGH-T359|SGH-T369|SGH-T379|SGH-T409|SGH-T429|SGH-T439|SGH-T459|SGH-T469|SGH-T479|SGH-T499|SGH-T509|SGH-T519|SGH-T539|SGH-T559|SGH-T589|SGH-T609|SGH-T619|SGH-T629|SGH-T639|SGH-T659|SGH-T669|SGH-T679|SGH-T709|SGH-T719|SGH-T729|SGH-T739|SGH-T746|SGH-T749|SGH-T759|SGH-T769|SGH-T809|SGH-T819|SGH-T839|SGH-T919|SGH-T929|SGH-T939|SGH-T959|SGH-T989|SGH-U100|SGH-U200|SGH-U800|SGH-V205|SGH-V206|SGH-X100|SGH-X105|SGH-X120|SGH-X140|SGH-X426|SGH-X427|SGH-X475|SGH-X495|SGH-X497|SGH-X507|SGH-X600|SGH-X610|SGH-X620|SGH-X630|SGH-X700|SGH-X820|SGH-X890|SGH-Z130|SGH-Z150|SGH-Z170|SGH-ZX10|SGH-ZX20|SHW-M110|SPH-A120|SPH-A400|SPH-A420|SPH-A460|SPH-A500|SPH-A560|SPH-A600|SPH-A620|SPH-A660|SPH-A700|SPH-A740|SPH-A760|SPH-A790|SPH-A800|SPH-A820|SPH-A840|SPH-A880|SPH-A900|SPH-A940|SPH-A960|SPH-D600|SPH-D700|SPH-D710|SPH-D720|SPH-I300|SPH-I325|SPH-I330|SPH-I350|SPH-I500|SPH-I600|SPH-I700|SPH-L700|SPH-M100|SPH-M220|SPH-M240|SPH-M300|SPH-M305|SPH-M320|SPH-M330|SPH-M350|SPH-M360|SPH-M370|SPH-M380|SPH-M510|SPH-M540|SPH-M550|SPH-M560|SPH-M570|SPH-M580|SPH-M610|SPH-M620|SPH-M630|SPH-M800|SPH-M810|SPH-M850|SPH-M900|SPH-M910|SPH-M920|SPH-M930|SPH-N100|SPH-N200|SPH-N240|SPH-N300|SPH-N400|SPH-Z400|SWC-E100|SCH-i909|GT-N7100|GT-N7105|SCH-I535|SM-N900A|SGH-I317|SGH-T999L|GT-S5360B|GT-I8262|GT-S6802|GT-S6312|GT-S6310|GT-S5312|GT-S5310|GT-I9105|GT-I8510|GT-S6790N|SM-G7105|SM-N9005|GT-S5301|GT-I9295|GT-I9195|SM-C101|GT-S7392|GT-S7560|GT-B7610|GT-I5510|GT-S7582|GT-S7530E|GT-I8750|SM-G9006V|SM-G9008V|SM-G9009D|SM-G900A|SM-G900D|SM-G900F|SM-G900H|SM-G900I|SM-G900J|SM-G900K|SM-G900L|SM-G900M|SM-G900P|SM-G900R4|SM-G900S|SM-G900T|SM-G900V|SM-G900W8|SHV-E160K|SCH-P709|SCH-P729|SM-T2558|GT-I9205|SM-G9350|SM-J120F|SM-G920F|SM-G920V|SM-G930F|SM-N910C|SM-A310F|GT-I9190|SM-J500FN|SM-G903F|SM-J330F",
+            "LG": "\\bLG\\b;|LG[- ]?(C800|C900|E400|E610|E900|E-900|F160|F180K|F180L|F180S|730|855|L160|LS740|LS840|LS970|LU6200|MS690|MS695|MS770|MS840|MS870|MS910|P500|P700|P705|VM696|AS680|AS695|AX840|C729|E970|GS505|272|C395|E739BK|E960|L55C|L75C|LS696|LS860|P769BK|P350|P500|P509|P870|UN272|US730|VS840|VS950|LN272|LN510|LS670|LS855|LW690|MN270|MN510|P509|P769|P930|UN200|UN270|UN510|UN610|US670|US740|US760|UX265|UX840|VN271|VN530|VS660|VS700|VS740|VS750|VS910|VS920|VS930|VX9200|VX11000|AX840A|LW770|P506|P925|P999|E612|D955|D802|MS323|M257)|LM-G710",
+            "Sony": "SonyST|SonyLT|SonyEricsson|SonyEricssonLT15iv|LT18i|E10i|LT28h|LT26w|SonyEricssonMT27i|C5303|C6902|C6903|C6906|C6943|D2533",
+            "Asus": "Asus.*Galaxy|PadFone.*Mobile",
+            "NokiaLumia": "Lumia [0-9]{3,4}",
+            "Micromax": "Micromax.*\\b(A210|A92|A88|A72|A111|A110Q|A115|A116|A110|A90S|A26|A51|A35|A54|A25|A27|A89|A68|A65|A57|A90)\\b",
+            "Palm": "PalmSource|Palm",
+            "Vertu": "Vertu|Vertu.*Ltd|Vertu.*Ascent|Vertu.*Ayxta|Vertu.*Constellation(F|Quest)?|Vertu.*Monika|Vertu.*Signature",
+            "Pantech": "PANTECH|IM-A850S|IM-A840S|IM-A830L|IM-A830K|IM-A830S|IM-A820L|IM-A810K|IM-A810S|IM-A800S|IM-T100K|IM-A725L|IM-A780L|IM-A775C|IM-A770K|IM-A760S|IM-A750K|IM-A740S|IM-A730S|IM-A720L|IM-A710K|IM-A690L|IM-A690S|IM-A650S|IM-A630K|IM-A600S|VEGA PTL21|PT003|P8010|ADR910L|P6030|P6020|P9070|P4100|P9060|P5000|CDM8992|TXT8045|ADR8995|IS11PT|P2030|P6010|P8000|PT002|IS06|CDM8999|P9050|PT001|TXT8040|P2020|P9020|P2000|P7040|P7000|C790",
+            "Fly": "IQ230|IQ444|IQ450|IQ440|IQ442|IQ441|IQ245|IQ256|IQ236|IQ255|IQ235|IQ245|IQ275|IQ240|IQ285|IQ280|IQ270|IQ260|IQ250",
+            "Wiko": "KITE 4G|HIGHWAY|GETAWAY|STAIRWAY|DARKSIDE|DARKFULL|DARKNIGHT|DARKMOON|SLIDE|WAX 4G|RAINBOW|BLOOM|SUNSET|GOA(?!nna)|LENNY|BARRY|IGGY|OZZY|CINK FIVE|CINK PEAX|CINK PEAX 2|CINK SLIM|CINK SLIM 2|CINK +|CINK KING|CINK PEAX|CINK SLIM|SUBLIM",
+            "iMobile": "i-mobile (IQ|i-STYLE|idea|ZAA|Hitz)",
+            "SimValley": "\\b(SP-80|XT-930|SX-340|XT-930|SX-310|SP-360|SP60|SPT-800|SP-120|SPT-800|SP-140|SPX-5|SPX-8|SP-100|SPX-8|SPX-12)\\b",
+            "Wolfgang": "AT-B24D|AT-AS50HD|AT-AS40W|AT-AS55HD|AT-AS45q2|AT-B26D|AT-AS50Q",
+            "Alcatel": "Alcatel",
+            "Nintendo": "Nintendo (3DS|Switch)",
+            "Amoi": "Amoi",
+            "INQ": "INQ",
+            "OnePlus": "ONEPLUS",
+            "GenericPhone": "Tapatalk|PDA;|SAGEM|\\bmmp\\b|pocket|\\bpsp\\b|symbian|Smartphone|smartfon|treo|up.browser|up.link|vodafone|\\bwap\\b|nokia|Series40|Series60|S60|SonyEricsson|N900|MAUI.*WAP.*Browser"
+        },
+        "tablets": {
+            "iPad": "iPad|iPad.*Mobile",
+            "NexusTablet": "Android.*Nexus[\\s]+(7|9|10)",
+            "GoogleTablet": "Android.*Pixel C",
+            "SamsungTablet": "SAMSUNG.*Tablet|Galaxy.*Tab|SC-01C|GT-P1000|GT-P1003|GT-P1010|GT-P3105|GT-P6210|GT-P6800|GT-P6810|GT-P7100|GT-P7300|GT-P7310|GT-P7500|GT-P7510|SCH-I800|SCH-I815|SCH-I905|SGH-I957|SGH-I987|SGH-T849|SGH-T859|SGH-T869|SPH-P100|GT-P3100|GT-P3108|GT-P3110|GT-P5100|GT-P5110|GT-P6200|GT-P7320|GT-P7511|GT-N8000|GT-P8510|SGH-I497|SPH-P500|SGH-T779|SCH-I705|SCH-I915|GT-N8013|GT-P3113|GT-P5113|GT-P8110|GT-N8010|GT-N8005|GT-N8020|GT-P1013|GT-P6201|GT-P7501|GT-N5100|GT-N5105|GT-N5110|SHV-E140K|SHV-E140L|SHV-E140S|SHV-E150S|SHV-E230K|SHV-E230L|SHV-E230S|SHW-M180K|SHW-M180L|SHW-M180S|SHW-M180W|SHW-M300W|SHW-M305W|SHW-M380K|SHW-M380S|SHW-M380W|SHW-M430W|SHW-M480K|SHW-M480S|SHW-M480W|SHW-M485W|SHW-M486W|SHW-M500W|GT-I9228|SCH-P739|SCH-I925|GT-I9200|GT-P5200|GT-P5210|GT-P5210X|SM-T311|SM-T310|SM-T310X|SM-T210|SM-T210R|SM-T211|SM-P600|SM-P601|SM-P605|SM-P900|SM-P901|SM-T217|SM-T217A|SM-T217S|SM-P6000|SM-T3100|SGH-I467|XE500|SM-T110|GT-P5220|GT-I9200X|GT-N5110X|GT-N5120|SM-P905|SM-T111|SM-T2105|SM-T315|SM-T320|SM-T320X|SM-T321|SM-T520|SM-T525|SM-T530NU|SM-T230NU|SM-T330NU|SM-T900|XE500T1C|SM-P605V|SM-P905V|SM-T337V|SM-T537V|SM-T707V|SM-T807V|SM-P600X|SM-P900X|SM-T210X|SM-T230|SM-T230X|SM-T325|GT-P7503|SM-T531|SM-T330|SM-T530|SM-T705|SM-T705C|SM-T535|SM-T331|SM-T800|SM-T700|SM-T537|SM-T807|SM-P907A|SM-T337A|SM-T537A|SM-T707A|SM-T807A|SM-T237|SM-T807P|SM-P607T|SM-T217T|SM-T337T|SM-T807T|SM-T116NQ|SM-T116BU|SM-P550|SM-T350|SM-T550|SM-T9000|SM-P9000|SM-T705Y|SM-T805|GT-P3113|SM-T710|SM-T810|SM-T815|SM-T360|SM-T533|SM-T113|SM-T335|SM-T715|SM-T560|SM-T670|SM-T677|SM-T377|SM-T567|SM-T357T|SM-T555|SM-T561|SM-T713|SM-T719|SM-T813|SM-T819|SM-T580|SM-T355Y?|SM-T280|SM-T817A|SM-T820|SM-W700|SM-P580|SM-T587|SM-P350|SM-P555M|SM-P355M|SM-T113NU|SM-T815Y|SM-T585|SM-T285|SM-T825|SM-W708|SM-T835|SM-T830|SM-T837V|SM-T720|SM-T510|SM-T387V",
+            "Kindle": "Kindle|Silk.*Accelerated|Android.*\\b(KFOT|KFTT|KFJWI|KFJWA|KFOTE|KFSOWI|KFTHWI|KFTHWA|KFAPWI|KFAPWA|WFJWAE|KFSAWA|KFSAWI|KFASWI|KFARWI|KFFOWI|KFGIWI|KFMEWI)\\b|Android.*Silk\/[0-9.]+ like Chrome\/[0-9.]+ (?!Mobile)",
+            "SurfaceTablet": "Windows NT [0-9.]+; ARM;.*(Tablet|ARMBJS)",
+            "HPTablet": "HP Slate (7|8|10)|HP ElitePad 900|hp-tablet|EliteBook.*Touch|HP 8|Slate 21|HP SlateBook 10",
+            "AsusTablet": "^.*PadFone((?!Mobile).)*$|Transformer|TF101|TF101G|TF300T|TF300TG|TF300TL|TF700T|TF700KL|TF701T|TF810C|ME171|ME301T|ME302C|ME371MG|ME370T|ME372MG|ME172V|ME173X|ME400C|Slider SL101|\\bK00F\\b|\\bK00C\\b|\\bK00E\\b|\\bK00L\\b|TX201LA|ME176C|ME102A|\\bM80TA\\b|ME372CL|ME560CG|ME372CG|ME302KL| K010 | K011 | K017 | K01E |ME572C|ME103K|ME170C|ME171C|\\bME70C\\b|ME581C|ME581CL|ME8510C|ME181C|P01Y|PO1MA|P01Z|\\bP027\\b|\\bP024\\b|\\bP00C\\b",
+            "BlackBerryTablet": "PlayBook|RIM Tablet",
+            "HTCtablet": "HTC_Flyer_P512|HTC Flyer|HTC Jetstream|HTC-P715a|HTC EVO View 4G|PG41200|PG09410",
+            "MotorolaTablet": "xoom|sholest|MZ615|MZ605|MZ505|MZ601|MZ602|MZ603|MZ604|MZ606|MZ607|MZ608|MZ609|MZ615|MZ616|MZ617",
+            "NookTablet": "Android.*Nook|NookColor|nook browser|BNRV200|BNRV200A|BNTV250|BNTV250A|BNTV400|BNTV600|LogicPD Zoom2",
+            "AcerTablet": "Android.*; \\b(A100|A101|A110|A200|A210|A211|A500|A501|A510|A511|A700|A701|W500|W500P|W501|W501P|W510|W511|W700|G100|G100W|B1-A71|B1-710|B1-711|A1-810|A1-811|A1-830)\\b|W3-810|\\bA3-A10\\b|\\bA3-A11\\b|\\bA3-A20\\b|\\bA3-A30",
+            "ToshibaTablet": "Android.*(AT100|AT105|AT200|AT205|AT270|AT275|AT300|AT305|AT1S5|AT500|AT570|AT700|AT830)|TOSHIBA.*FOLIO",
+            "LGTablet": "\\bL-06C|LG-V909|LG-V900|LG-V700|LG-V510|LG-V500|LG-V410|LG-V400|LG-VK810\\b",
+            "FujitsuTablet": "Android.*\\b(F-01D|F-02F|F-05E|F-10D|M532|Q572)\\b",
+            "PrestigioTablet": "PMP3170B|PMP3270B|PMP3470B|PMP7170B|PMP3370B|PMP3570C|PMP5870C|PMP3670B|PMP5570C|PMP5770D|PMP3970B|PMP3870C|PMP5580C|PMP5880D|PMP5780D|PMP5588C|PMP7280C|PMP7280C3G|PMP7280|PMP7880D|PMP5597D|PMP5597|PMP7100D|PER3464|PER3274|PER3574|PER3884|PER5274|PER5474|PMP5097CPRO|PMP5097|PMP7380D|PMP5297C|PMP5297C_QUAD|PMP812E|PMP812E3G|PMP812F|PMP810E|PMP880TD|PMT3017|PMT3037|PMT3047|PMT3057|PMT7008|PMT5887|PMT5001|PMT5002",
+            "LenovoTablet": "Lenovo TAB|Idea(Tab|Pad)( A1|A10| K1|)|ThinkPad([ ]+)?Tablet|YT3-850M|YT3-X90L|YT3-X90F|YT3-X90X|Lenovo.*(S2109|S2110|S5000|S6000|K3011|A3000|A3500|A1000|A2107|A2109|A1107|A5500|A7600|B6000|B8000|B8080)(-|)(FL|F|HV|H|)|TB-X103F|TB-X304X|TB-X304F|TB-X304L|TB-X505F|TB-X505L|TB-X505X|TB-X605F|TB-X605L|TB-8703F|TB-8703X|TB-8703N|TB-8704N|TB-8704F|TB-8704X|TB-8704V|TB-7304F|TB-7304I|TB-7304X|Tab2A7-10F|Tab2A7-20F|TB2-X30L|YT3-X50L|YT3-X50F|YT3-X50M|YT-X705F|YT-X703F|YT-X703L|YT-X705L|YT-X705X|TB2-X30F|TB2-X30L|TB2-X30M|A2107A-F|A2107A-H|TB3-730F|TB3-730M|TB3-730X|TB-7504F|TB-7504X",
+            "DellTablet": "Venue 11|Venue 8|Venue 7|Dell Streak 10|Dell Streak 7",
+            "YarvikTablet": "Android.*\\b(TAB210|TAB211|TAB224|TAB250|TAB260|TAB264|TAB310|TAB360|TAB364|TAB410|TAB411|TAB420|TAB424|TAB450|TAB460|TAB461|TAB464|TAB465|TAB467|TAB468|TAB07-100|TAB07-101|TAB07-150|TAB07-151|TAB07-152|TAB07-200|TAB07-201-3G|TAB07-210|TAB07-211|TAB07-212|TAB07-214|TAB07-220|TAB07-400|TAB07-485|TAB08-150|TAB08-200|TAB08-201-3G|TAB08-201-30|TAB09-100|TAB09-211|TAB09-410|TAB10-150|TAB10-201|TAB10-211|TAB10-400|TAB10-410|TAB13-201|TAB274EUK|TAB275EUK|TAB374EUK|TAB462EUK|TAB474EUK|TAB9-200)\\b",
+            "MedionTablet": "Android.*\\bOYO\\b|LIFE.*(P9212|P9514|P9516|S9512)|LIFETAB",
+            "ArnovaTablet": "97G4|AN10G2|AN7bG3|AN7fG3|AN8G3|AN8cG3|AN7G3|AN9G3|AN7dG3|AN7dG3ST|AN7dG3ChildPad|AN10bG3|AN10bG3DT|AN9G2",
+            "IntensoTablet": "INM8002KP|INM1010FP|INM805ND|Intenso Tab|TAB1004",
+            "IRUTablet": "M702pro",
+            "MegafonTablet": "MegaFon V9|\\bZTE V9\\b|Android.*\\bMT7A\\b",
+            "EbodaTablet": "E-Boda (Supreme|Impresspeed|Izzycomm|Essential)",
+            "AllViewTablet": "Allview.*(Viva|Alldro|City|Speed|All TV|Frenzy|Quasar|Shine|TX1|AX1|AX2)",
+            "ArchosTablet": "\\b(101G9|80G9|A101IT)\\b|Qilive 97R|Archos5|\\bARCHOS (70|79|80|90|97|101|FAMILYPAD|)(b|c|)(G10| Cobalt| TITANIUM(HD|)| Xenon| Neon|XSK| 2| XS 2| PLATINUM| CARBON|GAMEPAD)\\b",
+            "AinolTablet": "NOVO7|NOVO8|NOVO10|Novo7Aurora|Novo7Basic|NOVO7PALADIN|novo9-Spark",
+            "NokiaLumiaTablet": "Lumia 2520",
+            "SonyTablet": "Sony.*Tablet|Xperia Tablet|Sony Tablet S|SO-03E|SGPT12|SGPT13|SGPT114|SGPT121|SGPT122|SGPT123|SGPT111|SGPT112|SGPT113|SGPT131|SGPT132|SGPT133|SGPT211|SGPT212|SGPT213|SGP311|SGP312|SGP321|EBRD1101|EBRD1102|EBRD1201|SGP351|SGP341|SGP511|SGP512|SGP521|SGP541|SGP551|SGP621|SGP641|SGP612|SOT31|SGP771|SGP611|SGP612|SGP712",
+            "PhilipsTablet": "\\b(PI2010|PI3000|PI3100|PI3105|PI3110|PI3205|PI3210|PI3900|PI4010|PI7000|PI7100)\\b",
+            "CubeTablet": "Android.*(K8GT|U9GT|U10GT|U16GT|U17GT|U18GT|U19GT|U20GT|U23GT|U30GT)|CUBE U8GT",
+            "CobyTablet": "MID1042|MID1045|MID1125|MID1126|MID7012|MID7014|MID7015|MID7034|MID7035|MID7036|MID7042|MID7048|MID7127|MID8042|MID8048|MID8127|MID9042|MID9740|MID9742|MID7022|MID7010",
+            "MIDTablet": "M9701|M9000|M9100|M806|M1052|M806|T703|MID701|MID713|MID710|MID727|MID760|MID830|MID728|MID933|MID125|MID810|MID732|MID120|MID930|MID800|MID731|MID900|MID100|MID820|MID735|MID980|MID130|MID833|MID737|MID960|MID135|MID860|MID736|MID140|MID930|MID835|MID733|MID4X10",
+            "MSITablet": "MSI \\b(Primo 73K|Primo 73L|Primo 81L|Primo 77|Primo 93|Primo 75|Primo 76|Primo 73|Primo 81|Primo 91|Primo 90|Enjoy 71|Enjoy 7|Enjoy 10)\\b",
+            "SMiTTablet": "Android.*(\\bMID\\b|MID-560|MTV-T1200|MTV-PND531|MTV-P1101|MTV-PND530)",
+            "RockChipTablet": "Android.*(RK2818|RK2808A|RK2918|RK3066)|RK2738|RK2808A",
+            "FlyTablet": "IQ310|Fly Vision",
+            "bqTablet": "Android.*(bq)?.*\\b(Elcano|Curie|Edison|Maxwell|Kepler|Pascal|Tesla|Hypatia|Platon|Newton|Livingstone|Cervantes|Avant|Aquaris ([E|M]10|M8))\\b|Maxwell.*Lite|Maxwell.*Plus",
+            "HuaweiTablet": "MediaPad|MediaPad 7 Youth|IDEOS S7|S7-201c|S7-202u|S7-101|S7-103|S7-104|S7-105|S7-106|S7-201|S7-Slim|M2-A01L|BAH-L09|BAH-W09|AGS-L09|CMR-AL19",
+            "NecTablet": "\\bN-06D|\\bN-08D",
+            "PantechTablet": "Pantech.*P4100",
+            "BronchoTablet": "Broncho.*(N701|N708|N802|a710)",
+            "VersusTablet": "TOUCHPAD.*[78910]|\\bTOUCHTAB\\b",
+            "ZyncTablet": "z1000|Z99 2G|z930|z990|z909|Z919|z900",
+            "PositivoTablet": "TB07STA|TB10STA|TB07FTA|TB10FTA",
+            "NabiTablet": "Android.*\\bNabi",
+            "KoboTablet": "Kobo Touch|\\bK080\\b|\\bVox\\b Build|\\bArc\\b Build",
+            "DanewTablet": "DSlide.*\\b(700|701R|702|703R|704|802|970|971|972|973|974|1010|1012)\\b",
+            "TexetTablet": "NaviPad|TB-772A|TM-7045|TM-7055|TM-9750|TM-7016|TM-7024|TM-7026|TM-7041|TM-7043|TM-7047|TM-8041|TM-9741|TM-9747|TM-9748|TM-9751|TM-7022|TM-7021|TM-7020|TM-7011|TM-7010|TM-7023|TM-7025|TM-7037W|TM-7038W|TM-7027W|TM-9720|TM-9725|TM-9737W|TM-1020|TM-9738W|TM-9740|TM-9743W|TB-807A|TB-771A|TB-727A|TB-725A|TB-719A|TB-823A|TB-805A|TB-723A|TB-715A|TB-707A|TB-705A|TB-709A|TB-711A|TB-890HD|TB-880HD|TB-790HD|TB-780HD|TB-770HD|TB-721HD|TB-710HD|TB-434HD|TB-860HD|TB-840HD|TB-760HD|TB-750HD|TB-740HD|TB-730HD|TB-722HD|TB-720HD|TB-700HD|TB-500HD|TB-470HD|TB-431HD|TB-430HD|TB-506|TB-504|TB-446|TB-436|TB-416|TB-146SE|TB-126SE",
+            "PlaystationTablet": "Playstation.*(Portable|Vita)",
+            "TrekstorTablet": "ST10416-1|VT10416-1|ST70408-1|ST702xx-1|ST702xx-2|ST80208|ST97216|ST70104-2|VT10416-2|ST10216-2A|SurfTab",
+            "PyleAudioTablet": "\\b(PTBL10CEU|PTBL10C|PTBL72BC|PTBL72BCEU|PTBL7CEU|PTBL7C|PTBL92BC|PTBL92BCEU|PTBL9CEU|PTBL9CUK|PTBL9C)\\b",
+            "AdvanTablet": "Android.* \\b(E3A|T3X|T5C|T5B|T3E|T3C|T3B|T1J|T1F|T2A|T1H|T1i|E1C|T1-E|T5-A|T4|E1-B|T2Ci|T1-B|T1-D|O1-A|E1-A|T1-A|T3A|T4i)\\b ",
+            "DanyTechTablet": "Genius Tab G3|Genius Tab S2|Genius Tab Q3|Genius Tab G4|Genius Tab Q4|Genius Tab G-II|Genius TAB GII|Genius TAB GIII|Genius Tab S1",
+            "GalapadTablet": "Android.*\\bG1\\b(?!\\))",
+            "MicromaxTablet": "Funbook|Micromax.*\\b(P250|P560|P360|P362|P600|P300|P350|P500|P275)\\b",
+            "KarbonnTablet": "Android.*\\b(A39|A37|A34|ST8|ST10|ST7|Smart Tab3|Smart Tab2)\\b",
+            "AllFineTablet": "Fine7 Genius|Fine7 Shine|Fine7 Air|Fine8 Style|Fine9 More|Fine10 Joy|Fine11 Wide",
+            "PROSCANTablet": "\\b(PEM63|PLT1023G|PLT1041|PLT1044|PLT1044G|PLT1091|PLT4311|PLT4311PL|PLT4315|PLT7030|PLT7033|PLT7033D|PLT7035|PLT7035D|PLT7044K|PLT7045K|PLT7045KB|PLT7071KG|PLT7072|PLT7223G|PLT7225G|PLT7777G|PLT7810K|PLT7849G|PLT7851G|PLT7852G|PLT8015|PLT8031|PLT8034|PLT8036|PLT8080K|PLT8082|PLT8088|PLT8223G|PLT8234G|PLT8235G|PLT8816K|PLT9011|PLT9045K|PLT9233G|PLT9735|PLT9760G|PLT9770G)\\b",
+            "YONESTablet": "BQ1078|BC1003|BC1077|RK9702|BC9730|BC9001|IT9001|BC7008|BC7010|BC708|BC728|BC7012|BC7030|BC7027|BC7026",
+            "ChangJiaTablet": "TPC7102|TPC7103|TPC7105|TPC7106|TPC7107|TPC7201|TPC7203|TPC7205|TPC7210|TPC7708|TPC7709|TPC7712|TPC7110|TPC8101|TPC8103|TPC8105|TPC8106|TPC8203|TPC8205|TPC8503|TPC9106|TPC9701|TPC97101|TPC97103|TPC97105|TPC97106|TPC97111|TPC97113|TPC97203|TPC97603|TPC97809|TPC97205|TPC10101|TPC10103|TPC10106|TPC10111|TPC10203|TPC10205|TPC10503",
+            "GUTablet": "TX-A1301|TX-M9002|Q702|kf026",
+            "PointOfViewTablet": "TAB-P506|TAB-navi-7-3G-M|TAB-P517|TAB-P-527|TAB-P701|TAB-P703|TAB-P721|TAB-P731N|TAB-P741|TAB-P825|TAB-P905|TAB-P925|TAB-PR945|TAB-PL1015|TAB-P1025|TAB-PI1045|TAB-P1325|TAB-PROTAB[0-9]+|TAB-PROTAB25|TAB-PROTAB26|TAB-PROTAB27|TAB-PROTAB26XL|TAB-PROTAB2-IPS9|TAB-PROTAB30-IPS9|TAB-PROTAB25XXL|TAB-PROTAB26-IPS10|TAB-PROTAB30-IPS10",
+            "OvermaxTablet": "OV-(SteelCore|NewBase|Basecore|Baseone|Exellen|Quattor|EduTab|Solution|ACTION|BasicTab|TeddyTab|MagicTab|Stream|TB-08|TB-09)|Qualcore 1027",
+            "HCLTablet": "HCL.*Tablet|Connect-3G-2.0|Connect-2G-2.0|ME Tablet U1|ME Tablet U2|ME Tablet G1|ME Tablet X1|ME Tablet Y2|ME Tablet Sync",
+            "DPSTablet": "DPS Dream 9|DPS Dual 7",
+            "VistureTablet": "V97 HD|i75 3G|Visture V4( HD)?|Visture V5( HD)?|Visture V10",
+            "CrestaTablet": "CTP(-)?810|CTP(-)?818|CTP(-)?828|CTP(-)?838|CTP(-)?888|CTP(-)?978|CTP(-)?980|CTP(-)?987|CTP(-)?988|CTP(-)?989",
+            "MediatekTablet": "\\bMT8125|MT8389|MT8135|MT8377\\b",
+            "ConcordeTablet": "Concorde([ ]+)?Tab|ConCorde ReadMan",
+            "GoCleverTablet": "GOCLEVER TAB|A7GOCLEVER|M1042|M7841|M742|R1042BK|R1041|TAB A975|TAB A7842|TAB A741|TAB A741L|TAB M723G|TAB M721|TAB A1021|TAB I921|TAB R721|TAB I720|TAB T76|TAB R70|TAB R76.2|TAB R106|TAB R83.2|TAB M813G|TAB I721|GCTA722|TAB I70|TAB I71|TAB S73|TAB R73|TAB R74|TAB R93|TAB R75|TAB R76.1|TAB A73|TAB A93|TAB A93.2|TAB T72|TAB R83|TAB R974|TAB R973|TAB A101|TAB A103|TAB A104|TAB A104.2|R105BK|M713G|A972BK|TAB A971|TAB R974.2|TAB R104|TAB R83.3|TAB A1042",
+            "ModecomTablet": "FreeTAB 9000|FreeTAB 7.4|FreeTAB 7004|FreeTAB 7800|FreeTAB 2096|FreeTAB 7.5|FreeTAB 1014|FreeTAB 1001 |FreeTAB 8001|FreeTAB 9706|FreeTAB 9702|FreeTAB 7003|FreeTAB 7002|FreeTAB 1002|FreeTAB 7801|FreeTAB 1331|FreeTAB 1004|FreeTAB 8002|FreeTAB 8014|FreeTAB 9704|FreeTAB 1003",
+            "VoninoTablet": "\\b(Argus[ _]?S|Diamond[ _]?79HD|Emerald[ _]?78E|Luna[ _]?70C|Onyx[ _]?S|Onyx[ _]?Z|Orin[ _]?HD|Orin[ _]?S|Otis[ _]?S|SpeedStar[ _]?S|Magnet[ _]?M9|Primus[ _]?94[ _]?3G|Primus[ _]?94HD|Primus[ _]?QS|Android.*\\bQ8\\b|Sirius[ _]?EVO[ _]?QS|Sirius[ _]?QS|Spirit[ _]?S)\\b",
+            "ECSTablet": "V07OT2|TM105A|S10OT1|TR10CS1",
+            "StorexTablet": "eZee[_']?(Tab|Go)[0-9]+|TabLC7|Looney Tunes Tab",
+            "VodafoneTablet": "SmartTab([ ]+)?[0-9]+|SmartTabII10|SmartTabII7|VF-1497|VFD 1400",
+            "EssentielBTablet": "Smart[ ']?TAB[ ]+?[0-9]+|Family[ ']?TAB2",
+            "RossMoorTablet": "RM-790|RM-997|RMD-878G|RMD-974R|RMT-705A|RMT-701|RME-601|RMT-501|RMT-711",
+            "iMobileTablet": "i-mobile i-note",
+            "TolinoTablet": "tolino tab [0-9.]+|tolino shine",
+            "AudioSonicTablet": "\\bC-22Q|T7-QC|T-17B|T-17P\\b",
+            "AMPETablet": "Android.* A78 ",
+            "SkkTablet": "Android.* (SKYPAD|PHOENIX|CYCLOPS)",
+            "TecnoTablet": "TECNO P9|TECNO DP8D",
+            "JXDTablet": "Android.* \\b(F3000|A3300|JXD5000|JXD3000|JXD2000|JXD300B|JXD300|S5800|S7800|S602b|S5110b|S7300|S5300|S602|S603|S5100|S5110|S601|S7100a|P3000F|P3000s|P101|P200s|P1000m|P200m|P9100|P1000s|S6600b|S908|P1000|P300|S18|S6600|S9100)\\b",
+            "iJoyTablet": "Tablet (Spirit 7|Essentia|Galatea|Fusion|Onix 7|Landa|Titan|Scooby|Deox|Stella|Themis|Argon|Unique 7|Sygnus|Hexen|Finity 7|Cream|Cream X2|Jade|Neon 7|Neron 7|Kandy|Scape|Saphyr 7|Rebel|Biox|Rebel|Rebel 8GB|Myst|Draco 7|Myst|Tab7-004|Myst|Tadeo Jones|Tablet Boing|Arrow|Draco Dual Cam|Aurix|Mint|Amity|Revolution|Finity 9|Neon 9|T9w|Amity 4GB Dual Cam|Stone 4GB|Stone 8GB|Andromeda|Silken|X2|Andromeda II|Halley|Flame|Saphyr 9,7|Touch 8|Planet|Triton|Unique 10|Hexen 10|Memphis 4GB|Memphis 8GB|Onix 10)",
+            "FX2Tablet": "FX2 PAD7|FX2 PAD10",
+            "XoroTablet": "KidsPAD 701|PAD[ ]?712|PAD[ ]?714|PAD[ ]?716|PAD[ ]?717|PAD[ ]?718|PAD[ ]?720|PAD[ ]?721|PAD[ ]?722|PAD[ ]?790|PAD[ ]?792|PAD[ ]?900|PAD[ ]?9715D|PAD[ ]?9716DR|PAD[ ]?9718DR|PAD[ ]?9719QR|PAD[ ]?9720QR|TelePAD1030|Telepad1032|TelePAD730|TelePAD731|TelePAD732|TelePAD735Q|TelePAD830|TelePAD9730|TelePAD795|MegaPAD 1331|MegaPAD 1851|MegaPAD 2151",
+            "ViewsonicTablet": "ViewPad 10pi|ViewPad 10e|ViewPad 10s|ViewPad E72|ViewPad7|ViewPad E100|ViewPad 7e|ViewSonic VB733|VB100a",
+            "VerizonTablet": "QTAQZ3|QTAIR7|QTAQTZ3|QTASUN1|QTASUN2|QTAXIA1",
+            "OdysTablet": "LOOX|XENO10|ODYS[ -](Space|EVO|Xpress|NOON)|\\bXELIO\\b|Xelio10Pro|XELIO7PHONETAB|XELIO10EXTREME|XELIOPT2|NEO_QUAD10",
+            "CaptivaTablet": "CAPTIVA PAD",
+            "IconbitTablet": "NetTAB|NT-3702|NT-3702S|NT-3702S|NT-3603P|NT-3603P|NT-0704S|NT-0704S|NT-3805C|NT-3805C|NT-0806C|NT-0806C|NT-0909T|NT-0909T|NT-0907S|NT-0907S|NT-0902S|NT-0902S",
+            "TeclastTablet": "T98 4G|\\bP80\\b|\\bX90HD\\b|X98 Air|X98 Air 3G|\\bX89\\b|P80 3G|\\bX80h\\b|P98 Air|\\bX89HD\\b|P98 3G|\\bP90HD\\b|P89 3G|X98 3G|\\bP70h\\b|P79HD 3G|G18d 3G|\\bP79HD\\b|\\bP89s\\b|\\bA88\\b|\\bP10HD\\b|\\bP19HD\\b|G18 3G|\\bP78HD\\b|\\bA78\\b|\\bP75\\b|G17s 3G|G17h 3G|\\bP85t\\b|\\bP90\\b|\\bP11\\b|\\bP98t\\b|\\bP98HD\\b|\\bG18d\\b|\\bP85s\\b|\\bP11HD\\b|\\bP88s\\b|\\bA80HD\\b|\\bA80se\\b|\\bA10h\\b|\\bP89\\b|\\bP78s\\b|\\bG18\\b|\\bP85\\b|\\bA70h\\b|\\bA70\\b|\\bG17\\b|\\bP18\\b|\\bA80s\\b|\\bA11s\\b|\\bP88HD\\b|\\bA80h\\b|\\bP76s\\b|\\bP76h\\b|\\bP98\\b|\\bA10HD\\b|\\bP78\\b|\\bP88\\b|\\bA11\\b|\\bA10t\\b|\\bP76a\\b|\\bP76t\\b|\\bP76e\\b|\\bP85HD\\b|\\bP85a\\b|\\bP86\\b|\\bP75HD\\b|\\bP76v\\b|\\bA12\\b|\\bP75a\\b|\\bA15\\b|\\bP76Ti\\b|\\bP81HD\\b|\\bA10\\b|\\bT760VE\\b|\\bT720HD\\b|\\bP76\\b|\\bP73\\b|\\bP71\\b|\\bP72\\b|\\bT720SE\\b|\\bC520Ti\\b|\\bT760\\b|\\bT720VE\\b|T720-3GE|T720-WiFi",
+            "OndaTablet": "\\b(V975i|Vi30|VX530|V701|Vi60|V701s|Vi50|V801s|V719|Vx610w|VX610W|V819i|Vi10|VX580W|Vi10|V711s|V813|V811|V820w|V820|Vi20|V711|VI30W|V712|V891w|V972|V819w|V820w|Vi60|V820w|V711|V813s|V801|V819|V975s|V801|V819|V819|V818|V811|V712|V975m|V101w|V961w|V812|V818|V971|V971s|V919|V989|V116w|V102w|V973|Vi40)\\b[\\s]+|V10 \\b4G\\b",
+            "JaytechTablet": "TPC-PA762",
+            "BlaupunktTablet": "Endeavour 800NG|Endeavour 1010",
+            "DigmaTablet": "\\b(iDx10|iDx9|iDx8|iDx7|iDxD7|iDxD8|iDsQ8|iDsQ7|iDsQ8|iDsD10|iDnD7|3TS804H|iDsQ11|iDj7|iDs10)\\b",
+            "EvolioTablet": "ARIA_Mini_wifi|Aria[ _]Mini|Evolio X10|Evolio X7|Evolio X8|\\bEvotab\\b|\\bNeura\\b",
+            "LavaTablet": "QPAD E704|\\bIvoryS\\b|E-TAB IVORY|\\bE-TAB\\b",
+            "AocTablet": "MW0811|MW0812|MW0922|MTK8382|MW1031|MW0831|MW0821|MW0931|MW0712",
+            "MpmanTablet": "MP11 OCTA|MP10 OCTA|MPQC1114|MPQC1004|MPQC994|MPQC974|MPQC973|MPQC804|MPQC784|MPQC780|\\bMPG7\\b|MPDCG75|MPDCG71|MPDC1006|MP101DC|MPDC9000|MPDC905|MPDC706HD|MPDC706|MPDC705|MPDC110|MPDC100|MPDC99|MPDC97|MPDC88|MPDC8|MPDC77|MP709|MID701|MID711|MID170|MPDC703|MPQC1010",
+            "CelkonTablet": "CT695|CT888|CT[\\s]?910|CT7 Tab|CT9 Tab|CT3 Tab|CT2 Tab|CT1 Tab|C820|C720|\\bCT-1\\b",
+            "WolderTablet": "miTab \\b(DIAMOND|SPACE|BROOKLYN|NEO|FLY|MANHATTAN|FUNK|EVOLUTION|SKY|GOCAR|IRON|GENIUS|POP|MINT|EPSILON|BROADWAY|JUMP|HOP|LEGEND|NEW AGE|LINE|ADVANCE|FEEL|FOLLOW|LIKE|LINK|LIVE|THINK|FREEDOM|CHICAGO|CLEVELAND|BALTIMORE-GH|IOWA|BOSTON|SEATTLE|PHOENIX|DALLAS|IN 101|MasterChef)\\b",
+            "MediacomTablet": "M-MPI10C3G|M-SP10EG|M-SP10EGP|M-SP10HXAH|M-SP7HXAH|M-SP10HXBH|M-SP8HXAH|M-SP8MXA",
+            "MiTablet": "\\bMI PAD\\b|\\bHM NOTE 1W\\b",
+            "NibiruTablet": "Nibiru M1|Nibiru Jupiter One",
+            "NexoTablet": "NEXO NOVA|NEXO 10|NEXO AVIO|NEXO FREE|NEXO GO|NEXO EVO|NEXO 3G|NEXO SMART|NEXO KIDDO|NEXO MOBI",
+            "LeaderTablet": "TBLT10Q|TBLT10I|TBL-10WDKB|TBL-10WDKBO2013|TBL-W230V2|TBL-W450|TBL-W500|SV572|TBLT7I|TBA-AC7-8G|TBLT79|TBL-8W16|TBL-10W32|TBL-10WKB|TBL-W100",
+            "UbislateTablet": "UbiSlate[\\s]?7C",
+            "PocketBookTablet": "Pocketbook",
+            "KocasoTablet": "\\b(TB-1207)\\b",
+            "HisenseTablet": "\\b(F5281|E2371)\\b",
+            "Hudl": "Hudl HT7S3|Hudl 2",
+            "TelstraTablet": "T-Hub2",
+            "GenericTablet": "Android.*\\b97D\\b|Tablet(?!.*PC)|BNTV250A|MID-WCDMA|LogicPD Zoom2|\\bA7EB\\b|CatNova8|A1_07|CT704|CT1002|\\bM721\\b|rk30sdk|\\bEVOTAB\\b|M758A|ET904|ALUMIUM10|Smartfren Tab|Endeavour 1010|Tablet-PC-4|Tagi Tab|\\bM6pro\\b|CT1020W|arc 10HD|\\bTP750\\b|\\bQTAQZ3\\b|WVT101|TM1088|KT107"
+        },
+        "oss": {
+            "AndroidOS": "Android",
+            "BlackBerryOS": "blackberry|\\bBB10\\b|rim tablet os",
+            "PalmOS": "PalmOS|avantgo|blazer|elaine|hiptop|palm|plucker|xiino",
+            "SymbianOS": "Symbian|SymbOS|Series60|Series40|SYB-[0-9]+|\\bS60\\b",
+            "WindowsMobileOS": "Windows CE.*(PPC|Smartphone|Mobile|[0-9]{3}x[0-9]{3})|Windows Mobile|Windows Phone [0-9.]+|WCE;",
+            "WindowsPhoneOS": "Windows Phone 10.0|Windows Phone 8.1|Windows Phone 8.0|Windows Phone OS|XBLWP7|ZuneWP7|Windows NT 6.[23]; ARM;",
+            "iOS": "\\biPhone.*Mobile|\\biPod|\\biPad|AppleCoreMedia",
+            "iPadOS": "CPU OS 13",
+            "MeeGoOS": "MeeGo",
+            "MaemoOS": "Maemo",
+            "JavaOS": "J2ME\/|\\bMIDP\\b|\\bCLDC\\b",
+            "webOS": "webOS|hpwOS",
+            "badaOS": "\\bBada\\b",
+            "BREWOS": "BREW"
+        },
+        "uas": {
+            "Chrome": "\\bCrMo\\b|CriOS|Android.*Chrome\/[.0-9]* (Mobile)?",
+            "Dolfin": "\\bDolfin\\b",
+            "Opera": "Opera.*Mini|Opera.*Mobi|Android.*Opera|Mobile.*OPR\/[0-9.]+$|Coast\/[0-9.]+",
+            "Skyfire": "Skyfire",
+            "Edge": "Mobile Safari\/[.0-9]* Edge",
+            "IE": "IEMobile|MSIEMobile",
+            "Firefox": "fennec|firefox.*maemo|(Mobile|Tablet).*Firefox|Firefox.*Mobile|FxiOS",
+            "Bolt": "bolt",
+            "TeaShark": "teashark",
+            "Blazer": "Blazer",
+            "Safari": "Version.*Mobile.*Safari|Safari.*Mobile|MobileSafari",
+            "WeChat": "\\bMicroMessenger\\b",
+            "UCBrowser": "UC.*Browser|UCWEB",
+            "baiduboxapp": "baiduboxapp",
+            "baidubrowser": "baidubrowser",
+            "DiigoBrowser": "DiigoBrowser",
+            "Mercury": "\\bMercury\\b",
+            "ObigoBrowser": "Obigo",
+            "NetFront": "NF-Browser",
+            "GenericBrowser": "NokiaBrowser|OviBrowser|OneBrowser|TwonkyBeamBrowser|SEMC.*Browser|FlyFlow|Minimo|NetFront|Novarra-Vision|MQQBrowser|MicroMessenger",
+            "PaleMoon": "Android.*PaleMoon|Mobile.*PaleMoon"
+        },
+        "props": {
+            "Mobile": "Mobile\/[VER]",
+            "Build": "Build\/[VER]",
+            "Version": "Version\/[VER]",
+            "VendorID": "VendorID\/[VER]",
+            "iPad": "iPad.*CPU[a-z ]+[VER]",
+            "iPhone": "iPhone.*CPU[a-z ]+[VER]",
+            "iPod": "iPod.*CPU[a-z ]+[VER]",
+            "Kindle": "Kindle\/[VER]",
+            "Chrome": [
+                "Chrome\/[VER]",
+                "CriOS\/[VER]",
+                "CrMo\/[VER]"
+            ],
+            "Coast": [
+                "Coast\/[VER]"
+            ],
+            "Dolfin": "Dolfin\/[VER]",
+            "Firefox": [
+                "Firefox\/[VER]",
+                "FxiOS\/[VER]"
+            ],
+            "Fennec": "Fennec\/[VER]",
+            "Edge": "Edge\/[VER]",
+            "IE": [
+                "IEMobile\/[VER];",
+                "IEMobile [VER]",
+                "MSIE [VER];",
+                "Trident\/[0-9.]+;.*rv:[VER]"
+            ],
+            "NetFront": "NetFront\/[VER]",
+            "NokiaBrowser": "NokiaBrowser\/[VER]",
+            "Opera": [
+                " OPR\/[VER]",
+                "Opera Mini\/[VER]",
+                "Version\/[VER]"
+            ],
+            "Opera Mini": "Opera Mini\/[VER]",
+            "Opera Mobi": "Version\/[VER]",
+            "UCBrowser": [
+                "UCWEB[VER]",
+                "UC.*Browser\/[VER]"
+            ],
+            "MQQBrowser": "MQQBrowser\/[VER]",
+            "MicroMessenger": "MicroMessenger\/[VER]",
+            "baiduboxapp": "baiduboxapp\/[VER]",
+            "baidubrowser": "baidubrowser\/[VER]",
+            "SamsungBrowser": "SamsungBrowser\/[VER]",
+            "Iron": "Iron\/[VER]",
+            "Safari": [
+                "Version\/[VER]",
+                "Safari\/[VER]"
+            ],
+            "Skyfire": "Skyfire\/[VER]",
+            "Tizen": "Tizen\/[VER]",
+            "Webkit": "webkit[ \/][VER]",
+            "PaleMoon": "PaleMoon\/[VER]",
+            "Gecko": "Gecko\/[VER]",
+            "Trident": "Trident\/[VER]",
+            "Presto": "Presto\/[VER]",
+            "Goanna": "Goanna\/[VER]",
+            "iOS": " \\bi?OS\\b [VER][ ;]{1}",
+            "Android": "Android [VER]",
+            "BlackBerry": [
+                "BlackBerry[\\w]+\/[VER]",
+                "BlackBerry.*Version\/[VER]",
+                "Version\/[VER]"
+            ],
+            "BREW": "BREW [VER]",
+            "Java": "Java\/[VER]",
+            "Windows Phone OS": [
+                "Windows Phone OS [VER]",
+                "Windows Phone [VER]"
+            ],
+            "Windows Phone": "Windows Phone [VER]",
+            "Windows CE": "Windows CE\/[VER]",
+            "Windows NT": "Windows NT [VER]",
+            "Symbian": [
+                "SymbianOS\/[VER]",
+                "Symbian\/[VER]"
+            ],
+            "webOS": [
+                "webOS\/[VER]",
+                "hpwOS\/[VER];"
+            ]
+        },
+        "utils": {
+            "Bot": "Googlebot|facebookexternalhit|Google-AMPHTML|s~amp-validator|AdsBot-Google|Google Keyword Suggestion|Facebot|YandexBot|YandexMobileBot|bingbot|ia_archiver|AhrefsBot|Ezooms|GSLFbot|WBSearchBot|Twitterbot|TweetmemeBot|Twikle|PaperLiBot|Wotbox|UnwindFetchor|Exabot|MJ12bot|YandexImages|TurnitinBot|Pingdom|contentkingapp",
+            "MobileBot": "Googlebot-Mobile|AdsBot-Google-Mobile|YahooSeeker\/M1A1-R2D2",
+            "DesktopMode": "WPDesktop",
+            "TV": "SonyDTV|HbbTV",
+            "WebKit": "(webkit)[ \/]([\\w.]+)",
+            "Console": "\\b(Nintendo|Nintendo WiiU|Nintendo 3DS|Nintendo Switch|PLAYSTATION|Xbox)\\b",
+            "Watch": "SM-V700"
+        }
+    };
+    
+        // following patterns come from http://detectmobilebrowsers.com/
+        impl.detectMobileBrowsers = {
+            fullPattern: /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i,
+            shortPattern: /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i,
+            tabletPattern: /android|ipad|playbook|silk/i
+        };
+    
+        var hasOwnProp = Object.prototype.hasOwnProperty,
+            isArray;
+    
+        impl.FALLBACK_PHONE = 'UnknownPhone';
+        impl.FALLBACK_TABLET = 'UnknownTablet';
+        impl.FALLBACK_MOBILE = 'UnknownMobile';
+    
+        isArray = ('isArray' in Array) ?
+            Array.isArray : function (value) { return Object.prototype.toString.call(value) === '[object Array]'; };
+    
+        function equalIC(a, b) {
+            return a != null && b != null && a.toLowerCase() === b.toLowerCase();
+        }
+    
+        function containsIC(array, value) {
+            var valueLC, i, len = array.length;
+            if (!len || !value) {
+                return false;
+            }
+            valueLC = value.toLowerCase();
+            for (i = 0; i < len; ++i) {
+                if (valueLC === array[i].toLowerCase()) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    
+        function convertPropsToRegExp(object) {
+            for (var key in object) {
+                if (hasOwnProp.call(object, key)) {
+                    object[key] = new RegExp(object[key], 'i');
+                }
+            }
+        }
+    
+        function prepareUserAgent(userAgent) {
+            return (userAgent || '').substr(0, 500); // mitigate vulnerable to ReDoS
+        }
+    
+        (function init() {
+            var key, values, value, i, len, verPos, mobileDetectRules = impl.mobileDetectRules;
+            for (key in mobileDetectRules.props) {
+                if (hasOwnProp.call(mobileDetectRules.props, key)) {
+                    values = mobileDetectRules.props[key];
+                    if (!isArray(values)) {
+                        values = [values];
+                    }
+                    len = values.length;
+                    for (i = 0; i < len; ++i) {
+                        value = values[i];
+                        verPos = value.indexOf('[VER]');
+                        if (verPos >= 0) {
+                            value = value.substring(0, verPos) + '([\\w._\\+]+)' + value.substring(verPos + 5);
+                        }
+                        values[i] = new RegExp(value, 'i');
+                    }
+                    mobileDetectRules.props[key] = values;
+                }
+            }
+            convertPropsToRegExp(mobileDetectRules.oss);
+            convertPropsToRegExp(mobileDetectRules.phones);
+            convertPropsToRegExp(mobileDetectRules.tablets);
+            convertPropsToRegExp(mobileDetectRules.uas);
+            convertPropsToRegExp(mobileDetectRules.utils);
+    
+            // copy some patterns to oss0 which are tested first (see issue#15)
+            mobileDetectRules.oss0 = {
+                WindowsPhoneOS: mobileDetectRules.oss.WindowsPhoneOS,
+                WindowsMobileOS: mobileDetectRules.oss.WindowsMobileOS
+            };
+        }());
+    
+        /**
+         * Test userAgent string against a set of rules and find the first matched key.
+         * @param {Object} rules (key is String, value is RegExp)
+         * @param {String} userAgent the navigator.userAgent (or HTTP-Header 'User-Agent').
+         * @returns {String|null} the matched key if found, otherwise <tt>null</tt>
+         * @private
+         */
+        impl.findMatch = function(rules, userAgent) {
+            for (var key in rules) {
+                if (hasOwnProp.call(rules, key)) {
+                    if (rules[key].test(userAgent)) {
+                        return key;
+                    }
+                }
+            }
+            return null;
+        };
+    
+        /**
+         * Test userAgent string against a set of rules and return an array of matched keys.
+         * @param {Object} rules (key is String, value is RegExp)
+         * @param {String} userAgent the navigator.userAgent (or HTTP-Header 'User-Agent').
+         * @returns {Array} an array of matched keys, may be empty when there is no match, but not <tt>null</tt>
+         * @private
+         */
+        impl.findMatches = function(rules, userAgent) {
+            var result = [];
+            for (var key in rules) {
+                if (hasOwnProp.call(rules, key)) {
+                    if (rules[key].test(userAgent)) {
+                        result.push(key);
+                    }
+                }
+            }
+            return result;
+        };
+    
+        /**
+         * Check the version of the given property in the User-Agent.
+         *
+         * @param {String} propertyName
+         * @param {String} userAgent
+         * @return {String} version or <tt>null</tt> if version not found
+         * @private
+         */
+        impl.getVersionStr = function (propertyName, userAgent) {
+            var props = impl.mobileDetectRules.props, patterns, i, len, match;
+            if (hasOwnProp.call(props, propertyName)) {
+                patterns = props[propertyName];
+                len = patterns.length;
+                for (i = 0; i < len; ++i) {
+                    match = patterns[i].exec(userAgent);
+                    if (match !== null) {
+                        return match[1];
+                    }
+                }
+            }
+            return null;
+        };
+    
+        /**
+         * Check the version of the given property in the User-Agent.
+         * Will return a float number. (eg. 2_0 will return 2.0, 4.3.1 will return 4.31)
+         *
+         * @param {String} propertyName
+         * @param {String} userAgent
+         * @return {Number} version or <tt>NaN</tt> if version not found
+         * @private
+         */
+        impl.getVersion = function (propertyName, userAgent) {
+            var version = impl.getVersionStr(propertyName, userAgent);
+            return version ? impl.prepareVersionNo(version) : NaN;
+        };
+    
+        /**
+         * Prepare the version number.
+         *
+         * @param {String} version
+         * @return {Number} the version number as a floating number
+         * @private
+         */
+        impl.prepareVersionNo = function (version) {
+            var numbers;
+    
+            numbers = version.split(/[a-z._ \/\-]/i);
+            if (numbers.length === 1) {
+                version = numbers[0];
+            }
+            if (numbers.length > 1) {
+                version = numbers[0] + '.';
+                numbers.shift();
+                version += numbers.join('');
+            }
+            return Number(version);
+        };
+    
+        impl.isMobileFallback = function (userAgent) {
+            return impl.detectMobileBrowsers.fullPattern.test(userAgent) ||
+                impl.detectMobileBrowsers.shortPattern.test(userAgent.substr(0,4));
+        };
+    
+        impl.isTabletFallback = function (userAgent) {
+            return impl.detectMobileBrowsers.tabletPattern.test(userAgent);
+        };
+    
+        impl.prepareDetectionCache = function (cache, userAgent, maxPhoneWidth) {
+            if (cache.mobile !== undefined) {
+                return;
+            }
+            var phone, tablet, phoneSized;
+    
+            // first check for stronger tablet rules, then phone (see issue#5)
+            tablet = impl.findMatch(impl.mobileDetectRules.tablets, userAgent);
+            if (tablet) {
+                cache.mobile = cache.tablet = tablet;
+                cache.phone = null;
+                return; // unambiguously identified as tablet
+            }
+    
+            phone = impl.findMatch(impl.mobileDetectRules.phones, userAgent);
+            if (phone) {
+                cache.mobile = cache.phone = phone;
+                cache.tablet = null;
+                return; // unambiguously identified as phone
+            }
+    
+            // our rules haven't found a match -> try more general fallback rules
+            if (impl.isMobileFallback(userAgent)) {
+                phoneSized = MobileDetect.isPhoneSized(maxPhoneWidth);
+                if (phoneSized === undefined) {
+                    cache.mobile = impl.FALLBACK_MOBILE;
+                    cache.tablet = cache.phone = null;
+                } else if (phoneSized) {
+                    cache.mobile = cache.phone = impl.FALLBACK_PHONE;
+                    cache.tablet = null;
+                } else {
+                    cache.mobile = cache.tablet = impl.FALLBACK_TABLET;
+                    cache.phone = null;
+                }
+            } else if (impl.isTabletFallback(userAgent)) {
+                cache.mobile = cache.tablet = impl.FALLBACK_TABLET;
+                cache.phone = null;
+            } else {
+                // not mobile at all!
+                cache.mobile = cache.tablet = cache.phone = null;
+            }
+        };
+    
+        // t is a reference to a MobileDetect instance
+        impl.mobileGrade = function (t) {
+            // impl note:
+            // To keep in sync w/ Mobile_Detect.php easily, the following code is tightly aligned to the PHP version.
+            // When changes are made in Mobile_Detect.php, copy this method and replace:
+            //     $this-> / t.
+            //     self::MOBILE_GRADE_(.) / '$1'
+            //     , self::VERSION_TYPE_FLOAT / (nothing)
+            //     isIOS() / os('iOS')
+            //     [reg] / (nothing)   <-- jsdelivr complaining about unescaped unicode character U+00AE
+            var $isMobile = t.mobile() !== null;
+    
+            if (
+                // Apple iOS 3.2-5.1 - Tested on the original iPad (4.3 / 5.0), iPad 2 (4.3), iPad 3 (5.1), original iPhone (3.1), iPhone 3 (3.2), 3GS (4.3), 4 (4.3 / 5.0), and 4S (5.1)
+                t.os('iOS') && t.version('iPad')>=4.3 ||
+                t.os('iOS') && t.version('iPhone')>=3.1 ||
+                t.os('iOS') && t.version('iPod')>=3.1 ||
+    
+                // Android 2.1-2.3 - Tested on the HTC Incredible (2.2), original Droid (2.2), HTC Aria (2.1), Google Nexus S (2.3). Functional on 1.5 & 1.6 but performance may be sluggish, tested on Google G1 (1.5)
+                // Android 3.1 (Honeycomb)  - Tested on the Samsung Galaxy Tab 10.1 and Motorola XOOM
+                // Android 4.0 (ICS)  - Tested on a Galaxy Nexus. Note: transition performance can be poor on upgraded devices
+                // Android 4.1 (Jelly Bean)  - Tested on a Galaxy Nexus and Galaxy 7
+                ( t.version('Android')>2.1 && t.is('Webkit') ) ||
+    
+                // Windows Phone 7-7.5 - Tested on the HTC Surround (7.0) HTC Trophy (7.5), LG-E900 (7.5), Nokia Lumia 800
+                t.version('Windows Phone OS')>=7.0 ||
+    
+                // Blackberry 7 - Tested on BlackBerry Torch 9810
+                // Blackberry 6.0 - Tested on the Torch 9800 and Style 9670
+                t.is('BlackBerry') && t.version('BlackBerry')>=6.0 ||
+                // Blackberry Playbook (1.0-2.0) - Tested on PlayBook
+                t.match('Playbook.*Tablet') ||
+    
+                // Palm WebOS (1.4-2.0) - Tested on the Palm Pixi (1.4), Pre (1.4), Pre 2 (2.0)
+                ( t.version('webOS')>=1.4 && t.match('Palm|Pre|Pixi') ) ||
+                // Palm WebOS 3.0  - Tested on HP TouchPad
+                t.match('hp.*TouchPad') ||
+    
+                // Firefox Mobile (12 Beta) - Tested on Android 2.3 device
+                ( t.is('Firefox') && t.version('Firefox')>=12 ) ||
+    
+                // Chrome for Android - Tested on Android 4.0, 4.1 device
+                ( t.is('Chrome') && t.is('AndroidOS') && t.version('Android')>=4.0 ) ||
+    
+                // Skyfire 4.1 - Tested on Android 2.3 device
+                ( t.is('Skyfire') && t.version('Skyfire')>=4.1 && t.is('AndroidOS') && t.version('Android')>=2.3 ) ||
+    
+                // Opera Mobile 11.5-12: Tested on Android 2.3
+                ( t.is('Opera') && t.version('Opera Mobi')>11 && t.is('AndroidOS') ) ||
+    
+                // Meego 1.2 - Tested on Nokia 950 and N9
+                t.is('MeeGoOS') ||
+    
+                // Tizen (pre-release) - Tested on early hardware
+                t.is('Tizen') ||
+    
+                // Samsung Bada 2.0 - Tested on a Samsung Wave 3, Dolphin browser
+                // @todo: more tests here!
+                t.is('Dolfin') && t.version('Bada')>=2.0 ||
+    
+                // UC Browser - Tested on Android 2.3 device
+                ( (t.is('UC Browser') || t.is('Dolfin')) && t.version('Android')>=2.3 ) ||
+    
+                // Kindle 3 and Fire  - Tested on the built-in WebKit browser for each
+                ( t.match('Kindle Fire') ||
+                    t.is('Kindle') && t.version('Kindle')>=3.0 ) ||
+    
+                // Nook Color 1.4.1 - Tested on original Nook Color, not Nook Tablet
+                t.is('AndroidOS') && t.is('NookTablet') ||
+    
+                // Chrome Desktop 11-21 - Tested on OS X 10.7 and Windows 7
+                t.version('Chrome')>=11 && !$isMobile ||
+    
+                // Safari Desktop 4-5 - Tested on OS X 10.7 and Windows 7
+                t.version('Safari')>=5.0 && !$isMobile ||
+    
+                // Firefox Desktop 4-13 - Tested on OS X 10.7 and Windows 7
+                t.version('Firefox')>=4.0 && !$isMobile ||
+    
+                // Internet Explorer 7-9 - Tested on Windows XP, Vista and 7
+                t.version('MSIE')>=7.0 && !$isMobile ||
+    
+                // Opera Desktop 10-12 - Tested on OS X 10.7 and Windows 7
+                // @reference: http://my.opera.com/community/openweb/idopera/
+                t.version('Opera')>=10 && !$isMobile
+    
+                ){
+                return 'A';
+            }
+    
+            if (
+                t.os('iOS') && t.version('iPad')<4.3 ||
+                t.os('iOS') && t.version('iPhone')<3.1 ||
+                t.os('iOS') && t.version('iPod')<3.1 ||
+    
+                // Blackberry 5.0: Tested on the Storm 2 9550, Bold 9770
+                t.is('Blackberry') && t.version('BlackBerry')>=5 && t.version('BlackBerry')<6 ||
+    
+                //Opera Mini (5.0-6.5) - Tested on iOS 3.2/4.3 and Android 2.3
+                ( t.version('Opera Mini')>=5.0 && t.version('Opera Mini')<=6.5 &&
+                    (t.version('Android')>=2.3 || t.is('iOS')) ) ||
+    
+                // Nokia Symbian^3 - Tested on Nokia N8 (Symbian^3), C7 (Symbian^3), also works on N97 (Symbian^1)
+                t.match('NokiaN8|NokiaC7|N97.*Series60|Symbian/3') ||
+    
+                // @todo: report this (tested on Nokia N71)
+                t.version('Opera Mobi')>=11 && t.is('SymbianOS')
+                ){
+                return 'B';
+            }
+    
+            if (
+            // Blackberry 4.x - Tested on the Curve 8330
+                t.version('BlackBerry')<5.0 ||
+                // Windows Mobile - Tested on the HTC Leo (WinMo 5.2)
+                t.match('MSIEMobile|Windows CE.*Mobile') || t.version('Windows Mobile')<=5.2
+    
+                ){
+                return 'C';
+            }
+    
+            //All older smartphone platforms and featurephones - Any device that doesn't support media queries
+            //will receive the basic, C grade experience.
+            return 'C';
+        };
+    
+        impl.detectOS = function (ua) {
+            return impl.findMatch(impl.mobileDetectRules.oss0, ua) ||
+                impl.findMatch(impl.mobileDetectRules.oss, ua);
+        };
+    
+        impl.getDeviceSmallerSide = function () {
+            return window.screen.width < window.screen.height ?
+                window.screen.width :
+                window.screen.height;
+        };
+    
+        /**
+         * Constructor for MobileDetect object.
+         * <br>
+         * Such an object will keep a reference to the given user-agent string and cache most of the detect queries.<br>
+         * <div style="background-color: #d9edf7; border: 1px solid #bce8f1; color: #3a87ad; padding: 14px; border-radius: 2px; margin-top: 20px">
+         *     <strong>Find information how to download and install:</strong>
+         *     <a href="https://github.com/hgoebl/mobile-detect.js/">github.com/hgoebl/mobile-detect.js/</a>
+         * </div>
+         *
+         * @example <pre>
+         *     var md = new MobileDetect(window.navigator.userAgent);
+         *     if (md.mobile()) {
+         *         location.href = (md.mobileGrade() === 'A') ? '/mobile/' : '/lynx/';
+         *     }
+         * </pre>
+         *
+         * @param {string} userAgent typically taken from window.navigator.userAgent or http_header['User-Agent']
+         * @param {number} [maxPhoneWidth=600] <strong>only for browsers</strong> specify a value for the maximum
+         *        width of smallest device side (in logical "CSS" pixels) until a device detected as mobile will be handled
+         *        as phone.
+         *        This is only used in cases where the device cannot be classified as phone or tablet.<br>
+         *        See <a href="http://developer.android.com/guide/practices/screens_support.html">Declaring Tablet Layouts
+         *        for Android</a>.<br>
+         *        If you provide a value < 0, then this "fuzzy" check is disabled.
+         * @constructor
+         * @global
+         */
+        function MobileDetect(userAgent, maxPhoneWidth) {
+            this.ua = prepareUserAgent(userAgent);
+            this._cache = {};
+            //600dp is typical 7" tablet minimum width
+            this.maxPhoneWidth = maxPhoneWidth || 600;
+        }
+    
+        MobileDetect.prototype = {
+            constructor: MobileDetect,
+    
+            /**
+             * Returns the detected phone or tablet type or <tt>null</tt> if it is not a mobile device.
+             * <br>
+             * For a list of possible return values see {@link MobileDetect#phone} and {@link MobileDetect#tablet}.<br>
+             * <br>
+             * If the device is not detected by the regular expressions from Mobile-Detect, a test is made against
+             * the patterns of <a href="http://detectmobilebrowsers.com/">detectmobilebrowsers.com</a>. If this test
+             * is positive, a value of <code>UnknownPhone</code>, <code>UnknownTablet</code> or
+             * <code>UnknownMobile</code> is returned.<br>
+             * When used in browser, the decision whether phone or tablet is made based on <code>screen.width/height</code>.<br>
+             * <br>
+             * When used server-side (node.js), there is no way to tell the difference between <code>UnknownTablet</code>
+             * and <code>UnknownMobile</code>, so you will get <code>UnknownMobile</code> here.<br>
+             * Be aware that since v1.0.0 in this special case you will get <code>UnknownMobile</code> only for:
+             * {@link MobileDetect#mobile}, not for {@link MobileDetect#phone} and {@link MobileDetect#tablet}.
+             * In versions before v1.0.0 all 3 methods returned <code>UnknownMobile</code> which was tedious to use.
+             * <br>
+             * In most cases you will use the return value just as a boolean.
+             *
+             * @returns {String} the key for the phone family or tablet family, e.g. "Nexus".
+             * @function MobileDetect#mobile
+             */
+            mobile: function () {
+                impl.prepareDetectionCache(this._cache, this.ua, this.maxPhoneWidth);
+                return this._cache.mobile;
+            },
+    
+            /**
+             * Returns the detected phone type/family string or <tt>null</tt>.
+             * <br>
+             * The returned tablet (family or producer) is one of following keys:<br>
+             * <br><tt>iPhone, BlackBerry, HTC, Nexus, Dell, Motorola, Samsung, LG, Sony, Asus,
+             * NokiaLumia, Micromax, Palm, Vertu, Pantech, Fly, Wiko, iMobile, SimValley,
+             * Wolfgang, Alcatel, Nintendo, Amoi, INQ, OnePlus, GenericPhone</tt><br>
+             * <br>
+             * If the device is not detected by the regular expressions from Mobile-Detect, a test is made against
+             * the patterns of <a href="http://detectmobilebrowsers.com/">detectmobilebrowsers.com</a>. If this test
+             * is positive, a value of <code>UnknownPhone</code> or <code>UnknownMobile</code> is returned.<br>
+             * When used in browser, the decision whether phone or tablet is made based on <code>screen.width/height</code>.<br>
+             * <br>
+             * When used server-side (node.js), there is no way to tell the difference between <code>UnknownTablet</code>
+             * and <code>UnknownMobile</code>, so you will get <code>null</code> here, while {@link MobileDetect#mobile}
+             * will return <code>UnknownMobile</code>.<br>
+             * Be aware that since v1.0.0 in this special case you will get <code>UnknownMobile</code> only for:
+             * {@link MobileDetect#mobile}, not for {@link MobileDetect#phone} and {@link MobileDetect#tablet}.
+             * In versions before v1.0.0 all 3 methods returned <code>UnknownMobile</code> which was tedious to use.
+             * <br>
+             * In most cases you will use the return value just as a boolean.
+             *
+             * @returns {String} the key of the phone family or producer, e.g. "iPhone"
+             * @function MobileDetect#phone
+             */
+            phone: function () {
+                impl.prepareDetectionCache(this._cache, this.ua, this.maxPhoneWidth);
+                return this._cache.phone;
+            },
+    
+            /**
+             * Returns the detected tablet type/family string or <tt>null</tt>.
+             * <br>
+             * The returned tablet (family or producer) is one of following keys:<br>
+             * <br><tt>iPad, NexusTablet, GoogleTablet, SamsungTablet, Kindle, SurfaceTablet,
+             * HPTablet, AsusTablet, BlackBerryTablet, HTCtablet, MotorolaTablet, NookTablet,
+             * AcerTablet, ToshibaTablet, LGTablet, FujitsuTablet, PrestigioTablet,
+             * LenovoTablet, DellTablet, YarvikTablet, MedionTablet, ArnovaTablet,
+             * IntensoTablet, IRUTablet, MegafonTablet, EbodaTablet, AllViewTablet,
+             * ArchosTablet, AinolTablet, NokiaLumiaTablet, SonyTablet, PhilipsTablet,
+             * CubeTablet, CobyTablet, MIDTablet, MSITablet, SMiTTablet, RockChipTablet,
+             * FlyTablet, bqTablet, HuaweiTablet, NecTablet, PantechTablet, BronchoTablet,
+             * VersusTablet, ZyncTablet, PositivoTablet, NabiTablet, KoboTablet, DanewTablet,
+             * TexetTablet, PlaystationTablet, TrekstorTablet, PyleAudioTablet, AdvanTablet,
+             * DanyTechTablet, GalapadTablet, MicromaxTablet, KarbonnTablet, AllFineTablet,
+             * PROSCANTablet, YONESTablet, ChangJiaTablet, GUTablet, PointOfViewTablet,
+             * OvermaxTablet, HCLTablet, DPSTablet, VistureTablet, CrestaTablet,
+             * MediatekTablet, ConcordeTablet, GoCleverTablet, ModecomTablet, VoninoTablet,
+             * ECSTablet, StorexTablet, VodafoneTablet, EssentielBTablet, RossMoorTablet,
+             * iMobileTablet, TolinoTablet, AudioSonicTablet, AMPETablet, SkkTablet,
+             * TecnoTablet, JXDTablet, iJoyTablet, FX2Tablet, XoroTablet, ViewsonicTablet,
+             * VerizonTablet, OdysTablet, CaptivaTablet, IconbitTablet, TeclastTablet,
+             * OndaTablet, JaytechTablet, BlaupunktTablet, DigmaTablet, EvolioTablet,
+             * LavaTablet, AocTablet, MpmanTablet, CelkonTablet, WolderTablet, MediacomTablet,
+             * MiTablet, NibiruTablet, NexoTablet, LeaderTablet, UbislateTablet,
+             * PocketBookTablet, KocasoTablet, HisenseTablet, Hudl, TelstraTablet,
+             * GenericTablet</tt><br>
+             * <br>
+             * If the device is not detected by the regular expressions from Mobile-Detect, a test is made against
+             * the patterns of <a href="http://detectmobilebrowsers.com/">detectmobilebrowsers.com</a>. If this test
+             * is positive, a value of <code>UnknownTablet</code> or <code>UnknownMobile</code> is returned.<br>
+             * When used in browser, the decision whether phone or tablet is made based on <code>screen.width/height</code>.<br>
+             * <br>
+             * When used server-side (node.js), there is no way to tell the difference between <code>UnknownTablet</code>
+             * and <code>UnknownMobile</code>, so you will get <code>null</code> here, while {@link MobileDetect#mobile}
+             * will return <code>UnknownMobile</code>.<br>
+             * Be aware that since v1.0.0 in this special case you will get <code>UnknownMobile</code> only for:
+             * {@link MobileDetect#mobile}, not for {@link MobileDetect#phone} and {@link MobileDetect#tablet}.
+             * In versions before v1.0.0 all 3 methods returned <code>UnknownMobile</code> which was tedious to use.
+             * <br>
+             * In most cases you will use the return value just as a boolean.
+             *
+             * @returns {String} the key of the tablet family or producer, e.g. "SamsungTablet"
+             * @function MobileDetect#tablet
+             */
+            tablet: function () {
+                impl.prepareDetectionCache(this._cache, this.ua, this.maxPhoneWidth);
+                return this._cache.tablet;
+            },
+    
+            /**
+             * Returns the (first) detected user-agent string or <tt>null</tt>.
+             * <br>
+             * The returned user-agent is one of following keys:<br>
+             * <br><tt>Chrome, Dolfin, Opera, Skyfire, Edge, IE, Firefox, Bolt, TeaShark, Blazer,
+             * Safari, WeChat, UCBrowser, baiduboxapp, baidubrowser, DiigoBrowser, Mercury,
+             * ObigoBrowser, NetFront, GenericBrowser, PaleMoon</tt><br>
+             * <br>
+             * In most cases calling {@link MobileDetect#userAgent} will be sufficient. But there are rare
+             * cases where a mobile device pretends to be more than one particular browser. You can get the
+             * list of all matches with {@link MobileDetect#userAgents} or check for a particular value by
+             * providing one of the defined keys as first argument to {@link MobileDetect#is}.
+             *
+             * @returns {String} the key for the detected user-agent or <tt>null</tt>
+             * @function MobileDetect#userAgent
+             */
+            userAgent: function () {
+                if (this._cache.userAgent === undefined) {
+                    this._cache.userAgent = impl.findMatch(impl.mobileDetectRules.uas, this.ua);
+                }
+                return this._cache.userAgent;
+            },
+    
+            /**
+             * Returns all detected user-agent strings.
+             * <br>
+             * The array is empty or contains one or more of following keys:<br>
+             * <br><tt>Chrome, Dolfin, Opera, Skyfire, Edge, IE, Firefox, Bolt, TeaShark, Blazer,
+             * Safari, WeChat, UCBrowser, baiduboxapp, baidubrowser, DiigoBrowser, Mercury,
+             * ObigoBrowser, NetFront, GenericBrowser, PaleMoon</tt><br>
+             * <br>
+             * In most cases calling {@link MobileDetect#userAgent} will be sufficient. But there are rare
+             * cases where a mobile device pretends to be more than one particular browser. You can get the
+             * list of all matches with {@link MobileDetect#userAgents} or check for a particular value by
+             * providing one of the defined keys as first argument to {@link MobileDetect#is}.
+             *
+             * @returns {Array} the array of detected user-agent keys or <tt>[]</tt>
+             * @function MobileDetect#userAgents
+             */
+            userAgents: function () {
+                if (this._cache.userAgents === undefined) {
+                    this._cache.userAgents = impl.findMatches(impl.mobileDetectRules.uas, this.ua);
+                }
+                return this._cache.userAgents;
+            },
+    
+            /**
+             * Returns the detected operating system string or <tt>null</tt>.
+             * <br>
+             * The operating system is one of following keys:<br>
+             * <br><tt>AndroidOS, BlackBerryOS, PalmOS, SymbianOS, WindowsMobileOS, WindowsPhoneOS,
+             * iOS, iPadOS, MeeGoOS, MaemoOS, JavaOS, webOS, badaOS, BREWOS</tt><br>
+             *
+             * @returns {String} the key for the detected operating system.
+             * @function MobileDetect#os
+             */
+            os: function () {
+                if (this._cache.os === undefined) {
+                    this._cache.os = impl.detectOS(this.ua);
+                }
+                return this._cache.os;
+            },
+    
+            /**
+             * Get the version (as Number) of the given property in the User-Agent.
+             * <br>
+             * Will return a float number. (eg. 2_0 will return 2.0, 4.3.1 will return 4.31)
+             *
+             * @param {String} key a key defining a thing which has a version.<br>
+             *        You can use one of following keys:<br>
+             * <br><tt>Mobile, Build, Version, VendorID, iPad, iPhone, iPod, Kindle, Chrome, Coast,
+             * Dolfin, Firefox, Fennec, Edge, IE, NetFront, NokiaBrowser, Opera, Opera Mini,
+             * Opera Mobi, UCBrowser, MQQBrowser, MicroMessenger, baiduboxapp, baidubrowser,
+             * SamsungBrowser, Iron, Safari, Skyfire, Tizen, Webkit, PaleMoon, Gecko, Trident,
+             * Presto, Goanna, iOS, Android, BlackBerry, BREW, Java, Windows Phone OS, Windows
+             * Phone, Windows CE, Windows NT, Symbian, webOS</tt><br>
+             *
+             * @returns {Number} the version as float or <tt>NaN</tt> if User-Agent doesn't contain this version.
+             *          Be careful when comparing this value with '==' operator!
+             * @function MobileDetect#version
+             */
+            version: function (key) {
+                return impl.getVersion(key, this.ua);
+            },
+    
+            /**
+             * Get the version (as String) of the given property in the User-Agent.
+             * <br>
+             *
+             * @param {String} key a key defining a thing which has a version.<br>
+             *        You can use one of following keys:<br>
+             * <br><tt>Mobile, Build, Version, VendorID, iPad, iPhone, iPod, Kindle, Chrome, Coast,
+             * Dolfin, Firefox, Fennec, Edge, IE, NetFront, NokiaBrowser, Opera, Opera Mini,
+             * Opera Mobi, UCBrowser, MQQBrowser, MicroMessenger, baiduboxapp, baidubrowser,
+             * SamsungBrowser, Iron, Safari, Skyfire, Tizen, Webkit, PaleMoon, Gecko, Trident,
+             * Presto, Goanna, iOS, Android, BlackBerry, BREW, Java, Windows Phone OS, Windows
+             * Phone, Windows CE, Windows NT, Symbian, webOS</tt><br>
+             *
+             * @returns {String} the "raw" version as String or <tt>null</tt> if User-Agent doesn't contain this version.
+             *
+             * @function MobileDetect#versionStr
+             */
+            versionStr: function (key) {
+                return impl.getVersionStr(key, this.ua);
+            },
+    
+            /**
+             * Global test key against userAgent, os, phone, tablet and some other properties of userAgent string.
+             *
+             * @param {String} key the key (case-insensitive) of a userAgent, an operating system, phone or
+             *        tablet family.<br>
+             *        For a complete list of possible values, see {@link MobileDetect#userAgent},
+             *        {@link MobileDetect#os}, {@link MobileDetect#phone}, {@link MobileDetect#tablet}.<br>
+             *        Additionally you have following keys:<br>
+             * <br><tt>Bot, MobileBot, DesktopMode, TV, WebKit, Console, Watch</tt><br>
+             *
+             * @returns {boolean} <tt>true</tt> when the given key is one of the defined keys of userAgent, os, phone,
+             *                    tablet or one of the listed additional keys, otherwise <tt>false</tt>
+             * @function MobileDetect#is
+             */
+            is: function (key) {
+                return containsIC(this.userAgents(), key) ||
+                       equalIC(key, this.os()) ||
+                       equalIC(key, this.phone()) ||
+                       equalIC(key, this.tablet()) ||
+                       containsIC(impl.findMatches(impl.mobileDetectRules.utils, this.ua), key);
+            },
+    
+            /**
+             * Do a quick test against navigator::userAgent.
+             *
+             * @param {String|RegExp} pattern the pattern, either as String or RegExp
+             *                        (a string will be converted to a case-insensitive RegExp).
+             * @returns {boolean} <tt>true</tt> when the pattern matches, otherwise <tt>false</tt>
+             * @function MobileDetect#match
+             */
+            match: function (pattern) {
+                if (!(pattern instanceof RegExp)) {
+                    pattern = new RegExp(pattern, 'i');
+                }
+                return pattern.test(this.ua);
+            },
+    
+            /**
+             * Checks whether the mobile device can be considered as phone regarding <code>screen.width</code>.
+             * <br>
+             * Obviously this method makes sense in browser environments only (not for Node.js)!
+             * @param {number} [maxPhoneWidth] the maximum logical pixels (aka. CSS-pixels) to be considered as phone.<br>
+             *        The argument is optional and if not present or falsy, the value of the constructor is taken.
+             * @returns {boolean|undefined} <code>undefined</code> if screen size wasn't detectable, else <code>true</code>
+             *          when screen.width is less or equal to maxPhoneWidth, otherwise <code>false</code>.<br>
+             *          Will always return <code>undefined</code> server-side.
+             */
+            isPhoneSized: function (maxPhoneWidth) {
+                return MobileDetect.isPhoneSized(maxPhoneWidth || this.maxPhoneWidth);
+            },
+    
+            /**
+             * Returns the mobile grade ('A', 'B', 'C').
+             *
+             * @returns {String} one of the mobile grades ('A', 'B', 'C').
+             * @function MobileDetect#mobileGrade
+             */
+            mobileGrade: function () {
+                if (this._cache.grade === undefined) {
+                    this._cache.grade = impl.mobileGrade(this);
+                }
+                return this._cache.grade;
+            }
+        };
+    
+        // environment-dependent
+        if (typeof window !== 'undefined' && window.screen) {
+            MobileDetect.isPhoneSized = function (maxPhoneWidth) {
+                return maxPhoneWidth < 0 ? undefined : impl.getDeviceSmallerSide() <= maxPhoneWidth;
+            };
+        } else {
+            MobileDetect.isPhoneSized = function () {};
+        }
+    
+        // should not be replaced by a completely new object - just overwrite existing methods
+        MobileDetect._impl = impl;
+        
+        MobileDetect.version = '1.4.4 2019-09-21';
+    
+        return MobileDetect;
+    }); // end of call of define()
+    })((function (undefined) {
+        if (typeof module !== 'undefined' && module.exports) {
+            return function (factory) { module.exports = factory(); };
+        } else if (typeof define === 'function' && define.amd) {
+            return define;
+        } else if (typeof window !== 'undefined') {
+            return function (factory) { window.MobileDetect = factory(); };
+        } else {
+            // please file a bug if you get this error!
+            throw new Error('unknown environment');
+        }
+    })());
+/*!
+ * @fileOverview TouchSwipe - jQuery Plugin
+ * @version 1.6.18
+ *
+ * @author Matt Bryson http://www.github.com/mattbryson
+ * @see https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+ * @see http://labs.rampinteractive.co.uk/touchSwipe/
+ * @see http://plugins.jquery.com/project/touchSwipe
+ * @license
+ * Copyright (c) 2010-2015 Matt Bryson
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ */
+
+/*
+ *
+ * Changelog
+ * $Date: 2010-12-12 (Wed, 12 Dec 2010) $
+ * $version: 1.0.0
+ * $version: 1.0.1 - removed multibyte comments
+ *
+ * $Date: 2011-21-02 (Mon, 21 Feb 2011) $
+ * $version: 1.1.0 	- added allowPageScroll property to allow swiping and scrolling of page
+ *					- changed handler signatures so one handler can be used for multiple events
+ * $Date: 2011-23-02 (Wed, 23 Feb 2011) $
+ * $version: 1.2.0 	- added click handler. This is fired if the user simply clicks and does not swipe. The event object and click target are passed to handler.
+ *					- If you use the http://code.google.com/p/jquery-ui-for-ipad-and-iphone/ plugin, you can also assign jQuery mouse events to children of a touchSwipe object.
+ * $version: 1.2.1 	- removed console log!
+ *
+ * $version: 1.2.2 	- Fixed bug where scope was not preserved in callback methods.
+ *
+ * $Date: 2011-28-04 (Thurs, 28 April 2011) $
+ * $version: 1.2.4 	- Changed licence terms to be MIT or GPL inline with jQuery. Added check for support of touch events to stop non compatible browsers erroring.
+ *
+ * $Date: 2011-27-09 (Tues, 27 September 2011) $
+ * $version: 1.2.5 	- Added support for testing swipes with mouse on desktop browser (thanks to https://github.com/joelhy)
+ *
+ * $Date: 2012-14-05 (Mon, 14 May 2012) $
+ * $version: 1.2.6 	- Added timeThreshold between start and end touch, so user can ignore slow swipes (thanks to Mark Chase). Default is null, all swipes are detected
+ *
+ * $Date: 2012-05-06 (Tues, 05 June 2012) $
+ * $version: 1.2.7 	- Changed time threshold to have null default for backwards compatibility. Added duration param passed back in events, and refactored how time is handled.
+ *
+ * $Date: 2012-05-06 (Tues, 05 June 2012) $
+ * $version: 1.2.8 	- Added the possibility to return a value like null or false in the trigger callback. In that way we can control when the touch start/move should take effect or not (simply by returning in some cases return null; or return false;) This effects the ontouchstart/ontouchmove event.
+ *
+ * $Date: 2012-06-06 (Wed, 06 June 2012) $
+ * $version: 1.3.0 	- Refactored whole plugin to allow for methods to be executed, as well as exposed defaults for user override. Added 'enable', 'disable', and 'destroy' methods
+ *
+ * $Date: 2012-05-06 (Fri, 05 June 2012) $
+ * $version: 1.3.1 	- Bug fixes  - bind() with false as last argument is no longer supported in jQuery 1.6, also, if you just click, the duration is now returned correctly.
+ *
+ * $Date: 2012-29-07 (Sun, 29 July 2012) $
+ * $version: 1.3.2	- Added fallbackToMouseEvents option to NOT capture mouse events on non touch devices.
+ * 			- Added "all" fingers value to the fingers property, so any combination of fingers triggers the swipe, allowing event handlers to check the finger count
+ *
+ * $Date: 2012-09-08 (Thurs, 9 Aug 2012) $
+ * $version: 1.3.3	- Code tidy prep for minefied version
+ *
+ * $Date: 2012-04-10 (wed, 4 Oct 2012) $
+ * $version: 1.4.0	- Added pinch support, pinchIn and pinchOut
+ *
+ * $Date: 2012-11-10 (Thurs, 11 Oct 2012) $
+ * $version: 1.5.0	- Added excludedElements, a jquery selector that specifies child elements that do NOT trigger swipes. By default, this is .noSwipe
+ *
+ * $Date: 2012-22-10 (Mon, 22 Oct 2012) $
+ * $version: 1.5.1	- Fixed bug with jQuery 1.8 and trailing comma in excludedElements
+ *					- Fixed bug with IE and eventPreventDefault()
+ * $Date: 2013-01-12 (Fri, 12 Jan 2013) $
+ * $version: 1.6.0	- Fixed bugs with pinching, mainly when both pinch and swipe enabled, as well as adding time threshold for multifinger gestures, so releasing one finger beofre the other doesnt trigger as single finger gesture.
+ *					- made the demo site all static local HTML pages so they can be run locally by a developer
+ *					- added jsDoc comments and added documentation for the plugin
+ *					- code tidy
+ *					- added triggerOnTouchLeave property that will end the event when the user swipes off the element.
+ * $Date: 2013-03-23 (Sat, 23 Mar 2013) $
+ * $version: 1.6.1	- Added support for ie8 touch events
+ * $version: 1.6.2	- Added support for events binding with on / off / bind in jQ for all callback names.
+ *                   - Deprecated the 'click' handler in favour of tap.
+ *                   - added cancelThreshold property
+ *                   - added option method to update init options at runtime
+ * $version 1.6.3    - added doubletap, longtap events and longTapThreshold, doubleTapThreshold property
+ *
+ * $Date: 2013-04-04 (Thurs, 04 April 2013) $
+ * $version 1.6.4    - Fixed bug with cancelThreshold introduced in 1.6.3, where swipe status no longer fired start event, and stopped once swiping back.
+ *
+ * $Date: 2013-08-24 (Sat, 24 Aug 2013) $
+ * $version 1.6.5    - Merged a few pull requests fixing various bugs, added AMD support.
+ *
+ * $Date: 2014-06-04 (Wed, 04 June 2014) $
+ * $version 1.6.6 	- Merge of pull requests.
+ *    				- IE10 touch support
+ *    				- Only prevent default event handling on valid swipe
+ *    				- Separate license/changelog comment
+ *    				- Detect if the swipe is valid at the end of the touch event.
+ *    				- Pass fingerdata to event handlers.
+ *    				- Add 'hold' gesture
+ *    				- Be more tolerant about the tap distance
+ *    				- Typos and minor fixes
+ *
+ * $Date: 2015-22-01 (Thurs, 22 Jan 2015) $
+ * $version 1.6.7    - Added patch from https://github.com/mattbryson/TouchSwipe-Jquery-Plugin/issues/206 to fix memory leak
+ *
+ * $Date: 2015-2-2 (Mon, 2 Feb 2015) $
+ * $version 1.6.8    - Added preventDefaultEvents option to proxy events regardless.
+ *					- Fixed issue with swipe and pinch not triggering at the same time
+ *
+ * $Date: 2015-9-6 (Tues, 9 June 2015) $
+ * $version 1.6.9    - Added PR from jdalton/hybrid to fix pointer events
+ *					- Added scrolling demo
+ *					- Added version property to plugin
+ *
+ * $Date: 2015-1-10 (Wed, 1 October 2015) $
+ * $version 1.6.10    - Added PR from beatspace to fix tap events
+ * $version 1.6.11    - Added PRs from indri-indri ( Doc tidyup), kkirsche ( Bower tidy up ), UziTech (preventDefaultEvents fixes )
+ *					 - Allowed setting multiple options via .swipe("options", options_hash) and more simply .swipe(options_hash) or exisitng instances
+ * $version 1.6.12    - Fixed bug with multi finger releases above 2 not triggering events
+ *
+ * $Date: 2015-12-18 (Fri, 18 December 2015) $
+ * $version 1.6.13    - Added PRs
+ *                    - Fixed #267 allowPageScroll not working correctly
+ * $version 1.6.14    - Fixed #220 / #248 doubletap not firing with swipes, #223 commonJS compatible
+ * $version 1.6.15    - More bug fixes
+ *
+ * $Date: 2016-04-29 (Fri, 29 April 2016) $
+ * $version 1.6.16    - Swipes with 0 distance now allow default events to trigger.  So tapping any form elements or A tags will allow default interaction, but swiping will trigger a swipe.
+                        Removed the a, input, select etc from the excluded Children list as the 0 distance tap solves that issue.
+* $Date: 2016-05-19  (Fri, 29 April 2016) $
+* $version 1.6.17     - Fixed context issue when calling instance methods via $("selector").swipe("method");
+* $version 1.6.18     - now honors fallbackToMouseEvents=false for MS Pointer events when a Mouse is used.
+
+ */
+
+/**
+ * See (http://jquery.com/).
+ * @name $
+ * @class
+ * See the jQuery Library  (http://jquery.com/) for full details.  This just
+ * documents the function and classes that are added to jQuery by this plug-in.
+ */
+
+/**
+ * See (http://jquery.com/)
+ * @name fn
+ * @class
+ * See the jQuery Library  (http://jquery.com/) for full details.  This just
+ * documents the function and classes that are added to jQuery by this plug-in.
+ * @memberOf $
+ */
+
+
+(function(factory) {
+  if (typeof define === 'function' && define.amd && define.amd.jQuery) {
+    // AMD. Register as anonymous module.
+    define(['jquery'], factory);
+  } else if (typeof module !== 'undefined' && module.exports) {
+    // CommonJS Module
+    factory(require("jquery"));
+  } else {
+    // Browser globals.
+    factory(jQuery);
+  }
+}(function($) {
+  "use strict";
+
+  //Constants
+  var VERSION = "1.6.18",
+    LEFT = "left",
+    RIGHT = "right",
+    UP = "up",
+    DOWN = "down",
+    IN = "in",
+    OUT = "out",
+
+    NONE = "none",
+    AUTO = "auto",
+
+    SWIPE = "swipe",
+    PINCH = "pinch",
+    TAP = "tap",
+    DOUBLE_TAP = "doubletap",
+    LONG_TAP = "longtap",
+    HOLD = "hold",
+
+    HORIZONTAL = "horizontal",
+    VERTICAL = "vertical",
+
+    ALL_FINGERS = "all",
+
+    DOUBLE_TAP_THRESHOLD = 10,
+
+    PHASE_START = "start",
+    PHASE_MOVE = "move",
+    PHASE_END = "end",
+    PHASE_CANCEL = "cancel",
+
+    SUPPORTS_TOUCH = 'ontouchstart' in window,
+
+    SUPPORTS_POINTER_IE10 = window.navigator.msPointerEnabled && !window.PointerEvent && !SUPPORTS_TOUCH,
+
+    SUPPORTS_POINTER = (window.PointerEvent || window.navigator.msPointerEnabled) && !SUPPORTS_TOUCH,
+
+    PLUGIN_NS = 'TouchSwipe';
+
+
+
+  /**
+  * The default configuration, and available options to configure touch swipe with.
+  * You can set the default values by updating any of the properties prior to instantiation.
+  * @name $.fn.swipe.defaults
+  * @namespace
+  * @property {int} [fingers=1] The number of fingers to detect in a swipe. Any swipes that do not meet this requirement will NOT trigger swipe handlers.
+  * @property {int} [threshold=75] The number of pixels that the user must move their finger by before it is considered a swipe.
+  * @property {int} [cancelThreshold=null] The number of pixels that the user must move their finger back from the original swipe direction to cancel the gesture.
+  * @property {int} [pinchThreshold=20] The number of pixels that the user must pinch their finger by before it is considered a pinch.
+  * @property {int} [maxTimeThreshold=null] Time, in milliseconds, between touchStart and touchEnd must NOT exceed in order to be considered a swipe.
+  * @property {int} [fingerReleaseThreshold=250] Time in milliseconds between releasing multiple fingers.  If 2 fingers are down, and are released one after the other, if they are within this threshold, it counts as a simultaneous release.
+  * @property {int} [longTapThreshold=500] Time in milliseconds between tap and release for a long tap
+  * @property {int} [doubleTapThreshold=200] Time in milliseconds between 2 taps to count as a double tap
+  * @property {function} [swipe=null] A handler to catch all swipes. See {@link $.fn.swipe#event:swipe}
+  * @property {function} [swipeLeft=null] A handler that is triggered for "left" swipes. See {@link $.fn.swipe#event:swipeLeft}
+  * @property {function} [swipeRight=null] A handler that is triggered for "right" swipes. See {@link $.fn.swipe#event:swipeRight}
+  * @property {function} [swipeUp=null] A handler that is triggered for "up" swipes. See {@link $.fn.swipe#event:swipeUp}
+  * @property {function} [swipeDown=null] A handler that is triggered for "down" swipes. See {@link $.fn.swipe#event:swipeDown}
+  * @property {function} [swipeStatus=null] A handler triggered for every phase of the swipe. See {@link $.fn.swipe#event:swipeStatus}
+  * @property {function} [pinchIn=null] A handler triggered for pinch in events. See {@link $.fn.swipe#event:pinchIn}
+  * @property {function} [pinchOut=null] A handler triggered for pinch out events. See {@link $.fn.swipe#event:pinchOut}
+  * @property {function} [pinchStatus=null] A handler triggered for every phase of a pinch. See {@link $.fn.swipe#event:pinchStatus}
+  * @property {function} [tap=null] A handler triggered when a user just taps on the item, rather than swipes it. If they do not move, tap is triggered, if they do move, it is not.
+  * @property {function} [doubleTap=null] A handler triggered when a user double taps on the item. The delay between taps can be set with the doubleTapThreshold property. See {@link $.fn.swipe.defaults#doubleTapThreshold}
+  * @property {function} [longTap=null] A handler triggered when a user long taps on the item. The delay between start and end can be set with the longTapThreshold property. See {@link $.fn.swipe.defaults#longTapThreshold}
+  * @property (function) [hold=null] A handler triggered when a user reaches longTapThreshold on the item. See {@link $.fn.swipe.defaults#longTapThreshold}
+  * @property {boolean} [triggerOnTouchEnd=true] If true, the swipe events are triggered when the touch end event is received (user releases finger).  If false, it will be triggered on reaching the threshold, and then cancel the touch event automatically.
+  * @property {boolean} [triggerOnTouchLeave=false] If true, then when the user leaves the swipe object, the swipe will end and trigger appropriate handlers.
+  * @property {string|undefined} [allowPageScroll='auto'] How the browser handles page scrolls when the user is swiping on a touchSwipe object. See {@link $.fn.swipe.pageScroll}.  <br/><br/>
+  									<code>"auto"</code> : all undefined swipes will cause the page to scroll in that direction. <br/>
+  									<code>"none"</code> : the page will not scroll when user swipes. <br/>
+  									<code>"horizontal"</code> : will force page to scroll on horizontal swipes. <br/>
+  									<code>"vertical"</code> : will force page to scroll on vertical swipes. <br/>
+  * @property {boolean} [fallbackToMouseEvents=true] If true mouse events are used when run on a non touch device, false will stop swipes being triggered by mouse events on non touch devices.
+  * @property {string} [excludedElements=".noSwipe"] A jquery selector that specifies child elements that do NOT trigger swipes. By default this excludes elements with the class .noSwipe .
+  * @property {boolean} [preventDefaultEvents=true] by default default events are cancelled, so the page doesn't move.  You can disable this so both native events fire as well as your handlers.
+
+  */
+  var defaults = {
+    fingers: 1,
+    threshold: 75,
+    cancelThreshold: null,
+    pinchThreshold: 20,
+    maxTimeThreshold: null,
+    fingerReleaseThreshold: 250,
+    longTapThreshold: 500,
+    doubleTapThreshold: 200,
+    swipe: null,
+    swipeLeft: null,
+    swipeRight: null,
+    swipeUp: null,
+    swipeDown: null,
+    swipeStatus: null,
+    pinchIn: null,
+    pinchOut: null,
+    pinchStatus: null,
+    click: null, //Deprecated since 1.6.2
+    tap: null,
+    doubleTap: null,
+    longTap: null,
+    hold: null,
+    triggerOnTouchEnd: true,
+    triggerOnTouchLeave: false,
+    allowPageScroll: "auto",
+    fallbackToMouseEvents: true,
+    excludedElements: ".noSwipe",
+    preventDefaultEvents: true
+  };
+
+
+
+  /**
+   * Applies TouchSwipe behaviour to one or more jQuery objects.
+   * The TouchSwipe plugin can be instantiated via this method, or methods within
+   * TouchSwipe can be executed via this method as per jQuery plugin architecture.
+   * An existing plugin can have its options changed simply by re calling .swipe(options)
+   * @see TouchSwipe
+   * @class
+   * @param {Mixed} method If the current DOMNode is a TouchSwipe object, and <code>method</code> is a TouchSwipe method, then
+   * the <code>method</code> is executed, and any following arguments are passed to the TouchSwipe method.
+   * If <code>method</code> is an object, then the TouchSwipe class is instantiated on the current DOMNode, passing the
+   * configuration properties defined in the object. See TouchSwipe
+   *
+   */
+  $.fn.swipe = function(method) {
+    var $this = $(this),
+      plugin = $this.data(PLUGIN_NS);
+
+    //Check if we are already instantiated and trying to execute a method
+    if (plugin && typeof method === 'string') {
+      if (plugin[method]) {
+        return plugin[method].apply(plugin, Array.prototype.slice.call(arguments, 1));
+      } else {
+        $.error('Method ' + method + ' does not exist on jQuery.swipe');
+      }
+    }
+
+    //Else update existing plugin with new options hash
+    else if (plugin && typeof method === 'object') {
+      plugin['option'].apply(plugin, arguments);
+    }
+
+    //Else not instantiated and trying to pass init object (or nothing)
+    else if (!plugin && (typeof method === 'object' || !method)) {
+      return init.apply(this, arguments);
+    }
+
+    return $this;
+  };
+
+  /**
+   * The version of the plugin
+   * @readonly
+   */
+  $.fn.swipe.version = VERSION;
+
+
+
+  //Expose our defaults so a user could override the plugin defaults
+  $.fn.swipe.defaults = defaults;
+
+  /**
+   * The phases that a touch event goes through.  The <code>phase</code> is passed to the event handlers.
+   * These properties are read only, attempting to change them will not alter the values passed to the event handlers.
+   * @namespace
+   * @readonly
+   * @property {string} PHASE_START Constant indicating the start phase of the touch event. Value is <code>"start"</code>.
+   * @property {string} PHASE_MOVE Constant indicating the move phase of the touch event. Value is <code>"move"</code>.
+   * @property {string} PHASE_END Constant indicating the end phase of the touch event. Value is <code>"end"</code>.
+   * @property {string} PHASE_CANCEL Constant indicating the cancel phase of the touch event. Value is <code>"cancel"</code>.
+   */
+  $.fn.swipe.phases = {
+    PHASE_START: PHASE_START,
+    PHASE_MOVE: PHASE_MOVE,
+    PHASE_END: PHASE_END,
+    PHASE_CANCEL: PHASE_CANCEL
+  };
+
+  /**
+   * The direction constants that are passed to the event handlers.
+   * These properties are read only, attempting to change them will not alter the values passed to the event handlers.
+   * @namespace
+   * @readonly
+   * @property {string} LEFT Constant indicating the left direction. Value is <code>"left"</code>.
+   * @property {string} RIGHT Constant indicating the right direction. Value is <code>"right"</code>.
+   * @property {string} UP Constant indicating the up direction. Value is <code>"up"</code>.
+   * @property {string} DOWN Constant indicating the down direction. Value is <code>"cancel"</code>.
+   * @property {string} IN Constant indicating the in direction. Value is <code>"in"</code>.
+   * @property {string} OUT Constant indicating the out direction. Value is <code>"out"</code>.
+   */
+  $.fn.swipe.directions = {
+    LEFT: LEFT,
+    RIGHT: RIGHT,
+    UP: UP,
+    DOWN: DOWN,
+    IN: IN,
+    OUT: OUT
+  };
+
+  /**
+   * The page scroll constants that can be used to set the value of <code>allowPageScroll</code> option
+   * These properties are read only
+   * @namespace
+   * @readonly
+   * @see $.fn.swipe.defaults#allowPageScroll
+   * @property {string} NONE Constant indicating no page scrolling is allowed. Value is <code>"none"</code>.
+   * @property {string} HORIZONTAL Constant indicating horizontal page scrolling is allowed. Value is <code>"horizontal"</code>.
+   * @property {string} VERTICAL Constant indicating vertical page scrolling is allowed. Value is <code>"vertical"</code>.
+   * @property {string} AUTO Constant indicating either horizontal or vertical will be allowed, depending on the swipe handlers registered. Value is <code>"auto"</code>.
+   */
+  $.fn.swipe.pageScroll = {
+    NONE: NONE,
+    HORIZONTAL: HORIZONTAL,
+    VERTICAL: VERTICAL,
+    AUTO: AUTO
+  };
+
+  /**
+   * Constants representing the number of fingers used in a swipe.  These are used to set both the value of <code>fingers</code> in the
+   * options object, as well as the value of the <code>fingers</code> event property.
+   * These properties are read only, attempting to change them will not alter the values passed to the event handlers.
+   * @namespace
+   * @readonly
+   * @see $.fn.swipe.defaults#fingers
+   * @property {string} ONE Constant indicating 1 finger is to be detected / was detected. Value is <code>1</code>.
+   * @property {string} TWO Constant indicating 2 fingers are to be detected / were detected. Value is <code>2</code>.
+   * @property {string} THREE Constant indicating 3 finger are to be detected / were detected. Value is <code>3</code>.
+   * @property {string} FOUR Constant indicating 4 finger are to be detected / were detected. Not all devices support this. Value is <code>4</code>.
+   * @property {string} FIVE Constant indicating 5 finger are to be detected / were detected. Not all devices support this. Value is <code>5</code>.
+   * @property {string} ALL Constant indicating any combination of finger are to be detected.  Value is <code>"all"</code>.
+   */
+  $.fn.swipe.fingers = {
+    ONE: 1,
+    TWO: 2,
+    THREE: 3,
+    FOUR: 4,
+    FIVE: 5,
+    ALL: ALL_FINGERS
+  };
+
+  /**
+   * Initialise the plugin for each DOM element matched
+   * This creates a new instance of the main TouchSwipe class for each DOM element, and then
+   * saves a reference to that instance in the elements data property.
+   * @internal
+   */
+  function init(options) {
+    //Prep and extend the options
+    if (options && (options.allowPageScroll === undefined && (options.swipe !== undefined || options.swipeStatus !== undefined))) {
+      options.allowPageScroll = NONE;
+    }
+
+    //Check for deprecated options
+    //Ensure that any old click handlers are assigned to the new tap, unless we have a tap
+    if (options.click !== undefined && options.tap === undefined) {
+      options.tap = options.click;
+    }
+
+    if (!options) {
+      options = {};
+    }
+
+    //pass empty object so we dont modify the defaults
+    options = $.extend({}, $.fn.swipe.defaults, options);
+
+    //For each element instantiate the plugin
+    return this.each(function() {
+      var $this = $(this);
+
+      //Check we havent already initialised the plugin
+      var plugin = $this.data(PLUGIN_NS);
+
+      if (!plugin) {
+        plugin = new TouchSwipe(this, options);
+        $this.data(PLUGIN_NS, plugin);
+      }
+    });
+  }
+
+  /**
+   * Main TouchSwipe Plugin Class.
+   * Do not use this to construct your TouchSwipe object, use the jQuery plugin method $.fn.swipe(); {@link $.fn.swipe}
+   * @private
+   * @name TouchSwipe
+   * @param {DOMNode} element The HTML DOM object to apply to plugin to
+   * @param {Object} options The options to configure the plugin with.  @link {$.fn.swipe.defaults}
+   * @see $.fh.swipe.defaults
+   * @see $.fh.swipe
+   * @class
+   */
+  function TouchSwipe(element, options) {
+
+    //take a local/instacne level copy of the options - should make it this.options really...
+    var options = $.extend({}, options);
+
+    var useTouchEvents = (SUPPORTS_TOUCH || SUPPORTS_POINTER || !options.fallbackToMouseEvents),
+      START_EV = useTouchEvents ? (SUPPORTS_POINTER ? (SUPPORTS_POINTER_IE10 ? 'MSPointerDown' : 'pointerdown') : 'touchstart') : 'mousedown',
+      MOVE_EV = useTouchEvents ? (SUPPORTS_POINTER ? (SUPPORTS_POINTER_IE10 ? 'MSPointerMove' : 'pointermove') : 'touchmove') : 'mousemove',
+      END_EV = useTouchEvents ? (SUPPORTS_POINTER ? (SUPPORTS_POINTER_IE10 ? 'MSPointerUp' : 'pointerup') : 'touchend') : 'mouseup',
+      LEAVE_EV = useTouchEvents ? (SUPPORTS_POINTER ? 'mouseleave' : null) : 'mouseleave', //we manually detect leave on touch devices, so null event here
+      CANCEL_EV = (SUPPORTS_POINTER ? (SUPPORTS_POINTER_IE10 ? 'MSPointerCancel' : 'pointercancel') : 'touchcancel');
+
+
+
+    //touch properties
+    var distance = 0,
+      direction = null,
+      currentDirection = null,
+      duration = 0,
+      startTouchesDistance = 0,
+      endTouchesDistance = 0,
+      pinchZoom = 1,
+      pinchDistance = 0,
+      pinchDirection = 0,
+      maximumsMap = null;
+
+
+
+    //jQuery wrapped element for this instance
+    var $element = $(element);
+
+    //Current phase of th touch cycle
+    var phase = "start";
+
+    // the current number of fingers being used.
+    var fingerCount = 0;
+
+    //track mouse points / delta
+    var fingerData = {};
+
+    //track times
+    var startTime = 0,
+      endTime = 0,
+      previousTouchEndTime = 0,
+      fingerCountAtRelease = 0,
+      doubleTapStartTime = 0;
+
+    //Timeouts
+    var singleTapTimeout = null,
+      holdTimeout = null;
+
+    // Add gestures to all swipable areas if supported
+    try {
+      $element.on(START_EV, touchStart);
+      $element.on(CANCEL_EV, touchCancel);
+    } catch (e) {
+      $.error('events not supported ' + START_EV + ',' + CANCEL_EV + ' on jQuery.swipe');
+    }
+
+    //
+    //Public methods
+    //
+
+    /**
+     * re-enables the swipe plugin with the previous configuration
+     * @function
+     * @name $.fn.swipe#enable
+     * @return {DOMNode} The Dom element that was registered with TouchSwipe
+     * @example $("#element").swipe("enable");
+     */
+    this.enable = function() {
+      //Incase we are already enabled, clean up...
+      this.disable();
+      $element.on(START_EV, touchStart);
+      $element.on(CANCEL_EV, touchCancel);
+      return $element;
+    };
+
+    /**
+     * disables the swipe plugin
+     * @function
+     * @name $.fn.swipe#disable
+     * @return {DOMNode} The Dom element that is now registered with TouchSwipe
+     * @example $("#element").swipe("disable");
+     */
+    this.disable = function() {
+      removeListeners();
+      return $element;
+    };
+
+    /**
+     * Destroy the swipe plugin completely. To use any swipe methods, you must re initialise the plugin.
+     * @function
+     * @name $.fn.swipe#destroy
+     * @example $("#element").swipe("destroy");
+     */
+    this.destroy = function() {
+      removeListeners();
+      $element.data(PLUGIN_NS, null);
+      $element = null;
+    };
+
+
+    /**
+     * Allows run time updating of the swipe configuration options.
+     * @function
+     * @name $.fn.swipe#option
+     * @param {String} property The option property to get or set, or a has of multiple options to set
+     * @param {Object} [value] The value to set the property to
+     * @return {Object} If only a property name is passed, then that property value is returned. If nothing is passed the current options hash is returned.
+     * @example $("#element").swipe("option", "threshold"); // return the threshold
+     * @example $("#element").swipe("option", "threshold", 100); // set the threshold after init
+     * @example $("#element").swipe("option", {threshold:100, fingers:3} ); // set multiple properties after init
+     * @example $("#element").swipe({threshold:100, fingers:3} ); // set multiple properties after init - the "option" method is optional!
+     * @example $("#element").swipe("option"); // Return the current options hash
+     * @see $.fn.swipe.defaults
+     *
+     */
+    this.option = function(property, value) {
+
+      if (typeof property === 'object') {
+        options = $.extend(options, property);
+      } else if (options[property] !== undefined) {
+        if (value === undefined) {
+          return options[property];
+        } else {
+          options[property] = value;
+        }
+      } else if (!property) {
+        return options;
+      } else {
+        $.error('Option ' + property + ' does not exist on jQuery.swipe.options');
+      }
+
+      return null;
+    }
+
+
+
+    //
+    // Private methods
+    //
+
+    //
+    // EVENTS
+    //
+    /**
+     * Event handler for a touch start event.
+     * Stops the default click event from triggering and stores where we touched
+     * @inner
+     * @param {object} jqEvent The normalised jQuery event object.
+     */
+    function touchStart(jqEvent) {
+
+      //If we already in a touch event (a finger already in use) then ignore subsequent ones..
+      if (getTouchInProgress()) {
+        return;
+      }
+
+      //Check if this element matches any in the excluded elements selectors,  or its parent is excluded, if so, DON'T swipe
+      if ($(jqEvent.target).closest(options.excludedElements, $element).length > 0) {
+        return;
+      }
+
+      //As we use Jquery bind for events, we need to target the original event object
+      //If these events are being programmatically triggered, we don't have an original event object, so use the Jq one.
+      var event = jqEvent.originalEvent ? jqEvent.originalEvent : jqEvent;
+
+
+      //If we have a pointer event, whoes type is 'mouse' and we have said NO mouse events, then dont do anything.
+      if(event.pointerType && event.pointerType=="mouse" && options.fallbackToMouseEvents==false) {
+        return;
+      };
+
+      var ret,
+        touches = event.touches,
+        evt = touches ? touches[0] : event;
+
+      phase = PHASE_START;
+
+      //If we support touches, get the finger count
+      if (touches) {
+        // get the total number of fingers touching the screen
+        fingerCount = touches.length;
+      }
+      //Else this is the desktop, so stop the browser from dragging content
+      else if (options.preventDefaultEvents !== false) {
+        jqEvent.preventDefault(); //call this on jq event so we are cross browser
+      }
+
+      //clear vars..
+      distance = 0;
+      direction = null;
+      currentDirection=null;
+      pinchDirection = null;
+      duration = 0;
+      startTouchesDistance = 0;
+      endTouchesDistance = 0;
+      pinchZoom = 1;
+      pinchDistance = 0;
+      maximumsMap = createMaximumsData();
+      cancelMultiFingerRelease();
+
+      //Create the default finger data
+      createFingerData(0, evt);
+
+      // check the number of fingers is what we are looking for, or we are capturing pinches
+      if (!touches || (fingerCount === options.fingers || options.fingers === ALL_FINGERS) || hasPinches()) {
+        // get the coordinates of the touch
+        startTime = getTimeStamp();
+
+        if (fingerCount == 2) {
+          //Keep track of the initial pinch distance, so we can calculate the diff later
+          //Store second finger data as start
+          createFingerData(1, touches[1]);
+          startTouchesDistance = endTouchesDistance = calculateTouchesDistance(fingerData[0].start, fingerData[1].start);
+        }
+
+        if (options.swipeStatus || options.pinchStatus) {
+          ret = triggerHandler(event, phase);
+        }
+      } else {
+        //A touch with more or less than the fingers we are looking for, so cancel
+        ret = false;
+      }
+
+      //If we have a return value from the users handler, then return and cancel
+      if (ret === false) {
+        phase = PHASE_CANCEL;
+        triggerHandler(event, phase);
+        return ret;
+      } else {
+        if (options.hold) {
+          holdTimeout = setTimeout($.proxy(function() {
+            //Trigger the event
+            $element.trigger('hold', [event.target]);
+            //Fire the callback
+            if (options.hold) {
+              ret = options.hold.call($element, event, event.target);
+            }
+          }, this), options.longTapThreshold);
+        }
+
+        setTouchInProgress(true);
+      }
+
+      return null;
+    };
+
+
+
+    /**
+     * Event handler for a touch move event.
+     * If we change fingers during move, then cancel the event
+     * @inner
+     * @param {object} jqEvent The normalised jQuery event object.
+     */
+    function touchMove(jqEvent) {
+
+      //As we use Jquery bind for events, we need to target the original event object
+      //If these events are being programmatically triggered, we don't have an original event object, so use the Jq one.
+      var event = jqEvent.originalEvent ? jqEvent.originalEvent : jqEvent;
+
+      //If we are ending, cancelling, or within the threshold of 2 fingers being released, don't track anything..
+      if (phase === PHASE_END || phase === PHASE_CANCEL || inMultiFingerRelease())
+        return;
+
+      var ret,
+        touches = event.touches,
+        evt = touches ? touches[0] : event;
+
+
+      //Update the  finger data
+      var currentFinger = updateFingerData(evt);
+      endTime = getTimeStamp();
+
+      if (touches) {
+        fingerCount = touches.length;
+      }
+
+      if (options.hold) {
+        clearTimeout(holdTimeout);
+      }
+
+      phase = PHASE_MOVE;
+
+      //If we have 2 fingers get Touches distance as well
+      if (fingerCount == 2) {
+
+        //Keep track of the initial pinch distance, so we can calculate the diff later
+        //We do this here as well as the start event, in case they start with 1 finger, and the press 2 fingers
+        if (startTouchesDistance == 0) {
+          //Create second finger if this is the first time...
+          createFingerData(1, touches[1]);
+
+          startTouchesDistance = endTouchesDistance = calculateTouchesDistance(fingerData[0].start, fingerData[1].start);
+        } else {
+          //Else just update the second finger
+          updateFingerData(touches[1]);
+
+          endTouchesDistance = calculateTouchesDistance(fingerData[0].end, fingerData[1].end);
+          pinchDirection = calculatePinchDirection(fingerData[0].end, fingerData[1].end);
+        }
+
+        pinchZoom = calculatePinchZoom(startTouchesDistance, endTouchesDistance);
+        pinchDistance = Math.abs(startTouchesDistance - endTouchesDistance);
+      }
+
+      if ((fingerCount === options.fingers || options.fingers === ALL_FINGERS) || !touches || hasPinches()) {
+
+        //The overall direction of the swipe. From start to now.
+        direction = calculateDirection(currentFinger.start, currentFinger.end);
+
+        //The immediate direction of the swipe, direction between the last movement and this one.
+        currentDirection = calculateDirection(currentFinger.last, currentFinger.end);
+
+        //Check if we need to prevent default event (page scroll / pinch zoom) or not
+        validateDefaultEvent(jqEvent, currentDirection);
+
+        //Distance and duration are all off the main finger
+        distance = calculateDistance(currentFinger.start, currentFinger.end);
+        duration = calculateDuration();
+
+        //Cache the maximum distance we made in this direction
+        setMaxDistance(direction, distance);
+
+        //Trigger status handler
+        ret = triggerHandler(event, phase);
+
+
+        //If we trigger end events when threshold are met, or trigger events when touch leaves element
+        if (!options.triggerOnTouchEnd || options.triggerOnTouchLeave) {
+
+          var inBounds = true;
+
+          //If checking if we leave the element, run the bounds check (we can use touchleave as its not supported on webkit)
+          if (options.triggerOnTouchLeave) {
+            var bounds = getbounds(this);
+            inBounds = isInBounds(currentFinger.end, bounds);
+          }
+
+          //Trigger end handles as we swipe if thresholds met or if we have left the element if the user has asked to check these..
+          if (!options.triggerOnTouchEnd && inBounds) {
+            phase = getNextPhase(PHASE_MOVE);
+          }
+          //We end if out of bounds here, so set current phase to END, and check if its modified
+          else if (options.triggerOnTouchLeave && !inBounds) {
+            phase = getNextPhase(PHASE_END);
+          }
+
+          if (phase == PHASE_CANCEL || phase == PHASE_END) {
+            triggerHandler(event, phase);
+          }
+        }
+      } else {
+        phase = PHASE_CANCEL;
+        triggerHandler(event, phase);
+      }
+
+      if (ret === false) {
+        phase = PHASE_CANCEL;
+        triggerHandler(event, phase);
+      }
+    }
+
+
+
+
+    /**
+     * Event handler for a touch end event.
+     * Calculate the direction and trigger events
+     * @inner
+     * @param {object} jqEvent The normalised jQuery event object.
+     */
+    function touchEnd(jqEvent) {
+      //As we use Jquery bind for events, we need to target the original event object
+      //If these events are being programmatically triggered, we don't have an original event object, so use the Jq one.
+      var event = jqEvent.originalEvent ? jqEvent.originalEvent : jqEvent,
+        touches = event.touches;
+
+      //If we are still in a touch with the device wait a fraction and see if the other finger comes up
+      //if it does within the threshold, then we treat it as a multi release, not a single release and end the touch / swipe
+      if (touches) {
+        if (touches.length && !inMultiFingerRelease()) {
+          startMultiFingerRelease(event);
+          return true;
+        } else if (touches.length && inMultiFingerRelease()) {
+          return true;
+        }
+      }
+
+      //If a previous finger has been released, check how long ago, if within the threshold, then assume it was a multifinger release.
+      //This is used to allow 2 fingers to release fractionally after each other, whilst maintaining the event as containing 2 fingers, not 1
+      if (inMultiFingerRelease()) {
+        fingerCount = fingerCountAtRelease;
+      }
+
+      //Set end of swipe
+      endTime = getTimeStamp();
+
+      //Get duration incase move was never fired
+      duration = calculateDuration();
+
+      //If we trigger handlers at end of swipe OR, we trigger during, but they didnt trigger and we are still in the move phase
+      if (didSwipeBackToCancel() || !validateSwipeDistance()) {
+        phase = PHASE_CANCEL;
+        triggerHandler(event, phase);
+      } else if (options.triggerOnTouchEnd || (options.triggerOnTouchEnd === false && phase === PHASE_MOVE)) {
+        //call this on jq event so we are cross browser
+        if (options.preventDefaultEvents !== false && jqEvent.cancelable !== false) {
+          jqEvent.preventDefault();
+        }
+        phase = PHASE_END;
+        triggerHandler(event, phase);
+      }
+      //Special cases - A tap should always fire on touch end regardless,
+      //So here we manually trigger the tap end handler by itself
+      //We dont run trigger handler as it will re-trigger events that may have fired already
+      else if (!options.triggerOnTouchEnd && hasTap()) {
+        //Trigger the pinch events...
+        phase = PHASE_END;
+        triggerHandlerForGesture(event, phase, TAP);
+      } else if (phase === PHASE_MOVE) {
+        phase = PHASE_CANCEL;
+        triggerHandler(event, phase);
+      }
+
+      setTouchInProgress(false);
+
+      return null;
+    }
+
+
+
+    /**
+     * Event handler for a touch cancel event.
+     * Clears current vars
+     * @inner
+     */
+    function touchCancel() {
+      // reset the variables back to default values
+      fingerCount = 0;
+      endTime = 0;
+      startTime = 0;
+      startTouchesDistance = 0;
+      endTouchesDistance = 0;
+      pinchZoom = 1;
+
+      //If we were in progress of tracking a possible multi touch end, then re set it.
+      cancelMultiFingerRelease();
+
+      setTouchInProgress(false);
+    }
+
+
+    /**
+     * Event handler for a touch leave event.
+     * This is only triggered on desktops, in touch we work this out manually
+     * as the touchleave event is not supported in webkit
+     * @inner
+     */
+    function touchLeave(jqEvent) {
+      //If these events are being programmatically triggered, we don't have an original event object, so use the Jq one.
+      var event = jqEvent.originalEvent ? jqEvent.originalEvent : jqEvent;
+
+      //If we have the trigger on leave property set....
+      if (options.triggerOnTouchLeave) {
+        phase = getNextPhase(PHASE_END);
+        triggerHandler(event, phase);
+      }
+    }
+
+    /**
+     * Removes all listeners that were associated with the plugin
+     * @inner
+     */
+    function removeListeners() {
+      $element.off(START_EV, touchStart);
+      $element.off(CANCEL_EV, touchCancel);
+      $element.off(MOVE_EV, touchMove);
+      $element.off(END_EV, touchEnd);
+
+      //we only have leave events on desktop, we manually calculate leave on touch as its not supported in webkit
+      if (LEAVE_EV) {
+        $element.off(LEAVE_EV, touchLeave);
+      }
+
+      setTouchInProgress(false);
+    }
+
+
+    /**
+     * Checks if the time and distance thresholds have been met, and if so then the appropriate handlers are fired.
+     */
+    function getNextPhase(currentPhase) {
+
+      var nextPhase = currentPhase;
+
+      // Ensure we have valid swipe (under time and over distance  and check if we are out of bound...)
+      var validTime = validateSwipeTime();
+      var validDistance = validateSwipeDistance();
+      var didCancel = didSwipeBackToCancel();
+
+      //If we have exceeded our time, then cancel
+      if (!validTime || didCancel) {
+        nextPhase = PHASE_CANCEL;
+      }
+      //Else if we are moving, and have reached distance then end
+      else if (validDistance && currentPhase == PHASE_MOVE && (!options.triggerOnTouchEnd || options.triggerOnTouchLeave)) {
+        nextPhase = PHASE_END;
+      }
+      //Else if we have ended by leaving and didn't reach distance, then cancel
+      else if (!validDistance && currentPhase == PHASE_END && options.triggerOnTouchLeave) {
+        nextPhase = PHASE_CANCEL;
+      }
+
+      return nextPhase;
+    }
+
+
+    /**
+     * Trigger the relevant event handler
+     * The handlers are passed the original event, the element that was swiped, and in the case of the catch all handler, the direction that was swiped, "left", "right", "up", or "down"
+     * @param {object} event the original event object
+     * @param {string} phase the phase of the swipe (start, end cancel etc) {@link $.fn.swipe.phases}
+     * @inner
+     */
+    function triggerHandler(event, phase) {
+
+
+
+      var ret,
+        touches = event.touches;
+
+      // SWIPE GESTURES
+      if (didSwipe() || hasSwipes()) {
+          ret = triggerHandlerForGesture(event, phase, SWIPE);
+      }
+
+      // PINCH GESTURES (if the above didn't cancel)
+      if ((didPinch() || hasPinches()) && ret !== false) {
+          ret = triggerHandlerForGesture(event, phase, PINCH);
+      }
+
+      // CLICK / TAP (if the above didn't cancel)
+      if (didDoubleTap() && ret !== false) {
+        //Trigger the tap events...
+        ret = triggerHandlerForGesture(event, phase, DOUBLE_TAP);
+      }
+
+      // CLICK / TAP (if the above didn't cancel)
+      else if (didLongTap() && ret !== false) {
+        //Trigger the tap events...
+        ret = triggerHandlerForGesture(event, phase, LONG_TAP);
+      }
+
+      // CLICK / TAP (if the above didn't cancel)
+      else if (didTap() && ret !== false) {
+        //Trigger the tap event..
+        ret = triggerHandlerForGesture(event, phase, TAP);
+      }
+
+
+
+      // If we are cancelling the gesture, then manually trigger the reset handler
+      if (phase === PHASE_CANCEL) {
+
+        touchCancel(event);
+      }
+
+
+
+
+      // If we are ending the gesture, then manually trigger the reset handler IF all fingers are off
+      if (phase === PHASE_END) {
+        //If we support touch, then check that all fingers are off before we cancel
+        if (touches) {
+          if (!touches.length) {
+            touchCancel(event);
+          }
+        } else {
+          touchCancel(event);
+        }
+      }
+
+      return ret;
+    }
+
+
+
+    /**
+     * Trigger the relevant event handler
+     * The handlers are passed the original event, the element that was swiped, and in the case of the catch all handler, the direction that was swiped, "left", "right", "up", or "down"
+     * @param {object} event the original event object
+     * @param {string} phase the phase of the swipe (start, end cancel etc) {@link $.fn.swipe.phases}
+     * @param {string} gesture the gesture to trigger a handler for : PINCH or SWIPE {@link $.fn.swipe.gestures}
+     * @return Boolean False, to indicate that the event should stop propagation, or void.
+     * @inner
+     */
+    function triggerHandlerForGesture(event, phase, gesture) {
+
+      var ret;
+
+      //SWIPES....
+      if (gesture == SWIPE) {
+        //Trigger status every time..
+        $element.trigger('swipeStatus', [phase, direction || null, distance || 0, duration || 0, fingerCount, fingerData, currentDirection]);
+
+        if (options.swipeStatus) {
+          ret = options.swipeStatus.call($element, event, phase, direction || null, distance || 0, duration || 0, fingerCount, fingerData, currentDirection);
+          //If the status cancels, then dont run the subsequent event handlers..
+          if (ret === false) return false;
+        }
+
+        if (phase == PHASE_END && validateSwipe()) {
+
+          //Cancel any taps that were in progress...
+          clearTimeout(singleTapTimeout);
+          clearTimeout(holdTimeout);
+
+          $element.trigger('swipe', [direction, distance, duration, fingerCount, fingerData, currentDirection]);
+
+          if (options.swipe) {
+            ret = options.swipe.call($element, event, direction, distance, duration, fingerCount, fingerData, currentDirection);
+            //If the status cancels, then dont run the subsequent event handlers..
+            if (ret === false) return false;
+          }
+
+          //trigger direction specific event handlers
+          switch (direction) {
+            case LEFT:
+              $element.trigger('swipeLeft', [direction, distance, duration, fingerCount, fingerData, currentDirection]);
+
+              if (options.swipeLeft) {
+                ret = options.swipeLeft.call($element, event, direction, distance, duration, fingerCount, fingerData, currentDirection);
+              }
+              break;
+
+            case RIGHT:
+              $element.trigger('swipeRight', [direction, distance, duration, fingerCount, fingerData, currentDirection]);
+
+              if (options.swipeRight) {
+                ret = options.swipeRight.call($element, event, direction, distance, duration, fingerCount, fingerData, currentDirection);
+              }
+              break;
+
+            case UP:
+              $element.trigger('swipeUp', [direction, distance, duration, fingerCount, fingerData, currentDirection]);
+
+              if (options.swipeUp) {
+                ret = options.swipeUp.call($element, event, direction, distance, duration, fingerCount, fingerData, currentDirection);
+              }
+              break;
+
+            case DOWN:
+              $element.trigger('swipeDown', [direction, distance, duration, fingerCount, fingerData, currentDirection]);
+
+              if (options.swipeDown) {
+                ret = options.swipeDown.call($element, event, direction, distance, duration, fingerCount, fingerData, currentDirection);
+              }
+              break;
+          }
+        }
+      }
+
+
+      //PINCHES....
+      if (gesture == PINCH) {
+        $element.trigger('pinchStatus', [phase, pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData]);
+
+        if (options.pinchStatus) {
+          ret = options.pinchStatus.call($element, event, phase, pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData);
+          //If the status cancels, then dont run the subsequent event handlers..
+          if (ret === false) return false;
+        }
+
+        if (phase == PHASE_END && validatePinch()) {
+
+          switch (pinchDirection) {
+            case IN:
+              $element.trigger('pinchIn', [pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData]);
+
+              if (options.pinchIn) {
+                ret = options.pinchIn.call($element, event, pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData);
+              }
+              break;
+
+            case OUT:
+              $element.trigger('pinchOut', [pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData]);
+
+              if (options.pinchOut) {
+                ret = options.pinchOut.call($element, event, pinchDirection || null, pinchDistance || 0, duration || 0, fingerCount, pinchZoom, fingerData);
+              }
+              break;
+          }
+        }
+      }
+
+      if (gesture == TAP) {
+        if (phase === PHASE_CANCEL || phase === PHASE_END) {
+
+          clearTimeout(singleTapTimeout);
+          clearTimeout(holdTimeout);
+
+          //If we are also looking for doubelTaps, wait incase this is one...
+          if (hasDoubleTap() && !inDoubleTap()) {
+            doubleTapStartTime = getTimeStamp();
+
+            //Now wait for the double tap timeout, and trigger this single tap
+            //if its not cancelled by a double tap
+            singleTapTimeout = setTimeout($.proxy(function() {
+              doubleTapStartTime = null;
+              $element.trigger('tap', [event.target]);
+
+              if (options.tap) {
+                ret = options.tap.call($element, event, event.target);
+              }
+            }, this), options.doubleTapThreshold);
+
+          } else {
+            doubleTapStartTime = null;
+            $element.trigger('tap', [event.target]);
+            if (options.tap) {
+              ret = options.tap.call($element, event, event.target);
+            }
+          }
+        }
+      } else if (gesture == DOUBLE_TAP) {
+        if (phase === PHASE_CANCEL || phase === PHASE_END) {
+          clearTimeout(singleTapTimeout);
+          clearTimeout(holdTimeout);
+          doubleTapStartTime = null;
+          $element.trigger('doubletap', [event.target]);
+
+          if (options.doubleTap) {
+            ret = options.doubleTap.call($element, event, event.target);
+          }
+        }
+      } else if (gesture == LONG_TAP) {
+        if (phase === PHASE_CANCEL || phase === PHASE_END) {
+          clearTimeout(singleTapTimeout);
+          doubleTapStartTime = null;
+
+          $element.trigger('longtap', [event.target]);
+          if (options.longTap) {
+            ret = options.longTap.call($element, event, event.target);
+          }
+        }
+      }
+
+      return ret;
+    }
+
+
+    //
+    // GESTURE VALIDATION
+    //
+
+    /**
+     * Checks the user has swipe far enough
+     * @return Boolean if <code>threshold</code> has been set, return true if the threshold was met, else false.
+     * If no threshold was set, then we return true.
+     * @inner
+     */
+    function validateSwipeDistance() {
+      var valid = true;
+      //If we made it past the min swipe distance..
+      if (options.threshold !== null) {
+        valid = distance >= options.threshold;
+      }
+
+      return valid;
+    }
+
+    /**
+     * Checks the user has swiped back to cancel.
+     * @return Boolean if <code>cancelThreshold</code> has been set, return true if the cancelThreshold was met, else false.
+     * If no cancelThreshold was set, then we return true.
+     * @inner
+     */
+    function didSwipeBackToCancel() {
+      var cancelled = false;
+      if (options.cancelThreshold !== null && direction !== null) {
+        cancelled = (getMaxDistance(direction) - distance) >= options.cancelThreshold;
+      }
+
+      return cancelled;
+    }
+
+    /**
+     * Checks the user has pinched far enough
+     * @return Boolean if <code>pinchThreshold</code> has been set, return true if the threshold was met, else false.
+     * If no threshold was set, then we return true.
+     * @inner
+     */
+    function validatePinchDistance() {
+      if (options.pinchThreshold !== null) {
+        return pinchDistance >= options.pinchThreshold;
+      }
+      return true;
+    }
+
+    /**
+     * Checks that the time taken to swipe meets the minimum / maximum requirements
+     * @return Boolean
+     * @inner
+     */
+    function validateSwipeTime() {
+      var result;
+      //If no time set, then return true
+      if (options.maxTimeThreshold) {
+        if (duration >= options.maxTimeThreshold) {
+          result = false;
+        } else {
+          result = true;
+        }
+      } else {
+        result = true;
+      }
+
+      return result;
+    }
+
+
+    /**
+     * Checks direction of the swipe and the value allowPageScroll to see if we should allow or prevent the default behaviour from occurring.
+     * This will essentially allow page scrolling or not when the user is swiping on a touchSwipe object.
+     * @param {object} jqEvent The normalised jQuery representation of the event object.
+     * @param {string} direction The direction of the event. See {@link $.fn.swipe.directions}
+     * @see $.fn.swipe.directions
+     * @inner
+     */
+    function validateDefaultEvent(jqEvent, direction) {
+
+      //If the option is set, allways allow the event to bubble up (let user handle weirdness)
+      if (options.preventDefaultEvents === false) {
+        return;
+      }
+
+      if (options.allowPageScroll === NONE) {
+        jqEvent.preventDefault();
+      } else {
+        var auto = options.allowPageScroll === AUTO;
+
+        switch (direction) {
+          case LEFT:
+            if ((options.swipeLeft && auto) || (!auto && options.allowPageScroll != HORIZONTAL)) {
+              jqEvent.preventDefault();
+            }
+            break;
+
+          case RIGHT:
+            if ((options.swipeRight && auto) || (!auto && options.allowPageScroll != HORIZONTAL)) {
+              jqEvent.preventDefault();
+            }
+            break;
+
+          case UP:
+            if ((options.swipeUp && auto) || (!auto && options.allowPageScroll != VERTICAL)) {
+              jqEvent.preventDefault();
+            }
+            break;
+
+          case DOWN:
+            if ((options.swipeDown && auto) || (!auto && options.allowPageScroll != VERTICAL)) {
+              jqEvent.preventDefault();
+            }
+            break;
+
+          case NONE:
+
+            break;
+        }
+      }
+    }
+
+
+    // PINCHES
+    /**
+     * Returns true of the current pinch meets the thresholds
+     * @return Boolean
+     * @inner
+     */
+    function validatePinch() {
+      var hasCorrectFingerCount = validateFingers();
+      var hasEndPoint = validateEndPoint();
+      var hasCorrectDistance = validatePinchDistance();
+      return hasCorrectFingerCount && hasEndPoint && hasCorrectDistance;
+
+    }
+
+    /**
+     * Returns true if any Pinch events have been registered
+     * @return Boolean
+     * @inner
+     */
+    function hasPinches() {
+      //Enure we dont return 0 or null for false values
+      return !!(options.pinchStatus || options.pinchIn || options.pinchOut);
+    }
+
+    /**
+     * Returns true if we are detecting pinches, and have one
+     * @return Boolean
+     * @inner
+     */
+    function didPinch() {
+      //Enure we dont return 0 or null for false values
+      return !!(validatePinch() && hasPinches());
+    }
+
+
+
+
+    // SWIPES
+    /**
+     * Returns true if the current swipe meets the thresholds
+     * @return Boolean
+     * @inner
+     */
+    function validateSwipe() {
+      //Check validity of swipe
+      var hasValidTime = validateSwipeTime();
+      var hasValidDistance = validateSwipeDistance();
+      var hasCorrectFingerCount = validateFingers();
+      var hasEndPoint = validateEndPoint();
+      var didCancel = didSwipeBackToCancel();
+
+      // if the user swiped more than the minimum length, perform the appropriate action
+      // hasValidDistance is null when no distance is set
+      var valid = !didCancel && hasEndPoint && hasCorrectFingerCount && hasValidDistance && hasValidTime;
+
+      return valid;
+    }
+
+    /**
+     * Returns true if any Swipe events have been registered
+     * @return Boolean
+     * @inner
+     */
+    function hasSwipes() {
+      //Enure we dont return 0 or null for false values
+      return !!(options.swipe || options.swipeStatus || options.swipeLeft || options.swipeRight || options.swipeUp || options.swipeDown);
+    }
+
+
+    /**
+     * Returns true if we are detecting swipes and have one
+     * @return Boolean
+     * @inner
+     */
+    function didSwipe() {
+      //Enure we dont return 0 or null for false values
+      return !!(validateSwipe() && hasSwipes());
+    }
+
+    /**
+     * Returns true if we have matched the number of fingers we are looking for
+     * @return Boolean
+     * @inner
+     */
+    function validateFingers() {
+      //The number of fingers we want were matched, or on desktop we ignore
+      return ((fingerCount === options.fingers || options.fingers === ALL_FINGERS) || !SUPPORTS_TOUCH);
+    }
+
+    /**
+     * Returns true if we have an end point for the swipe
+     * @return Boolean
+     * @inner
+     */
+    function validateEndPoint() {
+      //We have an end value for the finger
+      return fingerData[0].end.x !== 0;
+    }
+
+    // TAP / CLICK
+    /**
+     * Returns true if a click / tap events have been registered
+     * @return Boolean
+     * @inner
+     */
+    function hasTap() {
+      //Enure we dont return 0 or null for false values
+      return !!(options.tap);
+    }
+
+    /**
+     * Returns true if a double tap events have been registered
+     * @return Boolean
+     * @inner
+     */
+    function hasDoubleTap() {
+      //Enure we dont return 0 or null for false values
+      return !!(options.doubleTap);
+    }
+
+    /**
+     * Returns true if any long tap events have been registered
+     * @return Boolean
+     * @inner
+     */
+    function hasLongTap() {
+      //Enure we dont return 0 or null for false values
+      return !!(options.longTap);
+    }
+
+    /**
+     * Returns true if we could be in the process of a double tap (one tap has occurred, we are listening for double taps, and the threshold hasn't past.
+     * @return Boolean
+     * @inner
+     */
+    function validateDoubleTap() {
+      if (doubleTapStartTime == null) {
+        return false;
+      }
+      var now = getTimeStamp();
+      return (hasDoubleTap() && ((now - doubleTapStartTime) <= options.doubleTapThreshold));
+    }
+
+    /**
+     * Returns true if we could be in the process of a double tap (one tap has occurred, we are listening for double taps, and the threshold hasn't past.
+     * @return Boolean
+     * @inner
+     */
+    function inDoubleTap() {
+      return validateDoubleTap();
+    }
+
+
+    /**
+     * Returns true if we have a valid tap
+     * @return Boolean
+     * @inner
+     */
+    function validateTap() {
+      return ((fingerCount === 1 || !SUPPORTS_TOUCH) && (isNaN(distance) || distance < options.threshold));
+    }
+
+    /**
+     * Returns true if we have a valid long tap
+     * @return Boolean
+     * @inner
+     */
+    function validateLongTap() {
+      //slight threshold on moving finger
+      return ((duration > options.longTapThreshold) && (distance < DOUBLE_TAP_THRESHOLD));
+    }
+
+    /**
+     * Returns true if we are detecting taps and have one
+     * @return Boolean
+     * @inner
+     */
+    function didTap() {
+      //Enure we dont return 0 or null for false values
+      return !!(validateTap() && hasTap());
+    }
+
+
+    /**
+     * Returns true if we are detecting double taps and have one
+     * @return Boolean
+     * @inner
+     */
+    function didDoubleTap() {
+      //Enure we dont return 0 or null for false values
+      return !!(validateDoubleTap() && hasDoubleTap());
+    }
+
+    /**
+     * Returns true if we are detecting long taps and have one
+     * @return Boolean
+     * @inner
+     */
+    function didLongTap() {
+      //Enure we dont return 0 or null for false values
+      return !!(validateLongTap() && hasLongTap());
+    }
+
+
+
+
+    // MULTI FINGER TOUCH
+    /**
+     * Starts tracking the time between 2 finger releases, and keeps track of how many fingers we initially had up
+     * @inner
+     */
+    function startMultiFingerRelease(event) {
+      previousTouchEndTime = getTimeStamp();
+      fingerCountAtRelease = event.touches.length + 1;
+    }
+
+    /**
+     * Cancels the tracking of time between 2 finger releases, and resets counters
+     * @inner
+     */
+    function cancelMultiFingerRelease() {
+      previousTouchEndTime = 0;
+      fingerCountAtRelease = 0;
+    }
+
+    /**
+     * Checks if we are in the threshold between 2 fingers being released
+     * @return Boolean
+     * @inner
+     */
+    function inMultiFingerRelease() {
+
+      var withinThreshold = false;
+
+      if (previousTouchEndTime) {
+        var diff = getTimeStamp() - previousTouchEndTime
+        if (diff <= options.fingerReleaseThreshold) {
+          withinThreshold = true;
+        }
+      }
+
+      return withinThreshold;
+    }
+
+
+    /**
+     * gets a data flag to indicate that a touch is in progress
+     * @return Boolean
+     * @inner
+     */
+    function getTouchInProgress() {
+      //strict equality to ensure only true and false are returned
+      return !!($element.data(PLUGIN_NS + '_intouch') === true);
+    }
+
+    /**
+     * Sets a data flag to indicate that a touch is in progress
+     * @param {boolean} val The value to set the property to
+     * @inner
+     */
+    function setTouchInProgress(val) {
+
+      //If destroy is called in an event handler, we have no el, and we have already cleaned up, so return.
+      if(!$element) { return; }
+
+      //Add or remove event listeners depending on touch status
+      if (val === true) {
+        $element.on(MOVE_EV, touchMove);
+        $element.on(END_EV, touchEnd);
+
+        //we only have leave events on desktop, we manually calcuate leave on touch as its not supported in webkit
+        if (LEAVE_EV) {
+          $element.on(LEAVE_EV, touchLeave);
+        }
+      } else {
+
+        $element.off(MOVE_EV, touchMove, false);
+        $element.off(END_EV, touchEnd, false);
+
+        //we only have leave events on desktop, we manually calcuate leave on touch as its not supported in webkit
+        if (LEAVE_EV) {
+          $element.off(LEAVE_EV, touchLeave, false);
+        }
+      }
+
+
+      //strict equality to ensure only true and false can update the value
+      $element.data(PLUGIN_NS + '_intouch', val === true);
+    }
+
+
+    /**
+     * Creates the finger data for the touch/finger in the event object.
+     * @param {int} id The id to store the finger data under (usually the order the fingers were pressed)
+     * @param {object} evt The event object containing finger data
+     * @return finger data object
+     * @inner
+     */
+    function createFingerData(id, evt) {
+      var f = {
+        start: {
+          x: 0,
+          y: 0
+        },
+        last: {
+          x: 0,
+          y: 0
+        },
+        end: {
+          x: 0,
+          y: 0
+        }
+      };
+      f.start.x = f.last.x = f.end.x = evt.pageX || evt.clientX;
+      f.start.y = f.last.y = f.end.y = evt.pageY || evt.clientY;
+      fingerData[id] = f;
+      return f;
+    }
+
+    /**
+     * Updates the finger data for a particular event object
+     * @param {object} evt The event object containing the touch/finger data to upadte
+     * @return a finger data object.
+     * @inner
+     */
+    function updateFingerData(evt) {
+      var id = evt.identifier !== undefined ? evt.identifier : 0;
+      var f = getFingerData(id);
+
+      if (f === null) {
+        f = createFingerData(id, evt);
+      }
+
+      f.last.x = f.end.x;
+      f.last.y = f.end.y;
+
+      f.end.x = evt.pageX || evt.clientX;
+      f.end.y = evt.pageY || evt.clientY;
+
+      return f;
+    }
+
+    /**
+     * Returns a finger data object by its event ID.
+     * Each touch event has an identifier property, which is used
+     * to track repeat touches
+     * @param {int} id The unique id of the finger in the sequence of touch events.
+     * @return a finger data object.
+     * @inner
+     */
+    function getFingerData(id) {
+      return fingerData[id] || null;
+    }
+
+
+    /**
+     * Sets the maximum distance swiped in the given direction.
+     * If the new value is lower than the current value, the max value is not changed.
+     * @param {string}  direction The direction of the swipe
+     * @param {int}  distance The distance of the swipe
+     * @inner
+     */
+    function setMaxDistance(direction, distance) {
+      if(direction==NONE) return;
+      distance = Math.max(distance, getMaxDistance(direction));
+      maximumsMap[direction].distance = distance;
+    }
+
+    /**
+     * gets the maximum distance swiped in the given direction.
+     * @param {string}  direction The direction of the swipe
+     * @return int  The distance of the swipe
+     * @inner
+     */
+    function getMaxDistance(direction) {
+      if (maximumsMap[direction]) return maximumsMap[direction].distance;
+      return undefined;
+    }
+
+    /**
+     * Creats a map of directions to maximum swiped values.
+     * @return Object A dictionary of maximum values, indexed by direction.
+     * @inner
+     */
+    function createMaximumsData() {
+      var maxData = {};
+      maxData[LEFT] = createMaximumVO(LEFT);
+      maxData[RIGHT] = createMaximumVO(RIGHT);
+      maxData[UP] = createMaximumVO(UP);
+      maxData[DOWN] = createMaximumVO(DOWN);
+
+      return maxData;
+    }
+
+    /**
+     * Creates a map maximum swiped values for a given swipe direction
+     * @param {string} The direction that these values will be associated with
+     * @return Object Maximum values
+     * @inner
+     */
+    function createMaximumVO(dir) {
+      return {
+        direction: dir,
+        distance: 0
+      }
+    }
+
+
+    //
+    // MATHS / UTILS
+    //
+
+    /**
+     * Calculate the duration of the swipe
+     * @return int
+     * @inner
+     */
+    function calculateDuration() {
+      return endTime - startTime;
+    }
+
+    /**
+     * Calculate the distance between 2 touches (pinch)
+     * @param {point} startPoint A point object containing x and y co-ordinates
+     * @param {point} endPoint A point object containing x and y co-ordinates
+     * @return int;
+     * @inner
+     */
+    function calculateTouchesDistance(startPoint, endPoint) {
+      var diffX = Math.abs(startPoint.x - endPoint.x);
+      var diffY = Math.abs(startPoint.y - endPoint.y);
+
+      return Math.round(Math.sqrt(diffX * diffX + diffY * diffY));
+    }
+
+    /**
+     * Calculate the zoom factor between the start and end distances
+     * @param {int} startDistance Distance (between 2 fingers) the user started pinching at
+     * @param {int} endDistance Distance (between 2 fingers) the user ended pinching at
+     * @return float The zoom value from 0 to 1.
+     * @inner
+     */
+    function calculatePinchZoom(startDistance, endDistance) {
+      var percent = (endDistance / startDistance) * 1;
+      return percent.toFixed(2);
+    }
+
+
+    /**
+     * Returns the pinch direction, either IN or OUT for the given points
+     * @return string Either {@link $.fn.swipe.directions.IN} or {@link $.fn.swipe.directions.OUT}
+     * @see $.fn.swipe.directions
+     * @inner
+     */
+    function calculatePinchDirection() {
+      if (pinchZoom < 1) {
+        return OUT;
+      } else {
+        return IN;
+      }
+    }
+
+
+    /**
+     * Calculate the length / distance of the swipe
+     * @param {point} startPoint A point object containing x and y co-ordinates
+     * @param {point} endPoint A point object containing x and y co-ordinates
+     * @return int
+     * @inner
+     */
+    function calculateDistance(startPoint, endPoint) {
+      return Math.round(Math.sqrt(Math.pow(endPoint.x - startPoint.x, 2) + Math.pow(endPoint.y - startPoint.y, 2)));
+    }
+
+    /**
+     * Calculate the angle of the swipe
+     * @param {point} startPoint A point object containing x and y co-ordinates
+     * @param {point} endPoint A point object containing x and y co-ordinates
+     * @return int
+     * @inner
+     */
+    function calculateAngle(startPoint, endPoint) {
+      var x = startPoint.x - endPoint.x;
+      var y = endPoint.y - startPoint.y;
+      var r = Math.atan2(y, x); //radians
+      var angle = Math.round(r * 180 / Math.PI); //degrees
+
+      //ensure value is positive
+      if (angle < 0) {
+        angle = 360 - Math.abs(angle);
+      }
+
+      return angle;
+    }
+
+    /**
+     * Calculate the direction of the swipe
+     * This will also call calculateAngle to get the latest angle of swipe
+     * @param {point} startPoint A point object containing x and y co-ordinates
+     * @param {point} endPoint A point object containing x and y co-ordinates
+     * @return string Either {@link $.fn.swipe.directions.LEFT} / {@link $.fn.swipe.directions.RIGHT} / {@link $.fn.swipe.directions.DOWN} / {@link $.fn.swipe.directions.UP}
+     * @see $.fn.swipe.directions
+     * @inner
+     */
+    function calculateDirection(startPoint, endPoint) {
+
+      if( comparePoints(startPoint, endPoint) ) {
+        return NONE;
+      }
+
+      var angle = calculateAngle(startPoint, endPoint);
+
+      if ((angle <= 45) && (angle >= 0)) {
+        return LEFT;
+      } else if ((angle <= 360) && (angle >= 315)) {
+        return LEFT;
+      } else if ((angle >= 135) && (angle <= 225)) {
+        return RIGHT;
+      } else if ((angle > 45) && (angle < 135)) {
+        return DOWN;
+      } else {
+        return UP;
+      }
+    }
+
+
+    /**
+     * Returns a MS time stamp of the current time
+     * @return int
+     * @inner
+     */
+    function getTimeStamp() {
+      var now = new Date();
+      return now.getTime();
+    }
+
+
+
+    /**
+     * Returns a bounds object with left, right, top and bottom properties for the element specified.
+     * @param {DomNode} The DOM node to get the bounds for.
+     */
+    function getbounds(el) {
+      el = $(el);
+      var offset = el.offset();
+
+      var bounds = {
+        left: offset.left,
+        right: offset.left + el.outerWidth(),
+        top: offset.top,
+        bottom: offset.top + el.outerHeight()
+      }
+
+      return bounds;
+    }
+
+
+    /**
+     * Checks if the point object is in the bounds object.
+     * @param {object} point A point object.
+     * @param {int} point.x The x value of the point.
+     * @param {int} point.y The x value of the point.
+     * @param {object} bounds The bounds object to test
+     * @param {int} bounds.left The leftmost value
+     * @param {int} bounds.right The righttmost value
+     * @param {int} bounds.top The topmost value
+     * @param {int} bounds.bottom The bottommost value
+     */
+    function isInBounds(point, bounds) {
+      return (point.x > bounds.left && point.x < bounds.right && point.y > bounds.top && point.y < bounds.bottom);
+    };
+
+    /**
+     * Checks if the two points are equal
+     * @param {object} point A point object.
+     * @param {object} point B point object.
+     * @return true of the points match
+     */
+    function comparePoints(pointA, pointB) {
+      return (pointA.x == pointB.x && pointA.y == pointB.y);
+    }
+
+
+  }
+
+
+
+
+  /**
+   * A catch all handler that is triggered for all swipe directions.
+   * @name $.fn.swipe#swipe
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {int} direction The direction the user swiped in. See {@link $.fn.swipe.directions}
+   * @param {int} distance The distance the user swiped
+   * @param {int} duration The duration of the swipe in milliseconds
+   * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
+   * @param {object} fingerData The coordinates of fingers in event
+   * @param {string} currentDirection The current direction the user is swiping.
+   */
+
+
+
+
+  /**
+   * A handler that is triggered for "left" swipes.
+   * @name $.fn.swipe#swipeLeft
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {int} direction The direction the user swiped in. See {@link $.fn.swipe.directions}
+   * @param {int} distance The distance the user swiped
+   * @param {int} duration The duration of the swipe in milliseconds
+   * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
+   * @param {object} fingerData The coordinates of fingers in event
+   * @param {string} currentDirection The current direction the user is swiping.
+   */
+
+  /**
+   * A handler that is triggered for "right" swipes.
+   * @name $.fn.swipe#swipeRight
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {int} direction The direction the user swiped in. See {@link $.fn.swipe.directions}
+   * @param {int} distance The distance the user swiped
+   * @param {int} duration The duration of the swipe in milliseconds
+   * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
+   * @param {object} fingerData The coordinates of fingers in event
+   * @param {string} currentDirection The current direction the user is swiping.
+   */
+
+  /**
+   * A handler that is triggered for "up" swipes.
+   * @name $.fn.swipe#swipeUp
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {int} direction The direction the user swiped in. See {@link $.fn.swipe.directions}
+   * @param {int} distance The distance the user swiped
+   * @param {int} duration The duration of the swipe in milliseconds
+   * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
+   * @param {object} fingerData The coordinates of fingers in event
+   * @param {string} currentDirection The current direction the user is swiping.
+   */
+
+  /**
+   * A handler that is triggered for "down" swipes.
+   * @name $.fn.swipe#swipeDown
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {int} direction The direction the user swiped in. See {@link $.fn.swipe.directions}
+   * @param {int} distance The distance the user swiped
+   * @param {int} duration The duration of the swipe in milliseconds
+   * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
+   * @param {object} fingerData The coordinates of fingers in event
+   * @param {string} currentDirection The current direction the user is swiping.
+   */
+
+  /**
+   * A handler triggered for every phase of the swipe. This handler is constantly fired for the duration of the pinch.
+   * This is triggered regardless of swipe thresholds.
+   * @name $.fn.swipe#swipeStatus
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {string} phase The phase of the swipe event. See {@link $.fn.swipe.phases}
+   * @param {string} direction The direction the user swiped in. This is null if the user has yet to move. See {@link $.fn.swipe.directions}
+   * @param {int} distance The distance the user swiped. This is 0 if the user has yet to move.
+   * @param {int} duration The duration of the swipe in milliseconds
+   * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
+   * @param {object} fingerData The coordinates of fingers in event
+   * @param {string} currentDirection The current direction the user is swiping.
+   */
+
+  /**
+   * A handler triggered for pinch in events.
+   * @name $.fn.swipe#pinchIn
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {int} direction The direction the user pinched in. See {@link $.fn.swipe.directions}
+   * @param {int} distance The distance the user pinched
+   * @param {int} duration The duration of the swipe in milliseconds
+   * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
+   * @param {int} zoom The zoom/scale level the user pinched too, 0-1.
+   * @param {object} fingerData The coordinates of fingers in event
+   */
+
+  /**
+   * A handler triggered for pinch out events.
+   * @name $.fn.swipe#pinchOut
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {int} direction The direction the user pinched in. See {@link $.fn.swipe.directions}
+   * @param {int} distance The distance the user pinched
+   * @param {int} duration The duration of the swipe in milliseconds
+   * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
+   * @param {int} zoom The zoom/scale level the user pinched too, 0-1.
+   * @param {object} fingerData The coordinates of fingers in event
+   */
+
+  /**
+   * A handler triggered for all pinch events. This handler is constantly fired for the duration of the pinch. This is triggered regardless of thresholds.
+   * @name $.fn.swipe#pinchStatus
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {int} direction The direction the user pinched in. See {@link $.fn.swipe.directions}
+   * @param {int} distance The distance the user pinched
+   * @param {int} duration The duration of the swipe in milliseconds
+   * @param {int} fingerCount The number of fingers used. See {@link $.fn.swipe.fingers}
+   * @param {int} zoom The zoom/scale level the user pinched too, 0-1.
+   * @param {object} fingerData The coordinates of fingers in event
+   */
+
+  /**
+   * A click handler triggered when a user simply clicks, rather than swipes on an element.
+   * This is deprecated since version 1.6.2, any assignment to click will be assigned to the tap handler.
+   * You cannot use <code>on</code> to bind to this event as the default jQ <code>click</code> event will be triggered.
+   * Use the <code>tap</code> event instead.
+   * @name $.fn.swipe#click
+   * @event
+   * @deprecated since version 1.6.2, please use {@link $.fn.swipe#tap} instead
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {DomObject} target The element clicked on.
+   */
+
+  /**
+   * A click / tap handler triggered when a user simply clicks or taps, rather than swipes on an element.
+   * @name $.fn.swipe#tap
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {DomObject} target The element clicked on.
+   */
+
+  /**
+   * A double tap handler triggered when a user double clicks or taps on an element.
+   * You can set the time delay for a double tap with the {@link $.fn.swipe.defaults#doubleTapThreshold} property.
+   * Note: If you set both <code>doubleTap</code> and <code>tap</code> handlers, the <code>tap</code> event will be delayed by the <code>doubleTapThreshold</code>
+   * as the script needs to check if its a double tap.
+   * @name $.fn.swipe#doubleTap
+   * @see  $.fn.swipe.defaults#doubleTapThreshold
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {DomObject} target The element clicked on.
+   */
+
+  /**
+   * A long tap handler triggered once a tap has been release if the tap was longer than the longTapThreshold.
+   * You can set the time delay for a long tap with the {@link $.fn.swipe.defaults#longTapThreshold} property.
+   * @name $.fn.swipe#longTap
+   * @see  $.fn.swipe.defaults#longTapThreshold
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {DomObject} target The element clicked on.
+   */
+
+  /**
+   * A hold tap handler triggered as soon as the longTapThreshold is reached
+   * You can set the time delay for a long tap with the {@link $.fn.swipe.defaults#longTapThreshold} property.
+   * @name $.fn.swipe#hold
+   * @see  $.fn.swipe.defaults#longTapThreshold
+   * @event
+   * @default null
+   * @param {EventObject} event The original event object
+   * @param {DomObject} target The element clicked on.
+   */
+
+}));
+
 const hamburger = document.querySelector('.hamburger');
 const nav__list = document.querySelector('.nav__list');
 
@@ -10877,13 +13991,13 @@ ymaps.ready(init);
 let player;
 const playerContainer = $('.player');
 let eventsInit = () => {
-  $('.player__volume-icon').click(()=>{
+  $('.player__volume-icon').click(() => {
     player.setVolume(0);
     $('.player__scroll-volume').css({
       left: '0%'
     });
   });
-  $('.player__line-volume').click( e =>{
+  $('.player__line-volume').click(e => {
     const barVolume = $(e.currentTarget);
     const clickedPositionVolume = e.originalEvent.layerX;
     console.log(clickedPositionVolume);
@@ -10966,3 +14080,79 @@ function onYouTubeIframeAPIReady() {
 }
 eventsInit();
 //player
+const sections = $('.section');
+const display = $('.main-content');
+let inScroll = false;
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+const performTransition = sectionEq => {
+  if (inScroll === false) {
+    inScroll = true;
+    const position = sectionEq * -100;
+    sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
+    display.css({
+      transform: `translateY(${position}%)`
+    });
+    display.on('transitionend', () => {
+      $('.bullets__item').eq(sectionEq).addClass('bullets__item--active').siblings().removeClass('bullets__item--active');
+      inScroll = false;
+    });
+  }
+};
+const scrollSection = direction => {
+  const activeSection = sections.filter('.active');
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+  if (nextSection.length && direction === 'next') {
+    performTransition(nextSection.index());
+  }
+  if (prevSection.length && direction === 'prev') {
+    performTransition(prevSection.index());
+  }
+}
+$(window).on('wheel', e => {
+  const deltaY = e.originalEvent.deltaY;
+  if (deltaY > 0) {
+    scrollSection('next');
+  }
+  if (deltaY < 0) {
+    scrollSection('prev');
+  }
+});
+$(document).on('keydown', e => {
+  const tagName = e.target.tagName.toLowerCase();
+  if (tagName != 'input' && tagName != 'textarea') {
+    switch (e.keyCode) {
+      case 38:
+        scrollSection('prev');
+        break;
+      case 40:
+        scrollSection('next');
+        break;
+    }
+  }
+});
+$('[data-scroll-to]').on('click', e => {
+  e.preventDefault();
+  const $this = $(e.currentTarget);
+  const target = $this.attr('data-scroll-to');
+  performTransition(target);
+});
+if (isMobile) {
+  $('body').swipe({
+    swipe: (even, direction) => {
+      let scrollDirection;
+      if (direction === 'up') {
+        scrollDirection = 'next';
+      }
+      if (direction === 'down') {
+        scrollDirection = 'prev';
+      }
+      scrollSection(scrollDirection);
+    }
+  });
+}
+$('.arrow-bottom').click(() => {
+  scrollSection('next');
+});
+//onepagescroll

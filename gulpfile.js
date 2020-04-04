@@ -16,6 +16,8 @@ task('html', () => {
 });
 const libs = [
     'node_modules/jquery/dist/jquery.js',
+    'src/js/mobile-detect.js',
+    'src/js/jquery.touchSwipe.js',
     'src/js/main.js'
 ];
 task('scripts', () => {

@@ -161,30 +161,6 @@
     text-decoration: none;
   }
 }
-.order-link {
-  padding: 0.625rem 1rem;
-  text-align: center;
-  background-color: #c1401e;
-  margin-left: 1rem;
-  border-radius: 0.4375rem;
-  font-size: 0.8125rem;
-  font-family: "Ubuntu";
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  text-decoration: none;
-  @include tablets {
-    margin: 1.75rem 0 0 auto;
-  }
-  &--form{
-    background: #e45028;
-    border-radius: 0.375rem;
-    margin-left: 0;
-  }
-  &--burgers{
-    margin: 0 0 0 2rem;
-  }
-  
-}
 .bullets {
   &__item {
     border: 1px solid transparent;
@@ -194,7 +170,7 @@
     position: relative;
     margin-bottom: 0.3125rem;
 
-    &.active {
+    &--active {
       border-color: #fff;
     }
   }
@@ -214,6 +190,9 @@
   position: fixed;
   top: 14%;
   right: 3.125rem;
+  @include phones {
+    right: 1rem;
+  }
 }
 .arrow {
   cursor: pointer;
