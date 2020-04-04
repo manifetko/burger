@@ -15,6 +15,10 @@
       left: 1.9375rem;
       top: 3.875rem;
     }
+    @include phones{
+      font-size: 3.482062rem;
+      left: 0.9375rem;
+    }
   }
   &__accordeon {
     position: relative;
@@ -75,6 +79,10 @@
     flex-basis: 5rem;
     width: 5rem;
     transition: all 0.5s;
+    @include phones {
+      width: 3.3rem;
+      flex-basis: 3.3rem;
+    }
     &--active {
       flex: 1 0 auto;
       @include phones {
@@ -89,7 +97,7 @@
           display: block;
         }
       }
-      & .menu__discription{
+      & .menu__discription {
         width: auto;
         visibility: visible;
       }
@@ -111,6 +119,9 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    @include phones {
+      width: 3.3rem;
+    }
   }
   &--meat {
     background: url(./images/menuitem1.png) 78%;
