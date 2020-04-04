@@ -144,8 +144,10 @@
       flex-direction: column;
     }
     &--active {
-      visibility: visible;
-      opacity: 1;
+      @include tablets {
+        visibility: visible;
+        opacity: 1;
+      }
       .nav__item {
         transform: translateY(0);
         opacity: 1;
