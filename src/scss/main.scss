@@ -17,8 +17,9 @@
   background-position: center;
   background-size: cover;
   height: 100%;
+  min-height: 40.625rem;
   @include phones {
-    min-height: 40.625rem;
+    min-height: auto;
   }
 }
 // for adaptive
