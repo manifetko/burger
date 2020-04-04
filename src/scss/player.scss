@@ -1,0 +1,139 @@
+.how-work {
+  @include bg(url(./images/playerbg.png));
+  &--container {
+    justify-content: center;
+    align-items: center;
+  }
+  &__heading {
+    font-size: 4.5rem;
+    font-family: "Gagalin";
+    color: rgb(47, 50, 52);
+    text-align: center;
+  }
+}
+.player {
+  width: 41.25rem;
+  margin-top: 3.125rem;
+  height: 25.3125rem;
+  position: relative;
+  &--active {
+    .player__pause {
+      display: none;
+    }
+    .player__triangle {
+      visibility: visible;
+    }
+  }
+  &--paused {
+    .player__start {
+      display: none;
+    }
+    .player__triangle {
+      visibility: hidden;
+    }
+  }
+  @include tablets {
+    width: 95%;
+    height: 28.4375rem;
+  }
+  @include phones {
+    height: 17.8125rem;
+  }
+  &__controls {
+    background: #3e3e3e;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1.875rem;
+    padding: 0 1rem;
+  }
+  &__wrapper {
+    height: 100%;
+    position: relative;
+  }
+  &__triangle {
+    position: absolute;
+    bottom: 1.875rem;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+  }
+  &__button {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 1rem;
+    margin-right: 1.25rem;
+  }
+  &__line {
+    height: 0.25rem;
+    background: #626262;
+    position: relative;
+    cursor: pointer;
+    z-index: 20;
+    &-main {
+      flex: 1 0 auto;
+      margin-right: 2.8125rem;
+      width: 3.75rem;
+      @include tablets {
+        margin-right: 0;
+      }
+    }
+    &-volume {
+      width: 3.75rem;
+    }
+  }
+  &__volume {
+    display: flex;
+    align-items: center;
+    @include tablets {
+      display: none;
+    }
+    &-icon {
+      margin-right: 1.25rem;
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: 1.125rem;
+      cursor: pointer;
+    }
+  }
+  &__scroll {
+    height: 0.75rem;
+    width: 0.75rem;
+    background: #626262;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    &-volume {
+      left: 100%;
+    }
+    &-main {
+      left: 0;
+    }
+  }
+}
+
+.play-control {
+  fill: #626262;
+  height: 1rem;
+  width: 1rem;
+}
+.volume {
+  fill: #626262;
+  height: 1.375rem;
+  width: 1.125rem;
+}
+.triangle {
+  fill: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include tablets {
+    fill: black;
+    opacity: 0.5;
+  }
+}

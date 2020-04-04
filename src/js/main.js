@@ -247,11 +247,123 @@ openComment.forEach(open => {
   });
 });
 // for overlay
-  $('.wrapper').fullpage({
-    //options here
-    autoScrolling: true,
-    sectionSelector: '.section'
+var myMap;
+const init = () => {
+  myMap = new ymaps.Map('map', {
+    center: [59.9277974, 30.2638647],
+    zoom: 12,
+    controls: []
   });
-
-  //methods
-// onepagescroll
+  const coords = [
+    [59.9490893, 30.2700442],
+    [59.9287917, 30.2516848],
+    [59.9607237, 30.2923823],
+    [59.9016327, 30.2829593]
+  ];
+  const myCollection = new ymaps.GeoObjectCollection({}, {
+    draggable: false,
+    iconLayout: 'default#image',
+    iconImageHref: './images/marker.svg',
+    iconImageSize: [46, 57],
+    iconImageOffSET: [-35, -52]
+  });
+  coords.forEach(coord => {
+    myCollection.add(new ymaps.Placemark(coord));
+  });
+  myMap.geoObjects.add(myCollection);
+  myMap.behaviors.disable('scrollZoom');
+}
+ymaps.ready(init);
+// map
+let player;
+const playerContainer = $('.player');
+let eventsInit = () => {
+  $('.player__volume-icon').click(()=>{
+    player.setVolume(0);
+    $('.player__scroll-volume').css({
+      left: '0%'
+    });
+  });
+  $('.player__line-volume').click( e =>{
+    const barVolume = $(e.currentTarget);
+    const clickedPositionVolume = e.originalEvent.layerX;
+    console.log(clickedPositionVolume);
+    const newButtonPositionVolume = (clickedPositionVolume / barVolume.width()) * 100;
+    $('.player__scroll-volume').css({
+      left: `${newButtonPositionVolume}%`
+    });
+    player.setVolume(newButtonPositionVolume);
+  });
+  $('.player__button').click(e => {
+    e.preventDefault();
+    const btn = $(e.currentTarget);
+    if (playerContainer.hasClass('player--active')) {
+      player.playVideo();
+    } else {
+      player.pauseVideo();
+    }
+  });
+  $('.player__triangle').click(e => {
+    player.playVideo();
+  });
+  $('.player__line-main').click(e => {
+    const bar = $(e.currentTarget);
+    const clickedPosition = e.originalEvent.layerX;
+    const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+    const newPlayBackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
+    player.seekTo(newPlayBackPositionSec);
+  });
+}
+const onPlayerStateChange = event => {
+  // -1 – воспроизведение видео не началось
+  // 0 – воспроизведение видео завершено
+  // 1 – воспроизведение
+  // 2 – пауза
+  // 3 – буферизация
+  // 5 – видео находится в очереди
+  switch (event.data) {
+    case 1:
+      playerContainer.removeClass('player--active');
+      playerContainer.addClass('player--paused');
+      break;
+    case 2:
+      playerContainer.removeClass('player--paused');
+      playerContainer.addClass('player--active');
+      break;
+  }
+};
+const onPlayerReady = () => {
+  let interval;
+  const durationSec = player.getDuration();
+  if (typeof interval != 'undefined') {
+    clearInterval(interval);
+  }
+  interval = setInterval(() => {
+    const completedSec = player.getCurrentTime();
+    const completedPercent = (completedSec / durationSec) * 100;
+    $('.player__scroll-main').css({
+      left: `${completedPercent}%`
+    });
+  }, 1000);
+};
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt-player', {
+    height: '100%',
+    width: '100%',
+    videoId: 'cgiGG_9Kxb0',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    },
+    playerVars: {
+      controls: 0,
+      disablekb: 0,
+      showinfo: 0,
+      rel: 0,
+      autoplay: 0,
+      modestbranding: 0
+    }
+  });
+}
+eventsInit();
+//player

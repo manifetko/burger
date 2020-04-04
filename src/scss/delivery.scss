@@ -105,12 +105,6 @@
   &__submit {
     @extend %formtext;
     margin-right: 1.25rem;
-    &--order {
-      width: 6.25rem;
-      height: 2.1875rem;
-      background: #e45028;
-      border-radius: 0.375rem;
-    }
   }
   &__comment {
     @extend %formtext;
