@@ -50,6 +50,9 @@
     padding-left: 0.4rem;
     outline: none;
     border: 0.125rem solid transparent;
+    @include phones{
+      line-height: 1.5rem;
+    }
     &:focus {
       border: 0.125rem solid #f9b43b;
     }
@@ -93,6 +96,9 @@
     display: flex;
     margin-bottom: 1.25rem;
     margin-left: -1.25rem;
+    @include phones{
+      margin-bottom: 0.5rem;
+    }
     &--textarea {
       display: flex;
       flex-direction: column;
@@ -143,4 +149,7 @@
 }
 .textarea {
   height: 6.875rem;
+  @include phones{
+    height: 4.875rem;
+  }
 }

@@ -15,7 +15,8 @@
     }
     @include phones {
       font-size: 3.125rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
+      padding: 0 0;
     }
   }
   &__discription {
@@ -45,6 +46,9 @@
     color: rgb(227, 80, 40);
     &-number {
       font-size: 4.4820625rem;
+      @include phones{
+        font-size: 3.4820625rem;
+      }
     }
   }
   &__arrow {
@@ -88,8 +92,11 @@
   }
   &__main-img {
     max-height: 18rem;
+    @include tablets{
+      max-height: 16rem; 
+    }
     @include phones {
-      max-height: 17rem;
+      max-height: 11rem;
     }
   }
   &__text {

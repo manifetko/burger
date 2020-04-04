@@ -15,9 +15,12 @@
     }
   }
   &__heading {
-    font-size: 71.713px;
+    font-size: 4.4820625rem;
     font-family: "Gagalin";
     color: rgb(249, 180, 59);
+    @include phones{
+      font-size: 3.4820625rem;
+    }
   }
   &__accordeon {
     margin-top: 3.125rem;
