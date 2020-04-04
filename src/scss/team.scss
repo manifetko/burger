@@ -13,6 +13,9 @@
       padding-left: 2.9375rem;
       padding-right: 2.9375rem;
     }
+    @include phones{
+      padding-top:4.5rem;
+    }
   }
   &__heading {
     font-size: 4.4820625rem;
