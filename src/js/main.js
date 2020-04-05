@@ -1,15 +1,17 @@
 const hamburger = document.querySelector('.hamburger');
 const nav__list = document.querySelector('.nav__list');
-
+let isModalOpen = false;
 hamburger.addEventListener('click', (e) => {
   if (hamburger.classList.contains('hamburger--active')) {
     hamburger.classList.remove('hamburger--active');
     nav__list.classList.remove('nav__list--active');
+    isModalOpen = false;
   } else {
     hamburger.classList.add('hamburger--active');
     nav__list.classList.add('nav__list--active');
+    isModalOpen = true;
   }
-})
+});
 // for hamburger
 $('.burgers__composition').each((ndx, item) => {
   $(item).on('click', () => {
@@ -89,18 +91,18 @@ function reset() {
   burgersList.classList.remove('burgers__list--notransition');
 }
 // for slider
-const menuTag = $('.menu__tag');
+const menuName = $('.menu__name');
 $('.menu__close').each((ndx, item) => {
   $(item).on('click', () => {
     $(item).closest('.menu__item').removeClass('menu__item--active');
   });
 });
-menuTag.each((ndx, item) => {
+menuName.each((ndx, item) => {
   $(item).on('click', () => {
     if ($(item).closest('.menu__item').hasClass('menu__item--active')) {
       $(item).closest('.menu__item').removeClass('menu__item--active');
     } else {
-      menuTag.each((ndx, item) => {
+      menuName.each((ndx, item) => {
         $(item).closest('.menu__item').removeClass('menu__item--active');
       });
       $(item).closest('.menu__item').addClass('menu__item--active')
@@ -126,7 +128,7 @@ team__items.forEach(active_all => {
 // for team accordeon 
 const form = document.querySelector('.form');
 const sendButton = document.querySelector('.form__submit');
-sendButton.addEventListener('click', formEvent => {
+form.addEventListener('submit', formEvent => {
   formEvent.preventDefault();
   if (validateForm(form)) {
     const xhr = new XMLHttpRequest();
@@ -373,7 +375,7 @@ let inScroll = false;
 const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 const performTransition = sectionEq => {
-  if (inScroll === false) {
+  if (inScroll === false && isModalOpen === false) {
     inScroll = true;
     const position = sectionEq * -100;
     sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
@@ -421,6 +423,9 @@ $(document).on('keydown', e => {
 });
 $('[data-scroll-to]').on('click', e => {
   e.preventDefault();
+  hamburger.classList.remove('hamburger--active');
+  nav__list.classList.remove('nav__list--active');
+  isModalOpen = false;
   const $this = $(e.currentTarget);
   const target = $this.attr('data-scroll-to');
   performTransition(target);

@@ -72,17 +72,4 @@
       display: none;
     }
   }
-
-  &__button {
-    font-size: 0.8125rem;
-    font-family: "Ubuntu";
-    background-color: #2f3234;
-    text-transform: uppercase;
-    padding: 0.9375rem;
-    border-radius: 0.3125rem;
-    color: #fff;
-    @include phones {
-      margin-top: 1.875rem;
-    }
-  }
 }
