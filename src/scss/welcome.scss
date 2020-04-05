@@ -34,7 +34,7 @@
     color: rgb(249, 180, 59);
     margin-bottom: 1.375rem;
     @include phones {
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
   }
 
@@ -44,7 +44,7 @@
     color: #fff;
     margin-bottom: 1.375rem;
     @include phones {
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
   }
 }
@@ -56,7 +56,7 @@
   }
   @include phones {
     max-width: 25rem;
-    width: 65%;
+    width: 77%;
   }
 }
 
