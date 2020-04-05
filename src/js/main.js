@@ -220,7 +220,7 @@ function validateField(field) {
   return field.checkValidity();
 }
 // for form
-const openComment = document.querySelectorAll('.comments__button');
+const openComment = document.querySelectorAll('.btn--comments');
 function createOverlay(eventObject, event, link, window, heading, linkContent, message) {
   var overlayElement = document.createElement('div');
   overlayElement.classList.add('overlay');
