@@ -13840,16 +13840,16 @@ team__items.forEach(active_all => {
 });
 // for team accordeon 
 const form = document.querySelector('.form');
-const sendButton = document.querySelector('.form__submit');
 form.addEventListener('submit', formEvent => {
   formEvent.preventDefault();
   if (validateForm(form)) {
     const xhr = new XMLHttpRequest();
-    const formData = new FormData();
+    var formData = new FormData();
     formData.append('name', form.elements.name.value);
     formData.append('phone', form.elements.phone.value);
     formData.append('comment', form.elements.comment.value);
     formData.append('to', 'mail@mail.ru');
+    console.log(formData);
     xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(JSON.stringify(formData));

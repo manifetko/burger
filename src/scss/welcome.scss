@@ -66,8 +66,6 @@
   align-items: center;
   @include tablets {
     justify-content: space-between;
-    position: relative;
-    padding-right: 4rem;
   }
 }
 
@@ -212,7 +210,6 @@
   z-index: 3;
   cursor: pointer;
   display: none;
-  position: absolute;
   right: 0;
   height: 22px;
   &--active {
@@ -228,7 +225,7 @@
     margin: 0 1.8rem 0 0;
   }
   @include phones{
-    margin: 0;
+    margin-right: 0.3rem;
   }
 }
 .icon-close {
