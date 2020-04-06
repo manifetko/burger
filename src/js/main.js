@@ -139,6 +139,26 @@ form.addEventListener('submit', e => {
     console.log(formData.length);
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(formData);
+    xhr.addEventListener('error', () => {
+      createOverlay();
+      const overlayText = document.querySelector('.overlay__text');
+      const overlayLink = document.querySelector('.overlay-link');
+      const overlayWindow = document.querySelector('.overlay__window');
+      overlayLink.classList.add('form__overlay-link');
+      overlayWindow.classList.add('form__overlay-window');
+      overlayLink.innerHTML = 'Закрыть';
+      overlayText.innerHTML = 'Ошибка';
+      overlayText.classList.add('form__overlay-text');
+      var overlayElement = document.querySelector('.overlay');
+      overlayLink.addEventListener('click', () => {
+        document.body.removeChild(overlayElement);
+      });
+      overlayElement.addEventListener('click', (e) => {
+        if (e.target === overlayElement) {
+          overlayLink.click();
+        }
+      });
+    });
     xhr.addEventListener('load', () => {
       if (xhr.status) {
         createOverlay();
