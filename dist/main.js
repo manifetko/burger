@@ -13850,7 +13850,6 @@ form.addEventListener('submit', e => {
     formData.append('comment', form.elements.comment.value);
     formData.append('to', 'mail@mail.ru');
     console.log(formData.length);
-    xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(formData);
     xhr.addEventListener('load', () => {
