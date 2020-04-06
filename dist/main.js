@@ -13840,19 +13840,19 @@ team__items.forEach(active_all => {
 });
 // for team accordeon 
 const form = document.querySelector('.form');
-form.addEventListener('submit', formEvent => {
-  formEvent.preventDefault();
+form.addEventListener('submit', e => {
+  e.preventDefault();
   if (validateForm(form)) {
     const xhr = new XMLHttpRequest();
-    var formData = new FormData();
+    let formData = new FormData(form);
     formData.append('name', form.elements.name.value);
     formData.append('phone', form.elements.phone.value);
     formData.append('comment', form.elements.comment.value);
     formData.append('to', 'mail@mail.ru');
-    console.log(formData);
+    console.log(formData.length);
     xhr.responseType = 'json';
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-    xhr.send(JSON.stringify(formData));
+    xhr.send(formData);
     xhr.addEventListener('load', () => {
       if (xhr.status) {
         createOverlay();
@@ -13918,13 +13918,13 @@ form.addEventListener('submit', formEvent => {
 });
 function validateForm(myform) {
   let valid = true;
-  if (!validateField(form.elements.name)) {
+  if (!validateField(myform.elements.name)) {
     valid = false;
   }
-  if (!validateField(form.elements.phone)) {
+  if (!validateField(myform.elements.phone)) {
     valid = false;
   }
-  if (!validateField(form.elements.comment)) {
+  if (!validateField(myform.elements.comment)) {
     valid = false;
   }
   return valid;
