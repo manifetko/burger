@@ -13853,86 +13853,18 @@ form.addEventListener('submit', e => {
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(formData);
     xhr.addEventListener('error', () => {
-      createOverlay();
-      const overlayText = document.querySelector('.overlay__text');
-      const overlayLink = document.querySelector('.overlay-link');
-      const overlayWindow = document.querySelector('.overlay__window');
-      overlayLink.classList.add('form__overlay-link');
-      overlayWindow.classList.add('form__overlay-window');
-      overlayLink.innerHTML = 'Закрыть';
-      overlayText.innerHTML = 'Ошибка';
-      overlayText.classList.add('form__overlay-text');
-      var overlayElement = document.querySelector('.overlay');
-      overlayLink.addEventListener('click', () => {
-        document.body.removeChild(overlayElement);
-      });
-      overlayElement.addEventListener('click', (e) => {
-        if (e.target === overlayElement) {
-          overlayLink.click();
-        }
-      });
+      createOverlay('form__overlay-link', '', 'Ошибка', 'form__overlay-window', 'Закрыть');
     });
     xhr.addEventListener('load', () => {
       if (xhr.status) {
-        createOverlay();
-        const overlayText = document.querySelector('.overlay__text');
-        const overlayLink = document.querySelector('.overlay-link');
-        const overlayWindow = document.querySelector('.overlay__window');
-        overlayLink.classList.add('form__overlay-link');
-        overlayWindow.classList.add('form__overlay-window');
-        overlayLink.innerHTML = 'Закрыть';
-        overlayText.innerHTML = 'Сообщение отправлено';
-        overlayText.classList.add('form__overlay-text');
-        var overlayElement = document.querySelector('.overlay');
-        overlayLink.addEventListener('click', () => {
-          document.body.removeChild(overlayElement);
-        });
-        overlayElement.addEventListener('click', (e) => {
-          if (e.target === overlayElement) {
-            overlayLink.click();
-          }
-        });
+        createOverlay('form__overlay-link', '', 'Сообщение отправлено', 'form__overlay-window', 'Закрыть');
       }
       else {
-        createOverlay();
-        const overlayText = document.querySelector('.overlay__text');
-        const overlayLink = document.querySelector('.overlay-link');
-        const overlayWindow = document.querySelector('.overlay__window');
-        overlayLink.classList.add('form__overlay-link');
-        overlayWindow.classList.add('form__overlay-window');
-        overlayLink.innerHTML = 'Закрыть';
-        overlayText.innerHTML = 'Ошибка';
-        overlayText.classList.add('form__overlay-text');
-        var overlayElement = document.querySelector('.overlay');
-        overlayLink.addEventListener('click', () => {
-          document.body.removeChild(overlayElement);
-        });
-        overlayElement.addEventListener('click', (e) => {
-          if (e.target === overlayElement) {
-            overlayLink.click();
-          }
-        });
+        createOverlay('form__overlay-link', '', 'Ошибка', 'form__overlay-window', 'Закрыть');
       }
     });
   } else {
-    createOverlay();
-    const overlayText = document.querySelector('.overlay__text');
-    const overlayLink = document.querySelector('.overlay-link');
-    const overlayWindow = document.querySelector('.overlay__window');
-    overlayLink.classList.add('form__overlay-link');
-    overlayWindow.classList.add('form__overlay-window');
-    overlayLink.innerHTML = 'Закрыть';
-    overlayText.innerHTML = 'Заполните все поля корректно';
-    overlayText.classList.add('form__overlay-text');
-    var overlayElement = document.querySelector('.overlay');
-    overlayLink.addEventListener('click', () => {
-      document.body.removeChild(overlayElement);
-    });
-    overlayElement.addEventListener('click', (e) => {
-      if (e.target === overlayElement) {
-        overlayLink.click();
-      }
-    });
+    createOverlay('form__overlay-link', '', 'Заполните все поля корректно', 'form__overlay-window', 'Закрыть');
   }
 });
 function validateForm(myform) {
@@ -13952,32 +13884,33 @@ function validateField(field) {
   return field.checkValidity();
 }
 // for form
-const openComment = document.querySelectorAll('.btn--comments');
-function createOverlay(eventObject, event, link, window, heading, linkContent, message) {
-  var overlayElement = document.createElement('div');
-  overlayElement.classList.add('overlay');
-  document.body.appendChild(overlayElement);
-  const template = document.querySelector('#overlayTemplate');
-  overlayElement.innerHTML = template.innerHTML;
-};
-openComment.forEach(open => {
-  open.addEventListener('click', () => {
-    createOverlay();
-    const overlayHeading = document.querySelector('.overlay__heading');
-    const overlayText = document.querySelector('.overlay__text');
-    const overlayLink = document.querySelector('.overlay-link');
-    overlayLink.classList.add('comments__close');
-    overlayHeading.innerHTML = 'Константин Спилберг';
-    overlayText.innerHTML = 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.';
-    var overlayElement = document.querySelector('.overlay');
-    overlayLink.addEventListener('click', () => {
-      document.body.removeChild(overlayElement);
+const openComment = $('.btn--comments');
+console.log(openComment);
+function createOverlay(link, heading, text, window, linkText) {
+  var overlayElement = $('body').append($('#overlayTemplate').html());
+  overlayElement = $('.overlay');
+  if (overlayElement) {
+    const overlayLink = $('.overlay-link');
+    const overlayWindow = $('.overlay__window');
+    overlayWindow.addClass(window);
+    overlayLink.addClass(link).html(linkText);
+    $('.overlay__heading').html(heading);
+    $('.overlay__text').html(text);
+    overlayLink.on('click', () => {
+      overlayElement.remove();
     });
-    overlayElement.addEventListener('click', (e) => {
-      if (e.target === overlayElement) {
-        overlayLink.click();
+    console.log(overlayElement);
+    overlayElement.on('click', e => {
+      if (overlayWindow.is(':hover')) {
+      } else {
+        overlayElement.remove();
       }
     });
+  }
+};
+openComment.each((ndx, item) => {
+  $(item).on('click', () => {
+    createOverlay('comments__close', 'Константин Спилберг', 'Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.');
   });
 });
 // for overlay
