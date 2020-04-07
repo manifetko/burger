@@ -625,6 +625,8 @@ img {
 
 @media screen and (max-width: 768px) {
   .welcome__text {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
     margin: 0;
     text-align: center;
   }
