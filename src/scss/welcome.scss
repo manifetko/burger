@@ -6,13 +6,13 @@
   }
   &__content {
     border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 100%;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     @include tablets {
       flex-direction: column;
     }
@@ -23,7 +23,6 @@
     flex-direction: column;
     margin-left: 0.875rem;
     margin-top: 3.3125rem;
-    flex-basis: 0;
     @include tablets {
       margin: 0;
       text-align: center;
@@ -58,7 +57,7 @@
   }
   @include phones {
     max-width: 25rem;
-    width: 77%;
+    width: 100%;
   }
 }
 
