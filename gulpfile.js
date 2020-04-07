@@ -47,7 +47,7 @@ task('server', () => {
     });
 });
 
-// watch('./src/js/main.js', series('scripts')).on('change', reload);
-// watch('./src/index.html', series('html')).on('change', reload);
-// watch('./src/scss/*.scss', series('styles')).on('change', reload);
+watch('./src/js/main.js', series('scripts')).on('change', reload);
+watch('./src/index.html', series('html')).on('change', reload);
+watch('./src/scss/*.scss', series('styles')).on('change', reload);
 task('default', series('styles', 'scripts', 'html', 'server'));
