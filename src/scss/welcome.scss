@@ -1,5 +1,4 @@
 .welcome {
-  position: relative;
   @include bg;
 
   &--container {
@@ -7,7 +6,6 @@
   }
   &__content {
     border: 2px solid red;
-    padding-top: 88px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -62,13 +60,10 @@
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid blue;
   @include tablets {
     justify-content: space-between;
   }
@@ -206,7 +201,8 @@
 .arrow {
   cursor: pointer;
   &-bottom {
-    margin-bottom: 1.625rem;
+    border: 2px solid green;
+    margin-top: auto 0 1.625rem;
     text-align: center;
   }
 }
