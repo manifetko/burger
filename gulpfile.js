@@ -9,31 +9,36 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 sass.compiler = require('node-sass');
 const reload = browserSync.reload;
+
 task('html', () => {
     return src('src/index.html')
         .pipe(concat('index.html'))
         .pipe(dest('dist'))
 });
+
 const libs = [
     'node_modules/jquery/dist/jquery.js',
     'src/js/mobile-detect.js',
     'src/js/jquery.touchSwipe.js',
     'src/js/main.js'
 ];
+
 task('scripts', () => {
     return src(libs)
         .pipe(concat('main.js'))
         .pipe(dest('dist'))
 });
+
 task('styles', () => {
     return src('src/scss/main.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass())
         .pipe(autoprefixer())
         .pipe(concat('main.min.css'))
         .pipe(gcmq())
         .pipe(cleanCSS())
         .pipe(dest('dist'))
 });
+
 task('server', () => {
     browserSync.init({
         server: {
@@ -41,6 +46,7 @@ task('server', () => {
         }
     });
 });
+
 watch('./src/js/main.js', series('scripts')).on('change', reload);
 watch('./src/index.html', series('html')).on('change', reload);
 watch('./src/scss/*.scss', series('styles')).on('change', reload);
