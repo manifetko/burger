@@ -174,7 +174,7 @@ function validateField(field) {
 const openComment = $('.btn--comments');
 console.log(openComment);
 function createOverlay(link, heading, text, window, linkText) {
-  var overlayElement = $('body').append($('#overlayTemplate').html());
+  $('body').append($('#overlayTemplate').html());
   overlayElement = $('.overlay');
   if (overlayElement) {
     const overlayLink = $('.overlay-link');

@@ -23,6 +23,7 @@
     margin-top: 3.3125rem;
     flex-basis: 0;
     @include tablets {
+      flex-basis: auto;
       margin: 0;
       text-align: center;
     }
