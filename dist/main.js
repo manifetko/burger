@@ -13887,7 +13887,6 @@ function validateField(field) {
 }
 // for form
 const openComment = $('.btn--comments');
-console.log(openComment);
 function createOverlay(link, heading, text, window, linkText) {
   $('body').append($('#overlayTemplate').html());
   overlayElement = $('.overlay');
@@ -13901,7 +13900,6 @@ function createOverlay(link, heading, text, window, linkText) {
     overlayLink.on('click', () => {
       overlayElement.remove();
     });
-    console.log(overlayElement);
     overlayElement.on('click', e => {
       if (overlayWindow.is(':hover')) {
       } else {
@@ -13926,23 +13924,38 @@ const init = () => {
   myMap.controls.add('zoomControl', {
   });
   const coords = [
-    [59.9490893, 30.2700442],
-    [59.9287917, 30.2516848],
-    [59.9607237, 30.2923823],
-    [59.9016327, 30.2829593]
+    {
+      latitude: 59.9490893,
+      longitude: 30.2700442,
+    },
+    {
+      latitude: 59.9016327,
+      longitude: 30.2829593,
+    },
+    {
+      latitude: 59.9607237,
+      longitude: 30.2516848,
+    },
+    {
+      latitude: 59.9287917,
+      longitude: 30.2516848,
+    }
   ];
-  const myCollection = new ymaps.GeoObjectCollection({}, {
-    draggable: false,
-    iconLayout: 'default#image',
-    iconImageHref: './images/marker.svg',
-    iconImageSize: [46, 57],
-    iconImageOffSET: [-35, -52]
-  });
+
   coords.forEach(coord => {
-    myCollection.add(new ymaps.Placemark(coord));
-  });
-  myMap.geoObjects.add(myCollection);
-  myMap.behaviors.disable('scrollZoom');
+    var placemark = new ymaps.Placemark([coord.latitude, coord.longitude], {
+      balloonContent: 'Cанкт-Петербург,ул.Бабушкина,д.12/1,15'
+    },
+      {
+        draggable: false,
+        iconLayout: 'default#image',
+        iconImageHref: './images/marker.svg',
+        iconImageSize: [46, 57],
+        iconImageOffSET: [-35, -52],
+    });
+    myMap.geoObjects.add(placemark);
+});
+myMap.behaviors.disable('scrollZoom');
 }
 ymaps.ready(init);
 // map
@@ -13958,7 +13971,6 @@ let eventsInit = () => {
   $('.player__line-volume').click(e => {
     const barVolume = $(e.currentTarget);
     const clickedPositionVolume = e.originalEvent.layerX;
-    console.log(clickedPositionVolume);
     const newButtonPositionVolume = (clickedPositionVolume / barVolume.width()) * 100;
     $('.player__scroll-volume').css({
       left: `${newButtonPositionVolume}%`

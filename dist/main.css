@@ -477,10 +477,9 @@ img {
   top: 0;
   right: 0;
   left: 0;
-  opacity: 0.95;
   bottom: 0;
   height: 100%;
-  background-color: #3f4244;
+  background-color: rgba(63, 66, 68, 0.95);
 }
 
 .overlay__heading {
@@ -1997,12 +1996,20 @@ img {
   position: relative;
 }
 
+.player--active {
+  cursor: pointer;
+}
+
 .player--active .player__pause {
   display: none;
 }
 
 .player--active .player__triangle {
   visibility: visible;
+}
+
+.player--paused {
+  cursor: pointer;
 }
 
 .player--paused .player__start {
@@ -2291,7 +2298,7 @@ img {
           align-items: center;
 }
 
-.form__choice-name, .form__heading, .form__submit, .form__comment, .form__checkbox {
+.form__choice-name, .form__heading, .form__reset, .form__comment, .form__checkbox {
   font-size: 0.875rem;
   font-family: "Ubuntu";
   color: white;
@@ -2450,7 +2457,7 @@ img {
   margin-left: 0;
 }
 
-.form__submit {
+.form__reset {
   margin-right: 1.25rem;
 }
 
