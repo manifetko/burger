@@ -13840,6 +13840,7 @@ team__items.forEach(active_all => {
 });
 // for team accordeon 
 const form = document.querySelector('.form');
+const resetForm = $('.form__reset');
 form.addEventListener('submit', e => {
   e.preventDefault();
   if (validateForm(form)) {
@@ -13866,6 +13867,7 @@ form.addEventListener('submit', e => {
   } else {
     createOverlay('form__overlay-link', '', 'Заполните все поля корректно', 'form__overlay-window', 'Закрыть');
   }
+  resetForm.click();
 });
 function validateForm(myform) {
   let valid = true;
@@ -13887,7 +13889,7 @@ function validateField(field) {
 const openComment = $('.btn--comments');
 console.log(openComment);
 function createOverlay(link, heading, text, window, linkText) {
-  var overlayElement = $('body').append($('#overlayTemplate').html());
+  $('body').append($('#overlayTemplate').html());
   overlayElement = $('.overlay');
   if (overlayElement) {
     const overlayLink = $('.overlay-link');
@@ -13920,6 +13922,8 @@ const init = () => {
     center: [59.9277974, 30.2638647],
     zoom: 12,
     controls: []
+  });
+  myMap.controls.add('zoomControl', {
   });
   const coords = [
     [59.9490893, 30.2700442],
