@@ -30,7 +30,7 @@
     "node-sass": "^4.13.1"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-touchswipe": "^1.6.19"
   }
 }
